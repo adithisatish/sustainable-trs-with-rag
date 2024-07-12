@@ -1,4 +1,28 @@
-from src import * 
+import pandas as pd 
+import lancedb
+import numpy as np 
+import os 
+import re 
+from sentence_transformers import SentenceTransformer
+from lancedb.rerankers import CrossEncoderReranker
+from lancedb.embeddings import get_registry
+from lancedb.util import attempt_import_or_raise
+from lancedb.pydantic import LanceModel, Vector
+import sys
+
+current = os.path.dirname(os.path.realpath(''))
+parent = os.path.dirname(current)
+
+sys.path.append(parent)
+
+data_parent_dir = "../../../european-city-data/"
+data_dir = data_parent_dir + "data-sources/"
+wikivoyage_docs_dir = data_dir + "wikivoyage/"
+wikivoyage_listings_dir = wikivoyage_docs_dir + "listings/"
+database_dir = "../../database/wikivoyage/"
+seasonality_dir = data_parent_dir + "computed/seasonality/"
+popularity_dir = data_parent_dir + "computed/popularity/"
+cities_csv = data_parent_dir + "cities_abstracts_embeddings.csv"
 
 def create_chunks(city, country, text):
     for i, line in enumerate(text):
@@ -28,7 +52,7 @@ def create_chunks(city, country, text):
 
 def read_docs():
     df = pd.DataFrame()
-    cities = pd.read_csv("../city_abstracts_embeddings.csv")
+    cities = pd.read_csv(cities_csv)
     for file_name in os.listdir(wikivoyage_docs_dir):
         city = file_name.split(".")[0]
         country = cities[cities['city'] == city]['country'].item()
