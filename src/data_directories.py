@@ -1,0 +1,6 @@
+data_dir = "../../europeancities-wikivoyage-tripadvisor/data-sources/"
+wikivoyage_docs_dir = data_dir + "wikivoyage/"
+wikivoyage_listings_dir = wikivoyage_docs_dir + "listings/"
+database_dir = "../../database/wikivoyage/"
+seasonality_dir = "../../europeancities-wikivoyage-tripadvisor/computed/seasonality/"
+popularity_dir = "../../europeancities-wikivoyage-tripadvisor/computed/popularity/"
