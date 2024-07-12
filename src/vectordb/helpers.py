@@ -22,7 +22,7 @@ wikivoyage_listings_dir = wikivoyage_docs_dir + "listings/"
 database_dir = "../../database/wikivoyage/"
 seasonality_dir = data_parent_dir + "computed/seasonality/"
 popularity_dir = data_parent_dir + "computed/popularity/"
-cities_csv = data_parent_dir + "cities_abstracts_embeddings.csv"
+cities_csv = data_parent_dir + "city_abstracts_embeddings.csv"
 
 def create_chunks(city, country, text):
     for i, line in enumerate(text):
@@ -53,10 +53,11 @@ def create_chunks(city, country, text):
 def read_docs():
     df = pd.DataFrame()
     cities = pd.read_csv(cities_csv)
-    for file_name in os.listdir(wikivoyage_docs_dir):
+    for file_name in os.listdir(wikivoyage_docs_dir + "cleaned/"):
         city = file_name.split(".")[0]
+        # print(city)
         country = cities[cities['city'] == city]['country'].item()
-        with open(wikivoyage_docs_dir + file_name) as file: 
+        with open(wikivoyage_docs_dir + "cleaned/" + file_name) as file: 
             text = file.readlines()
             chunk_df = create_chunks(city, country, text)
             df = pd.concat([df,chunk_df])
@@ -65,12 +66,27 @@ def read_docs():
 
 def read_listings():
     df = pd.read_csv(wikivoyage_listings_dir + "wikivoyage-listings-cleaned.csv")
+    cities = pd.read_csv(cities_csv)
+
+    def find_country(city):
+        return cities[cities['city'] == city]['country'].values[0]
+
+    df['country'] = df['city'].apply(find_country)
+
     return df
 
 def preprocess_df(df):
     section_counts = df['section'].value_counts()
     sections_to_keep = section_counts[section_counts > 150].index
     filtered_df = df[df['section'].isin(sections_to_keep)]
+
+    def preprocess_text(s):
+        s = re.sub(r'http\S+', '', s)
+        s = re.sub(r'=+', '', s)
+        s = s.strip()
+        return s
+    
+    filtered_df['text'] = filtered_df['text'].apply(preprocess_text)
 
     return filtered_df
 

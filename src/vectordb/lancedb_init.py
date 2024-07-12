@@ -27,8 +27,8 @@ class WikivoyageDocuments(LanceModel):
 
 class WikivoyageListings(LanceModel):
     city: str = model.SourceField()
-    country: str = model.SourceField()
     type: str = model.SourceField()
-    name: str = model.SourceField()
+    title: str = model.SourceField()
     description: str = model.SourceField()
+    country: str = model.SourceField()
     vector: Vector(model.ndims()) = model.VectorField()

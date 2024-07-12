@@ -30,9 +30,9 @@ def create_wikivoyage_listings_db_and_add_data():
     # filtered_df = preprocess_df(df)
 
     db.drop_table("wikivoyage_listings", ignore_missing=True)
-    table = db.create_table("wikivoyage_listings", schema=WikivoyageDocuments)
+    table = db.create_table("wikivoyage_listings", schema=WikivoyageListings)
 
-    table.add(df.to_dict('records'))
+    table.add(df.astype('str').to_dict('records'))
     logger.info("Completed ingestion.")
 
 def search_wikivoyage_docs(query, limit=10, reranking = 0):
