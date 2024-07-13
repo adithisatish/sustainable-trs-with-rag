@@ -1,6 +1,6 @@
 # from src import * 
-from helpers import * 
-from lancedb_init import *
+from vectordb.helpers import * 
+from vectordb.lancedb_init import *
 import logging
 
 logger = logging.getLogger(__name__)
@@ -57,30 +57,68 @@ def search_wikivoyage_docs(query, limit=10, reranking = 0):
 
     """
     uri = database_dir
+    # print(uri)
     db = lancedb.connect(uri)
-    print("Connected to DB.")
+    logger.info("Connected to DB.") 
 
     # query_embedding = embed_query(query)
     table = db.open_table("wikivoyage_documents")
 
     if reranking: 
         reranker = CrossEncoderReranker()
-        results = table.search(query).rerank(reranker=reranker).limit(limit).to_list()
+        results = table.search(query) \
+                    .rerank(reranker=reranker) \
+                    .limit(limit) \
+                    .to_list()
 
     else:
-        results = table.search(query).limit(limit).to_list()
+        results = table.search(query) \
+                    .limit(limit) \
+                    .to_list()
         
-    print("Found the most relevant documents.")
-    city_lists = [f"city: {r['city']}, country: {r['country']}, section: {r['section']}, text: {r['text']}" for r in results]
+    logger.info("Found the most relevant documents.")
+    city_lists = [{"city": r['city'], "country": r['country'], "section": r['section'], "text": r['text']} for r in results]
 
     # context = [f"city: {r['city']}, country: {r['country']}, name: {r['title']}, description: {r['description']}" for r in results]
 
     return city_lists
 
-# TO DO:
-# def search_wikivoyage_listings(query, limit=10, reranking = 0):
-#     uri = database_dir
-#     db = lancedb.connect(uri)
-#     print("Connected to DB.")
 
-#     pass
+def search_wikivoyage_listings(query, cities, limit=10, reranking = 0):
+    """
+    
+    Function to search the wikivoyage database an return most relevant listings, post-filtered by the recommended cities provided by wikivoyage_documents table. 
+
+    Args: 
+        - query: str
+        - cities: list
+        - limit: number of results (default is 10)
+        - reranking: bool (0 or 1), if activated, CrossEncoderReranker is used.
+
+    """
+    uri = database_dir
+    db = lancedb.connect(uri)
+    logger.info("Connected to DB.")
+
+    table = db.open_table("wikivoyage_listings")
+    
+    cities_filter = f"city IN {tuple(cities)}"
+
+    if reranking: 
+        reranker = CrossEncoderReranker()
+        results = table.search(query) \
+                    .where(cities_filter) \
+                    .rerank(reranker=reranker) \
+                    .limit(limit) \
+                    .to_list()
+
+    else:
+        results = table.search(query) \
+                    .where(cities_filter) \
+                    .limit(limit) \
+                    .to_list()
+        
+    logger.info("Found the most relevant documents.")
+    city_listings = [{"city": r['city'], "country": r['country'], "type": r['type'], "title": r['title'], "description": r['description']} for r in results]
+
+    return city_listings

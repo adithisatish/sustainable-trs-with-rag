@@ -1,4 +1,4 @@
-from vectordb import *
+from vectordb.vectordb import *
 import logging 
 
 logger = logging.getLogger(__name__)
