@@ -8,6 +8,11 @@ logger = logging.getLogger(__name__)
 # db = lancedb.connect("/tmp/db")
 
 def create_wikivoyage_docs_db_and_add_data():
+    """
+    
+    Creates wikivoyage documents table and ingests data
+
+    """
     uri = database_dir
     db = lancedb.connect(uri)
     logger.info("Connected to DB. Reading data now...")
@@ -22,6 +27,11 @@ def create_wikivoyage_docs_db_and_add_data():
     logger.info("Completed ingestion.")
 
 def create_wikivoyage_listings_db_and_add_data():
+    """
+    
+    Creates wikivoyage listings table and ingests data
+
+    """
     uri = database_dir
     db = lancedb.connect(uri)
     logger.info("Connected to DB. Reading data now...")
@@ -36,6 +46,16 @@ def create_wikivoyage_listings_db_and_add_data():
     logger.info("Completed ingestion.")
 
 def search_wikivoyage_docs(query, limit=10, reranking = 0):
+    """
+    
+    Function to search the wikivoyage database an return most relevant chunked docs. 
+
+    Args: 
+        - query: str
+        - limit: number of results (default is 10)
+        - reranking: bool (0 or 1), if activated, CrossEncoderReranker is used.
+
+    """
     uri = database_dir
     db = lancedb.connect(uri)
     print("Connected to DB.")

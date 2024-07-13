@@ -16,6 +16,17 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 from data_directories import *
 
 def create_chunks(city, country, text):
+    """
+    
+    Helper function that creates chunks given paragraph(s) of text based on implicit sections in the text. 
+
+    Args: 
+        - city: str
+        - country: str
+        - text: str; document that needs to be chunked
+
+    """
+
     for i, line in enumerate(text):
         if line[0] == "\n":
             del text[i]
@@ -42,6 +53,12 @@ def create_chunks(city, country, text):
     return df
 
 def read_docs():
+    """
+    
+    Helper function that reads all of the Wikivoyage documents containing information about the city. 
+
+    """
+
     df = pd.DataFrame()
     cities = pd.read_csv(cities_csv)
     for file_name in os.listdir(wikivoyage_docs_dir + "cleaned/"):
@@ -56,6 +73,11 @@ def read_docs():
     return df
 
 def read_listings():
+    """
+    
+    Helper function that reads the Wikivoyage listings csv containing tabular information about 144 cities. 
+
+    """
     df = pd.read_csv(wikivoyage_listings_dir + "wikivoyage-listings-cleaned.csv")
     cities = pd.read_csv(cities_csv)
 
@@ -67,6 +89,14 @@ def read_listings():
     return df
 
 def preprocess_df(df):
+    """
+    
+    Helper function that preprocesses the dataframe containing chunks of text and removes hyperlinks and strips the \n from the text. 
+
+    Args:
+        - df: dataframe
+
+    """
     section_counts = df['section'].value_counts()
     sections_to_keep = section_counts[section_counts > 150].index
     filtered_df = df[df['section'].isin(sections_to_keep)]
@@ -82,6 +112,14 @@ def preprocess_df(df):
     return filtered_df
 
 def compute_wv_docs_embeddings(df):
+    """
+    
+    Helper function that computes embeddings for the text. The all-MiniLM-L6-v2 embedding model is used.  
+
+    Args:
+        - df: dataframe
+
+    """
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     vector_dimension = model.get_sentence_embedding_dimension()
     
@@ -98,6 +136,14 @@ def compute_wv_docs_embeddings(df):
     return df
 
 def embed_query(query):
+    """
+    
+    Helper function that returns the embedded query. 
+
+    Args:
+        - query: str
+    
+    """
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
     # vector_dimension = model.get_sentence_embedding_dimension()   
     embedding = model.encode(query).tolist()

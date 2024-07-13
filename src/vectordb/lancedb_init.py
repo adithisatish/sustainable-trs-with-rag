@@ -18,6 +18,11 @@ from data_directories import *
 model = get_registry().get("sentence-transformers").create()
 
 class WikivoyageDocuments(LanceModel):
+    """
+    
+    Schema definition for the Wikivoyage Documents table.
+
+    """
     city: str = model.SourceField()
     country: str = model.SourceField()
     section: str = model.SourceField()
@@ -25,6 +30,11 @@ class WikivoyageDocuments(LanceModel):
     vector: Vector(model.ndims()) = model.VectorField()
 
 class WikivoyageListings(LanceModel):
+    """
+    
+    Schema definition for the Wikivoyage Listings table.
+
+    """
     city: str = model.SourceField()
     type: str = model.SourceField()
     title: str = model.SourceField()
