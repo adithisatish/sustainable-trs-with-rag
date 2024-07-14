@@ -56,7 +56,7 @@ def get_seasonality(destination, month = None):
 def compute_sfairness_score(destination, month = None):
     """
     
-    Returns the s-fairness score for a particular destination city and (optional) month.
+    Returns the s-fairness score for a particular destination city and (optional) month. If the destination doesn't have popularity or seasonality scores, then the function returns None.
 
     Args:
         - destination: str
@@ -71,17 +71,23 @@ def compute_sfairness_score(destination, month = None):
     # RECHECK THIS
     if seasonality[1] is not None and popularity is not None:
         s_fairness = 0.281 * emissions + 0.334 * popularity + 0.385 * seasonality[1]
-    elif popularity is not None: # => seasonality is None
-        s_fairness = 0.281 * emissions + 0.334 * popularity
-    elif seasonality[1] is not None: # => popularity is None
-        s_fairness = 0.281 * emissions + 0.385 * seasonality[1]
-    else: # => both are non
-        s_fairness =  0.281 * emissions
-
-    return {
+        return {
             'month': month, 
             's-fairness': s_fairness
         }
+    # elif popularity is not None: # => seasonality is None
+    #     s_fairness = 0.281 * emissions + 0.334 * popularity
+    # elif seasonality[1] is not None: # => popularity is None
+    #     s_fairness = 0.281 * emissions + 0.385 * seasonality[1]
+    # else: # => both are non
+    #     s_fairness =  0.281 * emissions
+    else: 
+        return {
+            'month': None, 
+            's-fairness': None
+        }
+
+    
 
 if __name__ == "__main__":
     print(compute_sfairness_score("Paris", "Oct"))
