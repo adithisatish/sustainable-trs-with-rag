@@ -2,7 +2,7 @@ from vectordb.vectordb import *
 import logging 
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 def run():
     logging.info("Creating database for Wikivoyage Documents")

@@ -4,6 +4,11 @@ import re
 from vectordb import vectordb
 from sustainability import s_fairness
 
+import logging 
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+
 def get_travel_months(query):
     """
     
@@ -56,7 +61,7 @@ def get_wikivoyage_context(query, params = {'limit': 10, 'reranking': 0}):
     reranking = params['reranking']
 
     docs = vectordb.search_wikivoyage_docs(query, limit, reranking)
-    print("Finished getting chunked wikivoyage docs.")
+    logger.info("Finished getting chunked wikivoyage docs.")
 
     results = {}
     for doc in docs: 
@@ -66,18 +71,18 @@ def get_wikivoyage_context(query, params = {'limit': 10, 'reranking': 0}):
     cities = [result['city'] for result in docs] 
 
     listings = vectordb.search_wikivoyage_listings(query, cities, limit, reranking)
-    print("Finished getting wikivoyage listings.")
-    # print(type(docs), type(listings))
+    logger.info("Finished getting wikivoyage listings.")
+    # logger.info(type(docs), type(listings))
 
     for listing in listings: 
-        # print(listing['city'])
+        # logger.info(listing['city'])
         results[listing['city']]['listings'].append({
             'type': listing['type'],
             'name': listing['title'],
             'description': listing['description']
         })
 
-    print("Returning retrieval results.")
+    logger.info("Returning retrieval results.")
     return results
 
 def get_sustainability_scores(query, destinations):
@@ -92,7 +97,7 @@ def get_sustainability_scores(query, destinations):
     city_scores = {}
 
     months = get_travel_months(query)
-    print("Finished parsing query for months.")
+    logger.info("Finished parsing query for months.")
 
     for city in destinations:
         if city not in city_scores:
@@ -104,17 +109,17 @@ def get_sustainability_scores(query, destinations):
             for month in months:
                 city_scores[city].append(s_fairness.compute_sfairness_score(city, month))
 
-    print("Finished getting s-fairness scores.")
+    logger.info("Finished getting s-fairness scores.")
 
     for city, scores in city_scores.items():
         min_score = min(scores, key=lambda x: x['s-fairness'])
-        result.append[{
+        result.append({
             'city': city,
             'month': min_score['month'],
             's-fairness': min_score['s-fairness']
-        }]
+        })
 
-    print("Returning s-fairness results.")
+    logger.info("Returning s-fairness results.")
     return result
 
 
@@ -158,15 +163,15 @@ def test():
             except Exception as e: 
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-                print(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
+                logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
 
         except Exception as e:
-            print(f"Error while creating DB: {e}")
+            logger.error(f"Error while creating DB: {e}")
 
     except Exception as e: 
         exc_type, exc_obj, exc_tb = sys.exc_info()
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-        print(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
+        logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
     
     return context
 
