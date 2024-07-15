@@ -45,20 +45,22 @@ def get_travel_months(query):
     # Return None if neither months nor seasons are found
     return months_in_query
 
-def get_wikivoyage_context(query, params = {'limit': 10, 'reranking': 0}):
+def get_wikivoyage_context(query, limit = 10, reranking = 0):
     """
     
     Function to retrieve the relevant documents and listings from the wikivoyage database. Works in two steps: 
     (i) the relevant cities are returned by the wikivoyage_docs table and (ii) then passed on to the wikivoyage listings database to retrieve further information. 
+    The user can pass a limit of how many results the search should return as well as whether to perform reranking (uses a CrossEncoderReranker)
 
     Args: 
         - query: str
-        - params: dict; contains value of the limit and reranking
+        - limit: int
+        - reranking: bool
 
     """
 
-    limit = params['limit']
-    reranking = params['reranking']
+    # limit = params['limit']
+    # reranking = params['reranking']
 
     docs = vectordb.search_wikivoyage_docs(query, limit, reranking)
     logger.info("Finished getting chunked wikivoyage docs.")
@@ -90,6 +92,10 @@ def get_sustainability_scores(query, destinations):
     
     Function to get the s-fairness scores for each destination for the given month (or the ideal month of travel if the user hasn't provided a month). 
     If multiple months are provided (or season), then the month with the minimum s-fairness score is chosen for the city.
+
+    Args: 
+        - query: str 
+        - destinations: list
     
     """
 
@@ -123,22 +129,33 @@ def get_sustainability_scores(query, destinations):
     return result
 
 
-def get_context(query):
+def get_context(query, **params):
     """
     
     Function that returns all the context: from the database, as well as the respective s-fairness scores for the destinations.
+
+    Args:
+        - query: str
+        - params: dict; contains value of the limit and reranking
     
     """
 
-    # define params - TO-DO: 
+    limit = 10 
+    reranking = 0
 
-    wikivoyage_context = get_wikivoyage_context(query)
+    if 'limit' in params:
+        limit = params['limit'] 
+    
+    if 'reranking' in params: 
+        reranking = params['reranking']
+
+    wikivoyage_context = get_wikivoyage_context(query, limit, reranking)
     recommended_cities = wikivoyage_context.keys()
 
     s_fairness_scores = get_sustainability_scores(query, recommended_cities)
 
     for score in s_fairness_scores: 
-        wikivoyage_context[score['city']]['s_fairness'] = {
+        wikivoyage_context[score['city']]['sustainability'] = {
             'month': score['month'],
             's-fairness': score['s-fairness']
         }
