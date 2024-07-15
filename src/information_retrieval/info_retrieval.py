@@ -3,6 +3,7 @@ import os
 import re
 from vectordb import vectordb
 from sustainability import s_fairness
+import json
 
 import logging 
 
@@ -190,6 +191,10 @@ def test():
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
     
+    file_path = os.path.join(os.getcwd(), "information_retrieval", "ir_results", "test_result.json")
+    with open(file_path, 'w') as file: 
+        json.dump(context, file)
+        
     return context
 
 if __name__ == "__main__":

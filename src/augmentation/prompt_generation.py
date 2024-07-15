@@ -1,7 +1,7 @@
 import sys 
 import os 
 import re
-from information_retrieval import info_retrieval
+from information_retrieval import info_retrieval as ir
 
 def generate_prompt(query, context, template = None):
     """
@@ -50,7 +50,7 @@ def augment_prompt(query, sustainability = 0):
         {}
         """
     
-    context = info_retrieval.get_context(query)
+    context = ir.get_context(query)
 
     # TO-DO: Some post processing for context???
 
