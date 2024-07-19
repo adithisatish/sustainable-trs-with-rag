@@ -133,11 +133,11 @@ def get_sustainability_scores(query, destinations):
 def get_context(query, **params):
     """
     
-    Function that returns all the context: from the database, as well as the respective s-fairness scores for the destinations.
+    Function that returns all the context: from the database, as well as the respective s-fairness scores for the destinations. The default does not consider S-Fairness scores, i.e. to append sustainability scores, a non-zero parameter "sustainability" needs to be explicitly passed to params.
 
     Args:
         - query: str
-        - params: dict; contains value of the limit and reranking
+        - params: dict; contains value of the limit and reranking (and sustainability)
     
     """
 
@@ -153,13 +153,14 @@ def get_context(query, **params):
     wikivoyage_context = get_wikivoyage_context(query, limit, reranking)
     recommended_cities = wikivoyage_context.keys()
 
-    s_fairness_scores = get_sustainability_scores(query, recommended_cities)
+    if 'sustainability' in params and params['sustainability']:
+        s_fairness_scores = get_sustainability_scores(query, recommended_cities)
 
-    for score in s_fairness_scores: 
-        wikivoyage_context[score['city']]['sustainability'] = {
-            'month': score['month'],
-            's-fairness': score['s-fairness']
-        }
+        for score in s_fairness_scores: 
+            wikivoyage_context[score['city']]['sustainability'] = {
+                'month': score['month'],
+                's-fairness': score['s-fairness']
+            }
 
     return wikivoyage_context
 
@@ -194,7 +195,7 @@ def test():
     file_path = os.path.join(os.getcwd(), "information_retrieval", "ir_results", "test_result.json")
     with open(file_path, 'w') as file: 
         json.dump(context, file)
-        
+
     return context
 
 if __name__ == "__main__":

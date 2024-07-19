@@ -30,13 +30,14 @@ def generate_prompt(query, context, template = None):
 
     return prompt 
 
-def augment_prompt(query, sustainability = 0):
+def augment_prompt(query, sustainability = 0, **params):
     """
     Function that accepts the user query as input, obtains relevant documents and augments the prompt with the retrieved context, which can be passed to the LLM. 
 
     Args: 
         - query: str
         - sustainability: bool; if true, then the prompt is appended to instruct the LLM to use s-fairness scores while generating the answer
+        - params: key-value parameters to be passed to the get_context function; sets the limit of results and whether to rerank the results
     
     """
 
@@ -50,7 +51,7 @@ def augment_prompt(query, sustainability = 0):
         {}
         """
     
-    context = ir.get_context(query)
+    context = ir.get_context(query=query, params={'sustainability': sustainability})
 
     # TO-DO: Some post processing for context???
 
@@ -60,3 +61,25 @@ def augment_prompt(query, sustainability = 0):
         prompt = generate_prompt(query, context)
 
     return prompt
+
+
+def test(): 
+    context_params = {
+        'limit': 5,
+        'reranking': 0
+    }
+
+    query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing in winter."
+
+    without_sfairness = augment_prompt(
+        query=query, 
+        sustainability=0,
+        params=context_params
+    )
+
+    with_sfairness = augment_prompt(
+        query=query, 
+        sustainability=1,
+        params=context_params
+    )
+
