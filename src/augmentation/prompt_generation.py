@@ -15,20 +15,22 @@ def generate_prompt(query, context, template = None):
     """
 
     if template: 
-        base_prompt = template
+        SYS_PROMPT = template
     else:
-        base_prompt = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. 
+        SYS_PROMPT = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. 
         Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer."
-
-        User question: {}
-
-        Contexts:
-        {}
         """
 
-    prompt = f"{base_prompt.format(query, context)}"
+    USER_PROMPT = """ Question: {}
 
-    return prompt 
+    Context: {}
+
+    """
+
+    formatted_prompt = f"{USER_PROMPT.format(query, context)}"
+    messages = [{"role":"system","content":SYS_PROMPT},{"role":"user","content":formatted_prompt}]
+
+    return messages 
 
 def augment_prompt(query, sustainability = 0, **params):
     """
@@ -44,11 +46,6 @@ def augment_prompt(query, sustainability = 0, **params):
     prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. You recommend the most sustainable city to the user. 
         The context contains a sustainability score for each city, also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness scores indicates that the city is a more sustainable travel destination for the month provided. 
         Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer."
-
-        User question: {}
-
-        Contexts:
-        {}
         """
     
     context = ir.get_context(query=query, params={'sustainability': sustainability})

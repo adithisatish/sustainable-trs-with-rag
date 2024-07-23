@@ -1,8 +1,10 @@
 beautifulsoup4==4.12.3
-numpy==2.0.0
+numpy==1.26.4
 pandas==2.2.2
 Requests==2.32.3
 selenium==4.21.0
 sentence_transformers==2.7.0
 ollama==0.2.1
 tantivy==0.22.0
+accelerate==0.33.0
+lancedb==0.10.2
