@@ -19,21 +19,22 @@ class LLMBaseClass():
         load_in_4bit=True, bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16
         )
 
-        tokenizer = AutoTokenizer.from_pretrained(model_id)
-        model = AutoModelForCausalLM.from_pretrained(
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+        self.model = AutoModelForCausalLM.from_pretrained(
             model_id,
             torch_dtype=torch.bfloat16,
             device_map="auto",
             quantization_config=bnb_config
         )
 
-        terminators = [
-            tokenizer.eos_token_id,
-            tokenizer.convert_tokens_to_ids("<|eot_id|>")
+        self.terminators = [
+            self.tokenizer.eos_token_id,
+            self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
         ]
 
     def generate(self, messages):
-        # tell the model to generate
+
+        # print(messages[0])
         input_ids = self.tokenizer.apply_chat_template(
             messages,
             add_generation_prompt=True,
@@ -57,22 +58,22 @@ class Llama3(LLMBaseClass):
     Initializes a Llama3 model object
     """
     def __init__(self) -> None:
-        model_id = "meta-llama/Meta-Llama-3-8B"
-        super().__init__(model_id)
+        self.model_id = "meta-llama/Meta-Llama-3-8B"
+        super().__init__(self.model_id)
 
 class Mistral(LLMBaseClass):
     """
     Initializes a Mistral model object
     """
     def __init__(self) -> None:
-        model_id = "mistralai/Mistral-7B-v0.3"
-        super().__init__(model_id)
+        self.model_id = "mistralai/Mistral-7B-v0.3"
+        super().__init__(self.model_id)
 
 class Gemma2(LLMBaseClass):
     """
     Initializes a Gemma2 model object
     """
     def __init__(self) -> None:
-        model_id = "google/gemma-2-9b"
-        super().__init__(model_id)
+        self.model_id = "google/gemma-2-9b"
+        super().__init__(self.model_id)
         

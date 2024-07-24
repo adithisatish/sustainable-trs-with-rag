@@ -1,6 +1,9 @@
 /database
-**/.DS_Store
+.DS_Store
 wikivoyage-listings-en.csv
 ir_results/
 europeancities.csv
 __pycache__/
+.ipynb_checkpoints
+.env
+test_results/
