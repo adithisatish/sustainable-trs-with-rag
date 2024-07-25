@@ -2,6 +2,10 @@ import sys
 import os
 import pandas as pd 
 import numpy as np
+import logging 
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
@@ -39,7 +43,7 @@ def get_seasonality(destination, month = None):
 
     # Check if city is present in dataframe 
     if not len(seasonality_df[seasonality_df['city'] == destination]): 
-        print(f"{destination} does not have seasonality data")
+        logger.info(f"{destination} does not have seasonality data for {month}")
         return (None, None)
 
     if month:

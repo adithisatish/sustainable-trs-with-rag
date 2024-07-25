@@ -49,7 +49,9 @@ def augment_prompt(query, context, sustainability = 0, **params):
     
     """
 
-    prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. You recommend the most sustainable city to the user. The context contains a sustainability score for each city, also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness scores indicates that the city is a more sustainable travel destination for the month provided. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
+    # what about the cities without s-fairness scores? i.e. they don't have seasonality data 
+
+    prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. You recommend the most sustainable city to the user. The context contains a sustainability score for each city, also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness scores indicates that the city is a more sustainable travel destination for the month provided. A city without a sustainability score should not be considered. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
 
     if sustainability: 
         prompt = generate_prompt(query, context, prompt_with_sustainability)
@@ -59,33 +61,103 @@ def augment_prompt(query, context, sustainability = 0, **params):
     return prompt
 
 def format_context(context):
-    # TO-DO: Some post processing for context???
-    pass
+    """
+    Function that formats the retrieved context in a way that is easy for the LLM to understand. 
+
+    Args:
+        - context: list[dict]; retrieved context 
+    
+    """
+    
+    formatted_context = []
+    
+    for city, info in context.items():
+        
+        # city = list(item.keys())[0]
+        # info = item[city]
+
+        city_info = {}
+        city_info['city'] = city
+        city_info['country'] = info['country']
+
+        text = f"{city} is a city in {info['country']}."
+        info_text = f"Here is some information about the city. {info['text']}"
+
+        attractions_text = "Here are some attractions: "
+        att_flag = 0
+        restaurants_text = "Here are some places to eat/drink: "
+        rest_flag = 0
+
+        hotels_text = "Here are some hotels: "
+        hotel_flag = 0
+        
+        if len(info['listings']):
+            for listing in info['listings']:
+                if listing['type'] in ['see', 'do', 'go', 'view']:
+                    att_flag = 1
+                    attractions_text+= f"{listing['name']} ({listing['description']}), "
+                elif listing['type'] in ['eat', 'drink']:
+                    rest_flag = 1
+                    restaurants_text+= f"{listing['name']} ({listing['description']}), "
+                else:
+                    hotel_flag = 1
+                    hotels_text+= f"{listing['name']} ({listing['description']}), "
+
+        # If we add sustainability in the end then it could get truncated because of context window
+        if "sustainability" in info:
+            if info['sustainability']['month'] =='No data available':
+                sfairness_text = "This city has no sustainability (or s-fairness) score available."
+            
+            else:
+                sfairness_text = f"The sustainability (or s-fairness) score for {city} in {info['sustainability']['month']} is {info['sustainability']['s-fairness']}. \n "
+
+            text+=sfairness_text
+        
+        text+=info_text
+            
+        if att_flag:
+            text += f"\n{attractions_text}"
+
+        if rest_flag:
+            text += f"\n{restaurants_text}"
+
+        if hotel_flag:
+            text += f"\n{hotels_text}"
+
+        city_info['text'] = text
+
+        formatted_context.append(city_info)
+
+    return formatted_context
+
 
 def test(): 
     context_params = {
-        'limit': 2,
+        'limit': 3,
         'reranking': 0
     }
 
     query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing in winter."
 
     # without sustainability
-    context = ir.get_context(query=query, params=context_params)
+    context = ir.get_context(query, **context_params)
+    formatted_context = format_context(context)
+
     without_sfairness = augment_prompt(
         query=query, 
-        context=context,
+        context=formatted_context,
         sustainability=0,
         params=context_params
     )
 
     # with sustainability
     context_params.update({'sustainability': 1})
-    context = ir.get_context(query=query, params=context_params)
+    s_context = ir.get_context(query, **context_params)
+    s_formatted_context = format_context(s_context)
 
     with_sfairness = augment_prompt(
         query=query, 
-        context=context,
+        context=s_formatted_context,
         sustainability=1,
         params=context_params
     )

@@ -119,12 +119,25 @@ def get_sustainability_scores(query, destinations):
     logger.info("Finished getting s-fairness scores.")
 
     for city, scores in city_scores.items():
-        min_score = min(scores, key=lambda x: x['s-fairness'])
-        result.append({
-            'city': city,
-            'month': min_score['month'],
-            's-fairness': min_score['s-fairness']
-        })
+        
+        no_result = 0
+        for score in scores:
+            if not score['month']:
+                no_result = 1
+                result.append({
+                    'city': city,
+                    'month': 'No data available',
+                    's-fairness': 'No data available'
+                })
+                break
+        
+        if not no_result:
+            min_score = min(scores, key=lambda x: x['s-fairness'])
+            result.append({
+                'city': city,
+                'month': min_score['month'],
+                's-fairness': min_score['s-fairness']
+            })
 
     logger.info("Returning s-fairness results.")
     return result
