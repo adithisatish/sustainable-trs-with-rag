@@ -38,10 +38,10 @@ def generate_response(model, prompt):
 
 def test():
     context_params = {
-        'limit': 5,
+        'limit': 3,
         'reranking': 0
     }
-    model = Mistral
+    model = Llama3
 
     query = "Suggest some places to visit during winter where I can go for hikes."
 
