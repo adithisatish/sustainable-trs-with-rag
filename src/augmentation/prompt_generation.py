@@ -25,7 +25,7 @@ def generate_prompt(query, context, template = None):
 
     USER_PROMPT = """ Question: {}
 
-    Context: {}
+    Context: Here are the options: {} Which city do you recommend and why?
 
     """
 
@@ -69,18 +69,11 @@ def format_context(context):
     
     """
     
-    formatted_context = []
+    formatted_context = ''
     
-    for city, info in context.items():
-        
-        # city = list(item.keys())[0]
-        # info = item[city]
+    for i, (city, info) in enumerate(context.items()):
 
-        city_info = {}
-        city_info['city'] = city
-        city_info['country'] = info['country']
-
-        text = f"{city} is a city in {info['country']}."
+        text = f"Option {i+1}: {city} is a city in {info['country']}."
         info_text = f"Here is some information about the city. {info['text']}"
 
         attractions_text = "Here are some attractions: "
@@ -124,9 +117,7 @@ def format_context(context):
         if hotel_flag:
             text += f"\n{hotels_text}"
 
-        city_info['text'] = text
-
-        formatted_context.append(city_info)
+        formatted_context+= text + "\n\n "
 
     return formatted_context
 
