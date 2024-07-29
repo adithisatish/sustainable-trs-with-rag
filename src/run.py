@@ -32,7 +32,7 @@ logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 TEST_DIR = "../tests/"
 MODELS = [Llama3, Mistral, Gemma2, Llama3Point1]
 
-def run(query, model):
+def run(query, model, **params):
     """
     
     Executes the entire RAG pipeline, provided the query and model class name.
@@ -40,12 +40,28 @@ def run(query, model):
     Args: 
         - query: str
         - model: class name, one of the following: Llama3, Mistral, Gemma2, Llama3Point1
+        - params: 
+            - limit (number of results to be retained) 
+            - reranking (binary, whether to rerank results using ColBERT or not)
+            - sustainability
+
     
     """
     context_params = {
         'limit': 5,
-        'reranking': 0
+        'reranking': 0,
+        'sustainability': 0
     }
+
+    if 'limit' in params:
+        context_params['limit'] = params['limit'] 
+    
+    if 'reranking' in params: 
+        context_params['reranking'] = params['reranking']
+    
+    if 'sustainability' in params: 
+        context_params['sustainability'] = params['sustainability']
+
 
     logger.info("Retrieving context..")
     try:
@@ -54,9 +70,9 @@ def run(query, model):
         logger.error(f"Error while trying to get context: {e}")
         return None
     
-    logger.info("Retrieved context, augmenting prompt (without sustainability)..")
+    logger.info("Retrieved context, augmenting prompt..")
     try:
-        without_sfairness = pg.augment_prompt(
+        prompt = pg.augment_prompt(
             query=query, 
             context=context,
             sustainability=0,
@@ -70,7 +86,7 @@ def run(query, model):
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
-        response = tg.generate_response(model, without_sfairness)
+        response = tg.generate_response(model, prompt)
     except Exception as e: 
         logger.info(f"Error while generating response: {e}")
         return None

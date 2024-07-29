@@ -22,6 +22,8 @@ class LLMBaseClass():
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
+        self.tokenizer.chat_template = "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{% for message in messages %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}"
+
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id,
             torch_dtype=torch.bfloat16,
@@ -39,7 +41,7 @@ class LLMBaseClass():
 
         # print(messages[0])
         input_ids = self.tokenizer.apply_chat_template(
-            messages,
+            conversation=messages,
             add_generation_prompt=True,
             return_tensors="pt",
             padding=True
@@ -48,7 +50,8 @@ class LLMBaseClass():
         outputs = self.model.generate(
             input_ids,
             max_new_tokens=1024,
-            eos_token_id=self.terminators,
+            # eos_token_id=self.terminators,
+            pad_token_id=self.tokenizer.eos_token_id ,
             do_sample=True,
             temperature=0.6,
             top_p=0.9,
@@ -63,6 +66,7 @@ class Llama3(LLMBaseClass):
     """
     def __init__(self) -> None:
         self.model_id = "meta-llama/Meta-Llama-3-8B"
+
         super().__init__(self.model_id)
 
 class Mistral(LLMBaseClass):

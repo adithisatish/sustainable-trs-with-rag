@@ -39,8 +39,8 @@ def generate_response(model, prompt):
 
 def test(model):
     context_params = {
-        'limit': 10,
-        'reranking': 1
+        'limit': 3,
+        'reranking': 0
     }
     # model = Llama3Point1
 
@@ -66,7 +66,7 @@ def test(model):
         logger.error(f"Error while trying to augment prompt: {e}")
         return None
     
-    return without_sfairness
+    # return without_sfairness
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
@@ -79,7 +79,7 @@ def test(model):
 
 
 if __name__ == "__main__":
-    response = test(Mistral)
+    response = test(Llama3)
     print(response)
 
     
