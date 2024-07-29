@@ -25,7 +25,9 @@ def generate_prompt(query, context, template = None):
 
     USER_PROMPT = """ Question: {}
 
-    Context: Here are the options: {} Which city do you recommend and why?
+    Context: Here are the options: {} 
+    
+    Your answer must contain the name of the city and the reason for recommending it. Answer:
 
     """
 
@@ -36,29 +38,6 @@ def generate_prompt(query, context, template = None):
             ]
 
     return messages
-
-def augment_prompt(query, context, sustainability = 0, **params):
-    """
-    Function that accepts the user query as input, obtains relevant documents and augments the prompt with the retrieved context, which can be passed to the LLM. 
-
-    Args: 
-        - query: str
-        - context: retrieved context, must be formatted otherwise the LLM cannot understand the nested dictionaries!
-        - sustainability: bool; if true, then the prompt is appended to instruct the LLM to use s-fairness scores while generating the answer
-        - params: key-value parameters to be passed to the get_context function; sets the limit of results and whether to rerank the results
-    
-    """
-
-    # what about the cities without s-fairness scores? i.e. they don't have seasonality data 
-
-    prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. You recommend the most sustainable city to the user. The context contains a sustainability score for each city, also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness scores indicates that the city is a more sustainable travel destination for the month provided. A city without a sustainability score should not be considered. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
-
-    if sustainability: 
-        prompt = generate_prompt(query, context, prompt_with_sustainability)
-    else: 
-        prompt = generate_prompt(query, context)
-
-    return prompt
 
 def format_context(context):
     """
@@ -121,6 +100,31 @@ def format_context(context):
 
     return formatted_context
 
+def augment_prompt(query, context, sustainability = 0, **params):
+    """
+    Function that accepts the user query as input, obtains relevant documents and augments the prompt with the retrieved context, which can be passed to the LLM. 
+
+    Args: 
+        - query: str
+        - context: retrieved context, must be formatted otherwise the LLM cannot understand the nested dictionaries!
+        - sustainability: bool; if true, then the prompt is appended to instruct the LLM to use s-fairness scores while generating the answer
+        - params: key-value parameters to be passed to the get_context function; sets the limit of results and whether to rerank the results
+    
+    """
+
+    # what about the cities without s-fairness scores? i.e. they don't have seasonality data 
+
+    prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to answer the question. You recommend the most sustainable city to the user. The context contains a sustainability score for each city, also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness scores indicates that the city is a more sustainable travel destination for the month provided. A city without a sustainability score should not be considered. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
+
+    # format context
+    formatted_context = format_context(context)
+
+    if sustainability: 
+        prompt = generate_prompt(query, formatted_context, prompt_with_sustainability)
+    else: 
+        prompt = generate_prompt(query, formatted_context)
+
+    return prompt
 
 def test(): 
     context_params = {
@@ -132,11 +136,11 @@ def test():
 
     # without sustainability
     context = ir.get_context(query, **context_params)
-    formatted_context = format_context(context)
+    # formatted_context = format_context(context)
 
     without_sfairness = augment_prompt(
         query=query, 
-        context=formatted_context,
+        context=context,
         sustainability=0,
         params=context_params
     )
@@ -144,11 +148,11 @@ def test():
     # with sustainability
     context_params.update({'sustainability': 1})
     s_context = ir.get_context(query, **context_params)
-    s_formatted_context = format_context(s_context)
+    # s_formatted_context = format_context(s_context)
 
     with_sfairness = augment_prompt(
         query=query, 
-        context=s_formatted_context,
+        context=s_context,
         sustainability=1,
         params=context_params
     )

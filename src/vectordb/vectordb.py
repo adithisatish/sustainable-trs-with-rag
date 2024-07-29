@@ -59,22 +59,34 @@ def search_wikivoyage_docs(query, limit=10, reranking = 0):
     uri = database_dir
     # print(uri)
     db = lancedb.connect(uri)
-    logger.info("Connected to DB.") 
+    logger.info("Connected to Wikivoyage DB.") 
 
     # query_embedding = embed_query(query)
     table = db.open_table("wikivoyage_documents")
 
     if reranking: 
-        reranker = CrossEncoderReranker()
-        results = table.search(query) \
-                    .rerank(reranker=reranker) \
-                    .limit(limit) \
-                    .to_list()
+        try:
+            reranker = ColbertReranker(column='text')
+            results = table.search(query) \
+                        .metric('cosine') \
+                        .rerank(reranker=reranker) \
+                        .limit(limit) \
+                        .to_list()
+        except Exception as e: 
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+            logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
 
     else:
-        results = table.search(query) \
+        try:
+            results = table.search(query) \
                     .limit(limit) \
+                    .metric('cosine') \
                     .to_list()
+        except Exception as e: 
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+            logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
         
     logger.info("Found the most relevant documents.")
     city_lists = [{"city": r['city'], "country": r['country'], "section": r['section'], "text": r['text']} for r in results]
@@ -98,25 +110,38 @@ def search_wikivoyage_listings(query, cities, limit=10, reranking = 0):
     """
     uri = database_dir
     db = lancedb.connect(uri)
-    logger.info("Connected to DB.")
+    logger.info("Connected to Wikivoyage Listings DB.")
 
     table = db.open_table("wikivoyage_listings")
     
     cities_filter = f"city IN {tuple(cities)}"
 
     if reranking: 
-        reranker = CrossEncoderReranker()
-        results = table.search(query) \
-                    .where(cities_filter) \
-                    .rerank(reranker=reranker) \
-                    .limit(limit) \
-                    .to_list()
+        try: 
+            reranker = ColbertReranker(column='description')
+            results = table.search(query) \
+                        .where(cities_filter) \
+                        .metric('cosine') \
+                        .rerank(reranker=reranker) \
+                        .limit(limit) \
+                        .to_list()
+            
+        except Exception as e: 
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+            logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
 
     else:
-        results = table.search(query) \
-                    .where(cities_filter) \
-                    .limit(limit) \
-                    .to_list()
+        try:
+            results = table.search(query) \
+                        .where(cities_filter) \
+                        .metric('cosine') \
+                        .limit(limit) \
+                        .to_list()
+        except Exception as e: 
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+            logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
         
     logger.info("Found the most relevant documents.")
     city_listings = [{"city": r['city'], "country": r['country'], "type": r['type'], "title": r['title'], "description": r['description']} for r in results]

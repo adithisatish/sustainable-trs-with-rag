@@ -74,7 +74,7 @@ def compute_sfairness_score(destination, month = None):
 
     # RECHECK
     if seasonality[1] is not None and popularity is not None:
-        s_fairness = 0.281 * emissions + 0.334 * popularity + 0.385 * seasonality[1]
+        s_fairness = round(0.281 * emissions + 0.334 * popularity + 0.385 * seasonality[1], 3)
         return {
             'month': month, 
             's-fairness': s_fairness

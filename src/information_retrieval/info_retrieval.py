@@ -154,8 +154,8 @@ def get_context(query, **params):
     
     """
 
-    limit = 10 
-    reranking = 0
+    limit = 3 
+    reranking = 1
 
     if 'limit' in params:
         limit = params['limit'] 
@@ -205,7 +205,7 @@ def test():
         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
         logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
     
-    file_path = os.path.join(os.getcwd(), "information_retrieval", "ir_results", "test_result.json")
+    file_path = os.path.join(os.getcwd(), "test_results", "test_result.json")
     with open(file_path, 'w') as file: 
         json.dump(context, file)
 

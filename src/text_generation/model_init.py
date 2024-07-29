@@ -20,12 +20,15 @@ class LLMBaseClass():
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+        self.tokenizer.pad_token = self.tokenizer.eos_token
+
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id,
             torch_dtype=torch.bfloat16,
             device_map="auto",
-            quantization_config=bnb_config
+            quantization_config=bnb_config,
         )
+        self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
         self.terminators = [
             self.tokenizer.eos_token_id,
@@ -38,7 +41,8 @@ class LLMBaseClass():
         input_ids = self.tokenizer.apply_chat_template(
             messages,
             add_generation_prompt=True,
-            return_tensors="pt"
+            return_tensors="pt",
+            padding=True
         ).to(self.model.device)
 
         outputs = self.model.generate(
@@ -76,4 +80,11 @@ class Gemma2(LLMBaseClass):
     def __init__(self) -> None:
         self.model_id = "google/gemma-2-9b"
         super().__init__(self.model_id)
-        
+
+class Llama3Point1(LLMBaseClass):
+    """
+    Initializes a Llama 3.1 object 
+    """
+    def __init__(self) -> None:
+        self.model_id = "meta-llama/Meta-Llama-3.1-8B"
+        super().__init__(self.model_id)

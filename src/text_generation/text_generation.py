@@ -1,13 +1,14 @@
-import os 
-import sys 
-import ollama
 from augmentation import prompt_generation as pg
 from information_retrieval import info_retrieval as ir
 from text_generation.model_init import (
     Llama3,
     Mistral,
-    Gemma2
+    Gemma2,
+    Llama3Point1,
 )
+import os 
+import sys 
+import ollama
 import logging 
 
 logger = logging.getLogger(__name__)
@@ -36,19 +37,19 @@ def generate_response(model, prompt):
 
     return response
 
-def test():
+def test(model):
     context_params = {
-        'limit': 3,
-        'reranking': 0
+        'limit': 10,
+        'reranking': 1
     }
-    model = Llama3
+    # model = Llama3Point1
 
-    query = "Suggest some places to visit during winter where I can go for hikes."
+    query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing in winter."
 
     # without sustainability
     logger.info("Retrieving context..")
     try:
-        context = ir.get_context(query=query, params=context_params)
+        context = ir.get_context(query=query, **context_params)
     except Exception as e:
         logger.error(f"Error while trying to get context: {e}")
         return None
@@ -64,6 +65,8 @@ def test():
     except Exception as e:
         logger.error(f"Error while trying to augment prompt: {e}")
         return None
+    
+    return without_sfairness
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
@@ -76,7 +79,7 @@ def test():
 
 
 if __name__ == "__main__":
-    response = test()
+    response = test(Mistral)
     print(response)
 
     

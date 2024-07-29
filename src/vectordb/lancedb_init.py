@@ -5,7 +5,7 @@ import os
 import sys
 import re 
 from sentence_transformers import SentenceTransformer
-from lancedb.rerankers import CrossEncoderReranker
+from lancedb.rerankers import CrossEncoderReranker, ColbertReranker
 from lancedb.embeddings import get_registry
 from lancedb.util import attempt_import_or_raise
 from lancedb.pydantic import LanceModel, Vector

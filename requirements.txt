@@ -11,3 +11,4 @@ lancedb==0.10.2
 bitsandbytes==0.43.2
 sentencepiece==0.2.0
 protobuf==5.27.2
+transformers==4.43.3
