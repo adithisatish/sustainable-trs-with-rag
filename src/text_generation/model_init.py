@@ -22,7 +22,9 @@ class LLMBaseClass():
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
-        self.tokenizer.chat_template = "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{% for message in messages %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}"
+        # self.tokenizer.chat_template = "{% if not add_generation_prompt is defined %}{% set add_generation_prompt = false %}{% endif %}{% for message in messages %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}"
+
+        self.tokenizer.chat_template = "{%- for message in messages %}{%- if message['role'] == 'user' %}{{- bos_token + '[INST] ' + message['content'].strip() + ' [/INST]' }}{%- elif message['role'] == 'system' %}{{- '<<SYS>>\\n' + message['content'].strip() + '\\n<</SYS>>\\n\\n' }}{%- elif message['role'] == 'assistant' %}{{- '[ASST] '  + message['content'] + ' [/ASST]' + eos_token }}{%- endif %}{%- endfor %}"
 
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id,
@@ -51,7 +53,7 @@ class LLMBaseClass():
             input_ids,
             max_new_tokens=1024,
             # eos_token_id=self.terminators,
-            pad_token_id=self.tokenizer.eos_token_id ,
+            pad_token_id=self.tokenizer.eos_token_id,
             do_sample=True,
             temperature=0.6,
             top_p=0.9,
