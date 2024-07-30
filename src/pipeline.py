@@ -11,9 +11,6 @@ What are your 10 test prompts? Generate them in JSON.
 
 """
 
-import os 
-import sys 
-import ollama
 from augmentation import prompt_generation as pg
 from information_retrieval import info_retrieval as ir
 from text_generation.model_init import (
@@ -24,22 +21,26 @@ from text_generation.model_init import (
 )
 from text_generation import text_generation as tg
 import logging 
-import json
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 TEST_DIR = "../tests/"
-MODELS = [Llama3, Mistral, Gemma2, Llama3Point1]
+MODELS = {
+        'Llama3': Llama3, 
+        'Mistral': Mistral, 
+        'Gemma2': Gemma2, 
+        'Llama3.1': Llama3Point1,
+    }
 
-def run(query, model, **params):
+def pipeline(query, model_name, **params):
     """
     
     Executes the entire RAG pipeline, provided the query and model class name.
 
     Args: 
         - query: str
-        - model: class name, one of the following: Llama3, Mistral, Gemma2, Llama3Point1
+        - model_name: string, one of the following: Llama3, Mistral, Gemma2, Llama3Point1
         - params: 
             - limit (number of results to be retained) 
             - reranking (binary, whether to rerank results using ColBERT or not)
@@ -47,6 +48,9 @@ def run(query, model, **params):
 
     
     """
+
+    model = MODELS[model_name]
+
     context_params = {
         'limit': 5,
         'reranking': 0,
