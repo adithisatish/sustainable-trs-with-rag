@@ -1,0 +1,29 @@
+I recommend Innsbruck. It is a great city for winter sports enthusiasts and offers a variety of activities and attractions for visitors. The city is located in a beautiful setting surrounded by mountains, making it a popular destination for skiing, snowboarding, and other outdoor activities. Additionally, Innsbruck is home to several museums, including the [[Alpenzoo]], the [[Tyrolean State Museum]], and the [[Innsbruck Hofkirche]], which offer a glimpse into the city's rich cultural heritage.
+
+
+    Context: Here are the options: Option 1: Strasbourg is a city in France.The sustainability (or s-fairness) score for Strasbourg in Jan is 0.024. 
+ Here is some information about the city. Strasbourg is the ninth largest city in France with nearly half a million inhabitants in a metropolitan area spanning across the river into the [[Germany|German]] city of [[Kehl]], on the eastern bank of the Rhine.
+The city is the seat of the Council of Europe, the European Court of Human Rights, the European Ombudsman, the Eurocorps, the European Audiovisual Observatory and, most famously, the [ European Parliament], which also holds sessions in [[Brussels]].
+Strasbourg is a popular tourist destination primarily thanks to the beautifully preserved and pedestrian friendly city centre, which can be explored on foot or bicycle in a few days. Don't forget that Strasbourg's appeal now brings tourists to the city throughout the year, with large tour groups especially frequent during the summer months and during the annual winter market.
+* {{listing
+| nameThe main Tourist Office | alt | url | email
+| addressPlace de la Cathédrale | lat | long | directions
+| phone | tollfree | fax
+| hours09:00 to 19:00 | price
+| lastedit2010-09-30
+| contentIf you ask whether they have maps they try to sell you one for €1.50 - be sure to ask if they have free maps, what you then get is basically the same as the paid one. They also sell a variety of self-guided walking tours through the town (Middle Ages, Renaissance, Modern and Contemporary) for €1 each, and can arrange bike tours through the Faubourgs (the suburbs of Neudorf and Neuhof).
+}}
+* {{listing
+| nameA smaller tourist office | alt | url | email
+| address | lat | long | directionsin the concourse level of the railway station
+| phone | tollfree
+| hours 09:00 to 19:00| price
+| wikipedia | wikidata
+| lastedit2010-09-30
+| content
+}}
+
+ Option 2: Bratislava is a city in Slovakia.The sustainability (or s-fairness) score for Bratislava in Jan is 0.113. 
+ Here is some information about the city. '''Bryndzové halušky''' (small, spaetzle-like dumplings with sheep's cheese and topped with pieces of meat) is the national dish of Slovakia and recommended to try. Potent garlic soup (but perhaps not on a date) and Slovak white wine (due to its cooler climate, Slovakia's reds pale in comparison with some of Europe's other offerings), schnitzels, goulashes and other typically Central European foods. Fresh vegetables are more common here thanks to the large amount of land given over to agriculture.
+In December, don't miss the '''Christmas market''' in front of the Old Town Hall. The traditional foods of the Christmas market are roasted pork or chicken sandwich burgers ("ciganska pecienka") with mustard and onions, potato pancakes ("loksa") with various fillings ranging traditionally from plain ones with goose fat, with garlic or goose liver to poppy seed, nut or chocolate. Bread with pork fat and onions is also popular. Also there are a few stands which offer specialities from other European countries. You can wash down the food with a cup of red or white mulled wine or a small cup of honey wine, also tea with or without rum is available, as well as grog or other "hot mixed drinks" like the Červený medveď (red bear).
+There are a large number of restaurants in the center of Bratislava in all price ranges so there are plenty to choose from

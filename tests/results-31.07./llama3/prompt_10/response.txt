@@ -1,0 +1,38 @@
+ I recommend Amsterdam. It is a city with many festivals, a great art scene, and a wide variety of museums. The city is known for its canals, which are a popular destination for tourists. The city also has a rich history, and there are many interesting museums to explore. Amsterdam is a great destination for those who are interested in culture and history.
+
+    [/SYS]
+
+[INST] I love wildlife, national parks, and outdoor adventures. Can you recommend some destinations in Europe for a spring trip? Which city do you recommend and why?
+
+    Context: Here are the options: Option 1: Mykolaiv is a city in Ukraine.Here is some information about the city. * Ukrainian theatre.
+* Russian drama theatre.
+* Zoo [ (one of the biggest in Europe, the biggest in Ukraine).
+* [ Museum of Shipbuilding and Fleet]
+* Museum of Arts.
+* Lutheran Church.
+* Catholic Church.
+* Russian Orthodox Church (1825).
+* Ukrainian Orthodox Church.
+* Synagogue.
+* Astronomical observatory [ (1821, 31.58E,46.58N).
+* Swimming pool 'Vodoley' [
+* Radsad wineries (right bank of the Southern Bug river).
+* Old Greek settlement Olvio (30 km south of Mykolaiv).
+* Yacht-club.
+* Soborna (main pedestrian street in town) is the place to be any night of the week with several gorgeous parks and lots of shopping.
+
+ Option 2: Strasbourg is a city in France.Here is some information about the city. * Walking around the old town is a very nice way to pass a day. And there are lots of good cafes to stop and rest in as you make your tour.
+* '''Boat tours''' along the Rhine offer views over both Strasbourg and neighbouring Germany. [ Batorama] offer several river tours lasting from around 45 minutes to a few hours, costing around €10 per person. 45-min tours run around the town center and the European district. Boats can be found below {{lang|fr|Place du Marché aux Poissons}}.
+* '''Football:''' [ RC Strasbourg Alsace] play soccer in Ligue 1, the top tier in France. Their home ground Stade de la Meinau (capacity 26,300) is 2 km south of town centre. 
+* '''[[Christmas Markets]]''' can be found in many places, but the most important and beautiful are {{lang|fr|place Broglie}} and {{lang|fr|place de la Cathédrale}}, although they are crowded. They are the best places to drink hot wine (''{{lang|fr|vin chaud}}'') and to eat Christmas cookies (''Brädeles'').
+
+ Option 3: Arkhangelsk is a city in Russia.Here is some information about the city. * Walk through Northern Dvina embankment, see kilometers of water and feel strong wind in any season.
+* Have something to drink in city cafes.
+* Visit one of the city festivals (summer: street theatres from all Europe, winter: ice sculpture festivals)
+* Arkhangelsk is called to be cultural capital of Russian North, so plunge into local culture: pay attention to the natural history museum and the gallery of arts, spend an evening at a classical organ concert in a music hall inside a former church.
+* Try Northern Dvina's beach in summer (bathing is not recommended due to environmental reasons, but still allowed and possible).
+* Spend a couple of hours on a skating-rink or take a skiing day-off in winter.
+* Get out to see severe Northern nature, rural settlements, and wooden temples.
+
+ Option 4: Amsterdam is a city in Netherlands.Here is some information about the city. The locals spend their summer days in Amsterdam uncorking bottles of red wine in the '''Vondelpark'''. Every district in Amsterdam has at least one park, but the [[Amsterdam/Zuid|Vondelpark]] stands out for its size and convivial atmosphere. The neighbourhood best known for its trees and gardens is the [[Amsterdam/Plantage|Plantage]]. Besides leafy boulevards and grand mansions it also features the botanical gardens of the '''Hortus Botanicus''' and has '''Artis Zoo''' for the kids.
+Another major patch of nature is '''Amsterdamse Bos''', which, directly translated, means Amsterdam Forest, but is more like a giant park. Amsterdamse Bos also offers Fun Forest, a climbing trail between the trees, and the Bosmuseum about the forest, which is actually a lot of fun, especially if you're [[travelling with children]]. Both are near the main entrance in Amsterdam Zuid. Amsterdamse Bos is on the outskirts of the city, not far from Schiphol, partially  in [[Amstelveen]] and Oudekerk, and near [[Aalsmeer]] Nieuw Oosteinde

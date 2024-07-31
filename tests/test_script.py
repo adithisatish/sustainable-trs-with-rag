@@ -66,7 +66,7 @@ def test():
             # with sustainability
             try:
                 logger.info(f"Running pipeline for {model_name} with sustainability..")
-                response = pipeline(
+                cities, response = pipeline(
                     query = item['prompt'],
                     model_name = model_name,
                     test = 1,
@@ -89,6 +89,8 @@ def test():
 
                 with open(f"{prompt_results_dir}/cities_sustainable.json", 'w') as file: 
                     json.dump(cities, file)
+
+                logger.info(f"Stored response in {prompt_results_dir}")
 
 
 if __name__ == "__main__":

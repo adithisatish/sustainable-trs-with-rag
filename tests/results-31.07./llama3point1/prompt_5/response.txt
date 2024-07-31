@@ -1,0 +1,31 @@
+ I recommend Nalchik, Russia. It is a beautiful city with stunning scenery and plenty of activities to keep you busy. The city is surrounded by mountains, making it a great place for hiking, skiing, and horseback riding. The city is also home to a number of historical and cultural sites, including the Besengi Valley and Chegem Valley. The city is also known for its strong horse riding culture, with the kabarda and balkar being famous horse-riders. The city is a great place to visit for those who love the outdoors and want to experience the beauty of the Russian countryside.
+    [/INST]
+
+[INST] Question: Recommend a city for a romantic weekend. I want to feel the atmosphere of a small town, walk through the streets, and have a nice dinner. I don't want to go to a city with a lot of tourists.
+
+    Context: Here are the options: Option 1: Arkhangelsk is a city in Russia.Here is some information about the city. * Walk through Northern Dvina embankment, see kilometers of water and feel strong wind in any season.
+* Have something to drink in city cafes.
+* Visit one of the city festivals (summer: street theatres from all Europe, winter: ice sculpture festivals)
+* Arkhangelsk is called to be cultural capital of Russian North, so plunge into local culture: pay attention to the natural history museum and the gallery of arts, spend an evening at a classical organ concert in a music hall inside a former church.
+* Try Northern Dvina's beach in summer (bathing is not recommended due to environmental reasons, but still allowed and possible).
+* Spend a couple of hours on a skating-rink or take a skiing day-off in winter.
+* Get out to see severe Northern nature, rural settlements, and wooden temples.
+
+ Option 2: Craiova is a city in Romania.Here is some information about the city. Visit Art Palace.
+Visit Nicolae Romanescu Park.
+Art Museum is interesting and well worth the walk there.
+
+ Option 3: Nalchik is a city in Russia.Here is some information about the city. Orekhovaya Roscha Square is a verdant area to walk around. Even moreso is the Central Park of Culture and Recreation (Ob'yedineniye Parka Kul'tury I Otdykha) which includes many artificial lakes, Atazhukinsky Garden,an amusement park, and paddle-boat rental. 
+Viewpoints
+A chair lift is available to the top of a hill to a restaurant with a nice view.
+Take the gondolas / cabins to the top (2nd station). The snow-cat will take you to the Elbrus base camp at 4200 m.
+Hiking
+The Bezengi valley and Chegem valley are a 1 hour drive from Nalchik. The mountains there are not as high (more pre-alps type) but the sceneries and the flora are just as beautiful and you will not a meet any tourist (at least after you pass the Chegem waterfalls).
+Don't expect nicely marked paths. Just get yourself a good map in a bookstore. Alternatively simply drive to the valley and choose a path going sideways. The mountains are used for livestock rearing in the summer so that there are always plenty of shepherds and cowboys. You will find tracks made by the animals and paths. These may not always lead you to the summits but will get you to the passes.
+In winter you can do snow-boot hiking. It is safer to stick to the Cheget / Elbrus area which is more populated in winter.
+Skiing
+In winter, you can ski at either Mount Cheget or Mount Elbrus, which are less than 10km from each other. Lifts are generally quite old and run down. Cheget is a more challenging ski resort than Elbrus. The snow tends to be better on Elbrus side, which has a higher altitude, and the trails are prepared at Elbrus. Both ski resorts have only 2-3 lifts.
+In both places you will find rental equipment but you will have more choices in Cheget. A daily ski lift pass costs around {{RUB|800}}.
+If you intend to spend a night at the ski resort, sleep at Cheget. It is friendlier, hotels and restaurants are better, and has more of a resort-feel than Elbrus. Cheget has a few restaurants, a disco bar under the big ugly hotel Cheget, a small market with traditional products and an ice-ring.
+Horse riding
+The kabarda (and balkar) are famous horse-riders. They have successfully bred their own type of horse "kabardin", which has achieved a certain fame. It is considered a very resistent, sturdy, hard working, small-sized horse. Locally, these horses are used for livestock rearing in the mountains. If you are a proficient rider, go

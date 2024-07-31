@@ -1,0 +1,36 @@
+ I recommend Mykolaiv as the city that best suits your question. It is a city in Ukraine that has a lot of culture and history, and is a great place to visit for anyone interested in wildlife, national parks, and outdoor adventures. It has a rich cultural heritage and is home to many historic sites, such as the Ukrainian theatre, Russian drama theatre, and the Museum of Shipbuilding and Fleet. It is also home to the oldest zoo in Ukraine, which is one of the biggest in Europe. Additionally, the city is home to many museums, such as the Museum of Arts, the Lutheran Church, and the Russian Orthodox Church (1825). The city is also known for its beautiful parks, such as the Astronomical observatory (1821, 31.58E,46.58N), the Radsad wineries (right bank of the Southern Bug river), the Old Greek settlement Olvio (30 km south of Mykolaiv), and the Yacht-club. The city is also known for its vibrant nightlife, with many cafes and bars located along the Soborna (main pedestrian street in town). The city is also home to many cultural events and festivals, such as the Mykolaiv Jazz Festival, the Mykolaiv Film Festival, and the Mykolaiv Music Festival. These festivals are a great way to experience the city's culture and enjoy live music and performances.
+    
+    [/INST]
+    
+    <</SYS>>
+You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to suggest the city that is best suited to the user's question. Your answer must begine with "I recommend " followed by the city name and why you recommended it. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer."
+<</SYS>>
+
+[INST] Question: I am a history buff and I am interested in visiting Europe. Can you recommend some destinations that offer a rich history and culture? Which city do you recommend and why?
+
+    Context: Here are the options: Option 1: Mykolaiv is a city in Ukraine.Here is some information about the city. * Ukrainian theatre.
+* Russian drama theatre.
+* Zoo [ (one of the biggest in Europe, the biggest in Ukraine).
+* [ Museum of Shipbuilding and Fleet]
+* Museum of Arts.
+* Lutheran Church.
+* Catholic Church.
+* Russian Orthodox Church (1825).
+* Ukrainian Orthodox Church.
+* Synagogue.
+* Astronomical observatory [ (1821, 31.58E,46.58N).
+* Swimming pool 'Vodoley' [
+* Radsad wineries (right bank of the Southern Bug river).
+* Old Greek settlement Olvio (30 km south of Mykolaiv).
+* Yacht-club.
+* Soborna (main pedestrian street in town) is the place to be any night of the week with several gorgeous parks and lots of shopping.
+
+ Option 2: Strasbourg is a city in France.Here is some information about the city. * Walking around the old town is a very nice way to pass a day. And there are lots of good cafes to stop and rest in as you make your tour.
+* '''Boat tours''' along the Rhine offer views over both Strasbourg and neighbouring Germany. [ Batorama] offer several river tours lasting from around 45 minutes to a few hours, costing around €10 per person. 45-min tours run around the town center and the European district. Boats can be found below {{lang|fr|Place du Marché aux Poissons}}.
+* '''Football:''' [ RC Strasbourg Alsace] play soccer in Ligue 1, the top tier in France. Their home ground Stade de la Meinau (capacity 26,300) is 2 km south of town centre. 
+* '''[[Christmas Markets]]''' can be found in many places, but the most important and beautiful are {{lang|fr|place Broglie}} and {{lang|fr|place de la Cathédrale}}, although they are crowded. They are the best places to drink hot wine (''{{lang|fr|vin chaud}}'') and to eat Christmas cookies (''Brädeles'').
+
+ Option 3: Arkhangelsk is a city in Russia.Here is some information about the city. * Walk through Northern Dvina embankment, see kilometers of water and feel strong wind in any season.
+* Have something to drink in city cafes.
+* Visit one of the city festivals (summer: street theatres from all Europe, winter: ice sculpture festivals)
+* Arkhangelsk is called to be cultural capital of Russian North, so plunge into local culture: pay attention to the natural history museum and the gallery of arts, spend an evening at a classical organ concert in a music hall inside
