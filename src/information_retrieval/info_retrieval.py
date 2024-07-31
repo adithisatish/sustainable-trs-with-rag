@@ -142,6 +142,31 @@ def get_sustainability_scores(query, destinations):
     logger.info("Returning s-fairness results.")
     return result
 
+def get_cities(context):
+    """
+    Only to be used for testing! Function that returns a list of cities with their s-fairness scores, provided the retrieved context
+
+    Args:
+        - context: dict
+    
+    """
+
+    recommended_cities = []
+
+    for city, info in context: 
+        city_info = {
+            'city': city,
+            'country': info['country']
+        }
+
+        if "sustainability" in info: 
+            city_info['month'] = info['sustainability']['month']
+            city_info['s-fairness'] = info['sustainability']['s-fairness']
+
+        recommended_cities.append(city_info)
+    
+    return recommended_cities
+        
 
 def get_context(query, **params):
     """

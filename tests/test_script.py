@@ -18,7 +18,7 @@ def test():
     """
     
     Test function - runs the pipeline twice (once without sustainability, once with sustainability enabled) for 10 prompts for each model and stores the results. 
-    The default settings of limit/k = 5 and reranking = 0 for the retrieval are used.
+    The default settings of limit/k = 5 and reranking = 0 for the retrieval are used. The argument "test" in the pipeline must be set to True so that the retrieved list of cities are returned along with the LLM response.
 
     """
     with open("prompts.json","r") as file:
@@ -38,9 +38,10 @@ def test():
             logger.info(f"Prompt {i+1}: {item['prompt']}")
             try:
                 logger.info(f"Running pipeline for {model_name} without sustainability..")
-                response = pipeline(
+                cities, response = pipeline(
                     query = item['prompt'],
-                    model_name = model_name
+                    model_name = model_name,
+                    test = 1,
                 )
             except Exception as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -50,8 +51,17 @@ def test():
             else:
                 logger.info("Pipeline execution complete. Storing response..")
 
-                with open(f"{results_dir}/prompt{i+1}.txt", "w") as f:
+                prompt_results_dir = os.path.join(results_dir, f"prompt_{i+1}")
+
+                if not os.path.exists(prompt_results_dir):
+                    # Create the folder and any necessary intermediate directories
+                    os.makedirs(prompt_results_dir)
+
+                with open(f"{prompt_results_dir}/response.txt", "w") as f:
                     f.write(response)
+
+                with open(f"{prompt_results_dir}/cities.json", 'w') as file: 
+                    json.dump(cities, file)
             
             # with sustainability
             try:
@@ -59,6 +69,7 @@ def test():
                 response = pipeline(
                     query = item['prompt'],
                     model_name = model_name,
+                    test = 1,
                     sustainability = 1
                 )
             except Exception as e:
@@ -69,8 +80,15 @@ def test():
             else:
                 logger.info("Pipeline execution complete. Storing response..")
 
-                with open(f"{results_dir}/prompt{i+1}_sustainable.txt", "w") as f:
+                if not os.path.exists(prompt_results_dir):
+                    # Create the folder and any necessary intermediate directories
+                    os.makedirs(prompt_results_dir)
+
+                with open(f"{prompt_results_dir}/response_sustainable.txt", "w") as f:
                     f.write(response)
+
+                with open(f"{prompt_results_dir}/cities_sustainable.json", 'w') as file: 
+                    json.dump(cities, file)
 
 
 if __name__ == "__main__":

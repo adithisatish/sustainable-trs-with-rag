@@ -21,7 +21,7 @@ def generate_prompt(query, context, template = None):
     if template: 
         SYS_PROMPT = template
     else:
-        SYS_PROMPT = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to suggest the city that is best suited to the user's question. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
+        SYS_PROMPT = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to suggest the city that is best suited to the user's question. Your answer must begine with "I recommend " followed by the city name and why you recommended it. Your answers are correct, high-quality, and written by an domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
 
     USER_PROMPT = """ Question: {} Which city do you recommend and why?
 

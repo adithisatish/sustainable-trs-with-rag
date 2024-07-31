@@ -33,7 +33,7 @@ MODELS = {
         'Llama3.1': Llama3Point1,
     }
 
-def pipeline(query, model_name, **params):
+def pipeline(query, model_name, test = 0, **params):
     """
     
     Executes the entire RAG pipeline, provided the query and model class name.
@@ -41,6 +41,7 @@ def pipeline(query, model_name, **params):
     Args: 
         - query: str
         - model_name: string, one of the following: Llama3, Mistral, Gemma2, Llama3Point1
+        - test: whether the pipeline is running a test
         - params: 
             - limit (number of results to be retained) 
             - reranking (binary, whether to rerank results using ColBERT or not)
@@ -70,6 +71,9 @@ def pipeline(query, model_name, **params):
     logger.info("Retrieving context..")
     try:
         context = ir.get_context(query=query, **context_params)
+        if test: 
+            retrieved_cities = ir.get_cities(context)
+
     except Exception as e:
         logger.error(f"Error while trying to get context: {e}")
         return None
@@ -95,4 +99,19 @@ def pipeline(query, model_name, **params):
         logger.info(f"Error while generating response: {e}")
         return None
 
-    return response
+    if test:
+        return (retrieved_cities, response)
+
+    else:
+        return response
+    
+if __name__ == "__main__":
+    query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest some European cities?"
+    model_name = "Llama3"
+
+    response = pipeline(
+        query=query,
+        model_name=model_name,
+    )
+
+    print(response)
