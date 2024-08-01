@@ -153,7 +153,7 @@ def get_cities(context):
 
     recommended_cities = []
 
-    for city, info in context: 
+    for city, info in context.items(): 
         city_info = {
             'city': city,
             'country': info['country']

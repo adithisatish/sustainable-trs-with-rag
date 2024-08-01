@@ -1,0 +1,49 @@
+ I recommend Gaziantep because it has a castle, explore the bazaars and don't forget the museum. There are a lot of museums in the center of city, especially some of them are close to castle. You should go Mosaic Museum (close to stadium), Medusa Museum (Glass Museum), Martyr's Museum, Dervishes Museum (''Mevlevihane''), Hasan Süzer Etnographia Museum.
+Walk around the narrow streets of the old town: between Attatürk bd. and Eyüpoglu cd. Sit in one of the Syrian-style cafes located in adorable courtyards and enjoy a tea, a lemonade or a meal. 
+Gaziantep is a quiet and peaceful city, it has a lot of parks, walking around the city in the parks is very pleasant.
+[INST]
+
+[INST] Question: I'm traveling in September and I'm interested in contemporary art, modern architecture, and vibrant urban culture. Where should I go? Which city do you recommend and why?
+
+    Context: Here are the options: Option 1: Craiova is a city in Romania.The sustainability (or s-fairness) score for Craiova in Sep is 0.382. 
+ Here is some information about the city. Visit Art Palace.
+Visit Nicolae Romanescu Park.
+Art Museum is interesting and well worth the walk there.
+
+ Option 2: Gaziantep is a city in Turkey.The sustainability (or s-fairness) score for Gaziantep in Sep is 0.255. 
+ Here is some information about the city. Visit the castle, explore the bazaars and don't forget the museum. There are a lot of museums in the center of city, especially some of them are close to castle. You should go Mosaic Museum (close to stadium), Medusa Museum (Glass Museum), Martyr's Museum, Dervishes Museum (''Mevlevihane''), Hasan Süzer Etnographia Museum.
+Walk around the narrow streets of the old town: between Attatürk bd. and Eyüpoglu cd. Sit in one of the Syrian-style cafes located in adorable courtyards and enjoy a tea, a lemonade or a meal. 
+Gaziantep is a quiet and peaceful city, it has a lot of parks, walking around the city in the parks is very pleasant.
+
+ Option 3: Kahramanmaras is a city in Turkey.The sustainability (or s-fairness) score for Kahramanmaras in Sep is 0.252. 
+ Here is some information about the city. *Walk around at Trabzon Ave.
+*Covered Bazaar: A must see. A big bazaar, where you can buy clothes, presents, etc. There are also a lot of lounges where you can sit.
+
+ Option 4: Mykolaiv is a city in Ukraine.The sustainability (or s-fairness) score for Mykolaiv in Sep is 0.283. 
+ Here is some information about the city. * Ukrainian theatre.
+* Russian drama theatre.
+* Zoo [ (one of the biggest in Europe, the biggest in Ukraine).
+* [ Museum of Shipbuilding and Fleet]
+* Museum of Arts.
+* Lutheran Church.
+* Catholic Church.
+* Russian Orthodox Church (1825).
+* Ukrainian Orthodox Church.
+* Synagogue.
+* Astronomical observatory [ (1821, 31.58E,46.58N).
+* Swimming pool 'Vodoley' [
+* Radsad wineries (right bank of the Southern Bug river).
+* Old Greek settlement Olvio (30 km south of Mykolaiv).
+* Yacht-club.
+* Soborna (main pedestrian street in town) is the place to be any night of the week with several gorgeous parks and lots of shopping.
+
+ Option 5: Baia Mare is a city in Romania.The sustainability (or s-fairness) score for Baia Mare in Sep is 0.267. 
+ Here is some information about the city. The old city center has many options, usually most of the pubs will have some type of food available for you. Most of them are OK.
+*'''Il Padrino''' (Strada Scolii nr. 9) – Pizzeria
+*'''Restaurant Pronto''' (Strada Victoriei nr. 146) – Good and cheap traditional full meals. The restaurant is basic, but the cooks are said to be the best in town. To get there is going to be a little difficult unless you have a bike or a car, cause it is quite far from the city center.
+
+    
+    Answer: [/INST] I recommend Craiova because it has a Art Palace. Visit Nicolae Romanescu Park. Art Museum is interesting and well worth the walk there.
+[INST]
+
+[INST] Question: I'm traveling in September and I'm interested in contemporary art, modern architecture, and vibrant urban culture. Where should I go? Which city do you recommend and

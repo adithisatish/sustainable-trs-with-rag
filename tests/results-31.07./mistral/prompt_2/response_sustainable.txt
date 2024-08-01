@@ -1,0 +1,32 @@
+
+    Answer: 
+
+
+    Context: Here are the options: Option 1: Varna is a city in Bulgaria.The sustainability (or s-fairness) score for Varna in Jun is 0.21. 
+ Here is some information about the city. The beach at night tends to have the most night life in the summer.There are also clubs and bars in the city but some of them are closed during summer: e.g. '''[ Cubo]''', Horizont, Planet Club.
+
+ Option 2: Copenhagen is a city in Denmark.The sustainability (or s-fairness) score for Copenhagen in Jul is 0.12. 
+ Here is some information about the city. Beach life 
+In the inner harbour, water quality has improved so much that it is possible to go for a swim from early June to late August in one of the two harbour baths: '''Copencabana''' on [[Copenhagen/Vesterbro|Vesterbro]] or '''Havnebadet''' at Island Brygge on [[Amager]]. When it is sunny these are packed with people from all walks of life enjoying the sunshine and taking a dip. The municipal administration has put a lot of money and effort into the facilities and this is an excellent opportunity for blending with the locals at their best.
+If you fancy a proper beach, the closest are those at '''Svanemøllen Strand''', '''Charlottenlund Fort''' in [[Copenhagen/Northern suburbs|Charlottenlund]] and '''Amager Strandpark''' (The Lagoon), on [[Amager]] near the Lergravsparken metro station. If the weather is not going your way, you can opt for '''[ DGI Byen]''' which is a leisure centre and excellent swimming pool near the [[Copenhagen/Vesterbro|central railway station]] or the Østerbro swimming pool, modeled after a Roman bath (on [[Copenhagen/Østerbro|Østerbro]]).
+ Amusement parks 
+
+Amazingly, the two oldest functioning amusement parks in the world, with the two oldest roller coasters, are in Copenhagen and they are distinctively different. '''Bakken''' or ''Dyrehavsbakken'' is the older of the two, set in a beautiful beech forest near [[Klampenborg]] north of Copenhagen. This gives it a special atmosphere and it is a lot less touristy than its counterpart — '''Tivoli''' — which is in the [[Copenhagen/Indre By|city centre]] in a beautiful park surrounding a lake.
+ Sports 
+* '''Football:''' [ FC Copenhagen] play soccer in Superliga, the top tier in Denmark. Their home ground Parken Stadium (38,000) also hosts the Danish national team. Three other top-tier clubs play close to the city, notably their rivals Brøndby IF.
+* '''Cycling:''' and see [[Cycling in Denmark]]. In 2022 the Tour de France started in Copenhagen and toured Denmark for three days before departing for France.
+* '''Lifting weights:''' a popular gym with day and week passes while travelling is Pure Gym which has many branches. A week pass costs kr 100 and would allow you to visit any of the branches of this gym in Copenhagen.
+Annual events
+* {{do
+| nameCrafts Fair | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentHeld every year in August — Thursday-Saturday — outdoors at Frue Plads in central Copenhagen. The Crafts Fair has more than 130 exhibitors, all members of the Danish Arts and Crafts Association, exhibiting unique and small series of handmade Arts and Crafts in all categories: ceramic, glass, jewelery, textile, mixed media.
+}}
+* {{do
+| nameCopenhagen Fashion Week | alt8-12 August 2017 | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| content''Held in February and August''. Copenhagen is fast emerging as a global fashion centre, with a host of both up-and-coming and already well established names. For two weeks each year more than 1,000 exhibitors and 50,
