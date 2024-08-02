@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 MODEL_NAMES = ['Llama3', 'Mistral', 'Gemma2', 'Llama3.1']
+INSTRUCTION_TUNED_MODELS = ['Llama3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct', ]
 
 def test():
     """
@@ -38,9 +39,9 @@ def test():
     
     # print(prompts)
     
-    for model_name in MODEL_NAMES: 
-        if model_name == 'Llama3.1':
-                dir_name = 'llama3point1'
+    for model_name in INSTRUCTION_TUNED_MODELS: # To run the normal models, switch "INSTRUCTION_TUNED" to "MODEL_NAMES"
+        if 'Llama3.1' in model_name:
+                dir_name = 'llama3point1-instruct' # change to "llama3point1" for normal models
         else:
             dir_name = model_name.lower()
 

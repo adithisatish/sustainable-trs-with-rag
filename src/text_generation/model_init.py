@@ -94,3 +94,27 @@ class Llama3Point1(LLMBaseClass):
     def __init__(self) -> None:
         self.model_id = "meta-llama/Meta-Llama-3.1-8B"
         super().__init__(self.model_id)
+
+class Llama3Instruct(LLMBaseClass):
+    """
+    Initializes a Llama 3 Instruct object
+    """
+    def __init__(self) -> None:
+        self.model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
+        super().__init__(self.model_id)
+
+class MistralInstruct(LLMBaseClass):
+    """
+    Initializes a Mistral Instruct object
+    """
+    def __init__(self) -> None:
+        self.model_id = "mistralai/Mistral-7B-Instruct-v0.1"
+        super().__init__(self.model_id)
+
+class Llama3Point1Instruct(LLMBaseClass):
+    """
+    Initializes a Llama 3.1 Instruct object
+    """
+    def __init__(self) -> None:
+        self.model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+        super().__init__(self.model_id)

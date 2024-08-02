@@ -10,6 +10,9 @@ from text_generation.model_init import (
     Mistral,
     Gemma2,
     Llama3Point1,
+    Llama3Instruct,
+    MistralInstruct,
+    Llama3Point1Instruct,
 )
 from text_generation import text_generation as tg
 import logging 
@@ -23,6 +26,9 @@ MODELS = {
         'Mistral': Mistral, 
         'Gemma2': Gemma2, 
         'Llama3.1': Llama3Point1,
+        'Llama3-Instruct': Llama3Instruct,
+        'Mistral-Instruct': MistralInstruct,
+        'Llama3.1-Instruct': Llama3Point1Instruct,
     }
 
 def pipeline(query, model_name, test = 0, **params):
