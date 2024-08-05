@@ -35,7 +35,7 @@ MODELS = {
     }
 
 
-def pipeline(query, test = 0, **params):
+def gpt4_pipeline(query, test = 0, **params):
     """
     
     Executes the entire RAG pipeline with GPT-4o, provided the query
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest some European cities?"
     model_name = "Llama3"
 
-    response = pipeline(
+    response = gpt4_pipeline(
         query=query
     )
 

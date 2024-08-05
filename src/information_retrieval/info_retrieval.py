@@ -164,8 +164,9 @@ def get_cities(context):
             city_info['s-fairness'] = info['sustainability']['s-fairness']
 
         recommended_cities.append(city_info)
-    
-    return recommended_cities
+
+    sorted_cities = sorted(recommended_cities, key=lambda x: x['s-fairness'])
+    return sorted_cities
         
 
 def get_context(query, **params):
