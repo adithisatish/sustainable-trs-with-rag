@@ -106,5 +106,17 @@ def test(prompt_file_name, results_dir, start_idx, end_idx, sustainability=0):
 
 if __name__ == "__main__":
     # NEEDS TO BE RUN 
+    # test(
+    #     prompt_file_name="prompts_100.json",
+    #     results_dir="results/results-06.08.",
+    #     start_idx=0,
+    #     end_idx=100,
+    #     sustainability=1
+    # )
 
-    test()
+    test(
+        prompt_file_name="prompts_100.json",
+        results_dir="results/results-06.08.",
+        start_idx=70,
+        end_idx=100,
+    )
