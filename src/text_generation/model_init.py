@@ -6,7 +6,8 @@ load_dotenv()
 import os
 from openai import OpenAI
 
-OAI_API_KEY = os.environ["OPENAI_API_KEY"]
+if "OPENAI_API_KEY" in os.environ:
+    OAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 
 class LLMBaseClass():
