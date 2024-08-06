@@ -1,5 +1,7 @@
 import sys
 import re
+import os
+import json
 sys.path.append("../")
 from src.vectordb import vectordb
 from src.sustainability import s_fairness
@@ -11,7 +13,7 @@ logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 def get_travel_months(query):
     """
-    
+
     Function to parse the user's query and search if month of travel has been provided by the user.
 
     Args:
@@ -48,12 +50,12 @@ def get_travel_months(query):
 
 def get_wikivoyage_context(query, limit=10, reranking=0):
     """
-    
-    Function to retrieve the relevant documents and listings from the wikivoyage database. Works in two steps: 
-    (i) the relevant cities are returned by the wikivoyage_docs table and (ii) then passed on to the wikivoyage listings database to retrieve further information. 
+
+    Function to retrieve the relevant documents and listings from the wikivoyage database. Works in two steps:
+    (i) the relevant cities are returned by the wikivoyage_docs table and (ii) then passed on to the wikivoyage listings database to retrieve further information.
     The user can pass a limit of how many results the search should return as well as whether to perform reranking (uses a CrossEncoderReranker)
 
-    Args: 
+    Args:
         - query: str
         - limit: int
         - reranking: bool
@@ -91,15 +93,14 @@ def get_wikivoyage_context(query, limit=10, reranking=0):
 
 def get_sustainability_scores(query, destinations):
     """
-    
-    Function to get the s-fairness scores for each destination for the given month (or the ideal month of travel if
-    the user hasn't provided a month). If multiple months are provided (or season), then the month with the minimum
-    s-fairness score is chosen for the city.
 
-    Args: 
-        - query: str 
+    Function to get the s-fairness scores for each destination for the given month (or the ideal month of travel if the user hasn't provided a month).
+    If multiple months are provided (or season), then the month with the minimum s-fairness score is chosen for the city.
+
+    Args:
+        - query: str
         - destinations: list
-    
+
     """
 
     result = []  # list of dicts of the format {city: <city>, month: <month>, }
@@ -151,7 +152,7 @@ def get_cities(context):
 
     Args:
         - context: dict
-    
+
     """
 
     recommended_cities = []
@@ -167,7 +168,7 @@ def get_cities(context):
             city_info['s-fairness'] = info['sustainability']['s-fairness']
 
         recommended_cities.append(city_info)
-    
+
     if "sustainability" in info:
         def get_s_fairness_value(item):
             s_fairness = item['s-fairness']
@@ -178,14 +179,14 @@ def get_cities(context):
         # Sort the list using the custom key
         sorted_cities = sorted(recommended_cities, key=get_s_fairness_value)
         return sorted_cities
-    
+
     else:
         return recommended_cities
 
 
 def get_context(query, **params):
     """
-    
+
     Function that returns all the context: from the database, as well as the respective s-fairness scores for the
     destinations. The default does not consider S-Fairness scores, i.e. to append sustainability scores, a non-zero
     parameter "sustainability" needs to be explicitly passed to params.
@@ -193,7 +194,7 @@ def get_context(query, **params):
     Args:
         - query: str
         - params: dict; contains value of the limit and reranking (and sustainability)
-    
+
     """
 
     limit = 3
@@ -227,30 +228,20 @@ def test():
 
     context = None
 
-<<<<<<< HEAD
     try:
-        context = get_context(query)
-=======
-    try: 
-        context = get_context(query, sustainability = 1)
+        context = get_context(query, sustainability=1)
         # cities = get_cities(context)
         # print(cities)
->>>>>>> 226126d8ea601155a7f759b0d648f3bed10d7aa7
     except FileNotFoundError as e:
         try:
             vectordb.create_wikivoyage_docs_db_and_add_data()
             vectordb.create_wikivoyage_listings_db_and_add_data()
 
             try:
-<<<<<<< HEAD
-                context = get_context(query)
-            except Exception as e:
-=======
-                context = get_context(query, sustainability = 1)
+                context = get_context(query, sustainability=1)
                 # cities = get_cities(context)
                 # print(cities)
-            except Exception as e: 
->>>>>>> 226126d8ea601155a7f759b0d648f3bed10d7aa7
+            except Exception as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
                 logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")
