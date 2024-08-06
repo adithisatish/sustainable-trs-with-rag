@@ -1,11 +1,8 @@
 import sys
-import os
 import re
 sys.path.append("../")
 from src.vectordb import vectordb
 from src.sustainability import s_fairness
-import json
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -170,9 +167,20 @@ def get_cities(context):
             city_info['s-fairness'] = info['sustainability']['s-fairness']
 
         recommended_cities.append(city_info)
+    
+    if "sustainability" in info:
+        def get_s_fairness_value(item):
+            s_fairness = item['s-fairness']
+            if s_fairness == 'No data available':
+                return float('inf')  # Assign a high value for "No data available"
+            return s_fairness
 
-    sorted_cities = sorted(recommended_cities, key=lambda x: x['s-fairness'])
-    return sorted_cities
+        # Sort the list using the custom key
+        sorted_cities = sorted(recommended_cities, key=get_s_fairness_value)
+        return sorted_cities
+    
+    else:
+        return recommended_cities
 
 
 def get_context(query, **params):
@@ -219,16 +227,30 @@ def test():
 
     context = None
 
+<<<<<<< HEAD
     try:
         context = get_context(query)
+=======
+    try: 
+        context = get_context(query, sustainability = 1)
+        # cities = get_cities(context)
+        # print(cities)
+>>>>>>> 226126d8ea601155a7f759b0d648f3bed10d7aa7
     except FileNotFoundError as e:
         try:
             vectordb.create_wikivoyage_docs_db_and_add_data()
             vectordb.create_wikivoyage_listings_db_and_add_data()
 
             try:
+<<<<<<< HEAD
                 context = get_context(query)
             except Exception as e:
+=======
+                context = get_context(query, sustainability = 1)
+                # cities = get_cities(context)
+                # print(cities)
+            except Exception as e: 
+>>>>>>> 226126d8ea601155a7f759b0d648f3bed10d7aa7
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
                 logger.error(f"Error while getting context: {e}, {(exc_type, fname, exc_tb.tb_lineno)}")

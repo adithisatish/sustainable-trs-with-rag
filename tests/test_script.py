@@ -41,15 +41,15 @@ def test():
     with open("prompts/prompts_100.json", "r") as file:
         prompts = json.load(file)
 
-    # print(prompts)
-
-    for model_name in INSTRUCTION_TUNED_MODELS:  # To run the normal models, switch "INSTRUCTION_TUNED" to "MODEL_NAMES"
+    prompts = prompts[:50] # Only because of limited GPU space; run the next 50 in the next iteration
+    
+    for model_name in INSTRUCTION_TUNED_MODELS: # To run the normal models, switch "INSTRUCTION_TUNED" to "MODEL_NAMES"
         if 'Llama3.1' in model_name:
             dir_name = 'llama3point1-instruct'  # change to "llama3point1" for normal models
         else:
             dir_name = model_name.lower()
 
-        results_dir = os.path.join(os.getcwd(), dir_name)
+        results_dir = os.path.join(os.getcwd(), "results-06.08.", dir_name)
 
         for i, item in enumerate(prompts):
             logger.info(f"Prompt {i}")

@@ -1,0 +1,71 @@
+Option 1: Paris, France
+
+* {{do
+| nameEiffel Tower | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Eiffel Tower is one of the most famous landmarks in the world and a must-see for any visitor to Paris. It offers breathtaking views of the city.
+}}
+* {{do
+| nameLouvre Museum | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Louvre Museum is one of the world's most famous museums and a must-see for any art lover. It houses thousands of works of art, including the Mona Lisa.
+| lastedit2022-07-27
+| imageLouvre Museum.jpg
+| contentThe Louvre Museum is one of the world's most famous museums and a must-see for any art lover. It houses thousands of works of art, including the Mona Lisa.
+}}
+* {{do
+| nameNotre Dame Cathedral | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Notre Dame Cathedral is one of the most famous cathedrals in the world and a must-see for any visitor to Paris. It is a masterpiece of French Gothic architecture.
+| lastedit2022-07-27
+| imageNotre Dame Cathedral.jpg
+| contentThe Notre Dame Cathedral is one of the most famous cathedrals in the world and a must-see for any visitor to Paris. It is a masterpiece of French Gothic architecture.
+}}
+* {{do
+| nameTour Eiffel | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Tour Eiffel is a popular tourist attraction in Paris that offers breathtaking views of the city. It was built in 1889 for the World's Fair and has since become a symbol of the city.
+| lastedit2022-07-27
+| imageTour Eiffel.jpg
+| contentThe Tour Eiffel is a popular tourist attraction in Paris that offers breathtaking views of the city. It was built in 1889 for the World's Fair and has since become a symbol of the city.
+}}
+* {{do
+| namePalace of Versailles | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Palace of Versailles is a must-see for any visitor to Paris. It was built in the 17th century and was the home of French kings and queens for over 200 years.
+| lastedit2022-07-27
+| imagePalace of Versailles.jpg
+| contentThe Palace of Versailles is a must-see for any visitor to Paris. It was built in the 17th century and was the home of French kings and queens for over 200 years.
+}}
+
+Option 2: Kyoto, Japan
+
+* {{do
+| nameFushimi Inari Shrine | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Fushimi Inari Shrine is one of the most famous shrines in Japan and is known for its thousands of torii gates. It is a must-see for any visitor to Kyoto.
+| lastedit2022-07-27
+| imageFushimi Inari Shrine.jpg
+| contentThe Fushimi Inari Shrine is one of the most famous shrines in Japan and is known for its thousands of torii gates. It is a must-see for any visitor to Kyoto.
+}}
+* {{do
+| nameKinkakuji Temple | alt | url | email
+| address | lat | long | directions
+| phone | tollfree | fax
+| hours | price
+| contentThe Kinkakuji Temple, also known as the Golden Pavilion, is a must-see for any visitor to Kyoto. It is a UNESCO World Heritage Site and is known for its stunning architecture and gardens.
+| lastedit2022-07-27
+| imageKinkakuji Temple.jpg
+| content
