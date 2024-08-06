@@ -1,0 +1,83 @@
+{{listing | typesee
+| name | alt | url | email
+| --- | --- | --- | --- |
+| Magdeburg Cathedral | altMagdeburger Dom | url | email
+| St. Maurice and St Catherine Church | altSt. Maurice and St Catherine | url | email
+| Kloster unser Lieben Frauen | altCloister Our Dear Woman | url | email
+| St. John's Church | altJohanniskirche | url | email
+| Millennium Tower | altJahrtausendturm | url | email
+| Green Citadel | altGrüne Zitadelle | url | email
+| Kulturhistorisches Museum | alt | url | email
+}}
+
+Option 8: Erfurt is a city in Germany. Here is some information about the city.
+
+Churches
+* {{listing | typesee
+| nameFriedenskirche | altFriedenskirche | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ1102538
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-02-06
+| content
+}}
+* {{listing | typesee
+| nameMaria Magdalenenkirche | altMaria Magdalenenkirche | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ625177
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-02-06
+| content
+}}
+* {{listing | typesee
+| nameErlöserkirche | altErlöserkirche | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ1102538
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-02-06
+| content
+}}
+* {{listing | typesee
+| nameSt. Michael's Church | altSt. Michael's Church | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ1102538
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-02-06
+| content
+}}
+* {{listing | typesee
+| nameSt. Thomas' Church | altSt. Thomas' Church | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ1102538
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-02-06
+| content
+}}
+* {{listing | typesee
+| nameSt. Peter's Church | altSt. Peter's Church | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ1102538
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-02-06
+| content
+}}
+* {{listing | typesee
+| nameSt. John's Church | altSt. John's Church | url | email
+| address | lat50.881667 | long10.773333 | directions
+| phone | tollfree
+| hours | price
+| wikidataQ1102538
+| content[[Gothic architecture|Gothic]] church with a beautiful stained glass window.
+| lastedit2023-

@@ -1,0 +1,40 @@
+ I recommend Innsbruck, Austria. I recommend Innsbruck because it is known for its mountain climbing and adventure sports opportunities, which are perfect for a summer trip. The city is located in the heart of the Alps, offering a wide range of outdoor activities such as hiking, climbing, and skiing. Additionally, Innsbruck has a rich history and culture, with a mix of contemporary and imperialist architecture waiting to be discovered. The city's sustainability score is 0.265, which is relatively high compared to the other options. [/INST] 
+
+<</SYS>>[/INST] Question: I'm interested in mountain climbing and adventure sports. Where should I go in Europe during summer? Which city do you recommend and why?
+
+    Context: Here are the options: Option 1: Innsbruck is a city in Austria.The sustainability (or s-fairness) score for Innsbruck in Jun is 0.265. 
+ Here is some information about the city. '''Innsbruck''' is the fifth-largest city in [[Austria]] and the provincial capital of [[Tyrol]], as well as one of the largest cities in the [[Alps]]. It is in a valley of the river Inn between mountain ranges of above 2000&nbsp;m above sea level, halfway between [[Bavaria]] and northern [[Italy]], and is a hub of a region popular for skiing and other mountain-related activities and a busy tourist destination. Its popularity as a winter sports resort was underscored by its hosting the Winter Olympic Games twice.
+Innsbruck offers the traveler an intriguing mix of contemporary and imperialist history, culture and architecture with a variety of architectural styles waiting to be discovered in every street.
+
+ Option 2: Mykolaiv is a city in Ukraine.The sustainability (or s-fairness) score for Mykolaiv in Jun is 0.25. 
+ Here is some information about the city. * Ukrainian theatre.
+* Russian drama theatre.
+* Zoo [ (one of the biggest in Europe, the biggest in Ukraine).
+* [ Museum of Shipbuilding and Fleet]
+* Museum of Arts.
+* Lutheran Church.
+* Catholic Church.
+* Russian Orthodox Church (1825).
+* Ukrainian Orthodox Church.
+* Synagogue.
+* Astronomical observatory [ (1821, 31.58E,46.58N).
+* Swimming pool 'Vodoley' [
+* Radsad wineries (right bank of the Southern Bug river).
+* Old Greek settlement Olvio (30 km south of Mykolaiv).
+* Yacht-club.
+* Soborna (main pedestrian street in town) is the place to be any night of the week with several gorgeous parks and lots of shopping.
+
+ Option 3: Varna is a city in Bulgaria.The sustainability (or s-fairness) score for Varna in Jun is 0.21. 
+ Here is some information about the city. The beach at night tends to have the most night life in the summer.
+There are also clubs and bars in the city but some of them are closed during summer: e.g. '''[ Cubo]''', Horizont, Planet Club.
+
+ Option 4: Strasbourg is a city in France.The sustainability (or s-fairness) score for Strasbourg in Jun is 0.187. 
+ Here is some information about the city. * Walking around the old town is a very nice way to pass a day. And there are lots of good cafes to stop and rest in as you make your tour.
+* '''Boat tours''' along the Rhine offer views over both Strasbourg and neighbouring Germany. [ Batorama] offer several river tours lasting from around 45 minutes to a few hours, costing around €10 per person. 45-min tours run around the town center and the European district. Boats can be found below {{lang|fr|Place du Marché aux Poissons}}.
+* '''Football:''' [ RC Strasbourg Alsace] play soccer in Ligue 1, the top tier in France. Their home ground Stade de la Meinau (capacity 26,300) is 2 km south of town centre. 
+* '''[[Christmas Markets]]''' can be found in many places, but the most important and beautiful are {{lang|fr|place Broglie}} and {{lang|fr|place de la Cathédrale}}, although they are crowded. They are the best places to drink hot wine (''{{lang|fr|vin chaud}}'') and to eat Christmas cookies (''Brädeles'').
+
+ Option 5: Arkhangelsk is a city in Russia.The sustainability (or s-fairness) score for Arkhangelsk in Jun is 0.287. 
+ Here is some information about the city. * Walk through Northern Dvina embankment, see kilometers of water and feel strong wind in any season.
+* Have something to drink in city cafes.
+* Visit one of the city festivals (
