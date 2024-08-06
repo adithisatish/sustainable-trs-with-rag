@@ -1,0 +1,4712 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e8ce066fae2432ce38b8eca4f704611b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e8ce066fae2432ce38b8eca4f704611b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e8ce066fae2432ce38b8eca4f704611b = L.map(
+                "map_e8ce066fae2432ce38b8eca4f704611b",
+                {
+                    center: [47.39406875, 22.308188124999997],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c093723821a0c01106227bc052daa19c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c093723821a0c01106227bc052daa19c.addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+            var marker_452fa89e5cd6602a06a890c6cdfd0ae3 = L.marker(
+                [57.05, 9.9167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_2428f932b93f05eb462d1d6b00d8b909 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf2bd182dba0c7620315ff8dedb486f7 = $(`<div id="html_cf2bd182dba0c7620315ff8dedb486f7" style="width: 100.0%; height: 100.0%;">Aalborg, Denmark</div>`)[0];
+                popup_2428f932b93f05eb462d1d6b00d8b909.setContent(html_cf2bd182dba0c7620315ff8dedb486f7);
+            
+        
+
+        marker_452fa89e5cd6602a06a890c6cdfd0ae3.bindPopup(popup_2428f932b93f05eb462d1d6b00d8b909)
+        ;
+
+        
+    
+    
+            marker_452fa89e5cd6602a06a890c6cdfd0ae3.bindTooltip(
+                `<div>
+                     Aalborg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_62939d669a9ac41a9a234944bec445f1 = L.marker(
+                [37.0, 35.3213],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_0e02536ff4d4f14614dd259069d57d49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8adeec967da0880107d7e45217db251c = $(`<div id="html_8adeec967da0880107d7e45217db251c" style="width: 100.0%; height: 100.0%;">Adana, Turkey</div>`)[0];
+                popup_0e02536ff4d4f14614dd259069d57d49.setContent(html_8adeec967da0880107d7e45217db251c);
+            
+        
+
+        marker_62939d669a9ac41a9a234944bec445f1.bindPopup(popup_0e02536ff4d4f14614dd259069d57d49)
+        ;
+
+        
+    
+    
+            marker_62939d669a9ac41a9a234944bec445f1.bindTooltip(
+                `<div>
+                     Adana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8995e759ced6e1c7dbf16bd2c150b968 = L.marker(
+                [52.3728, 4.8936],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_3694e518889203e3301e12221a3bd79c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1912ad0d4a4b4a6c46bf66c28b954133 = $(`<div id="html_1912ad0d4a4b4a6c46bf66c28b954133" style="width: 100.0%; height: 100.0%;">Amsterdam, Netherlands</div>`)[0];
+                popup_3694e518889203e3301e12221a3bd79c.setContent(html_1912ad0d4a4b4a6c46bf66c28b954133);
+            
+        
+
+        marker_8995e759ced6e1c7dbf16bd2c150b968.bindPopup(popup_3694e518889203e3301e12221a3bd79c)
+        ;
+
+        
+    
+    
+            marker_8995e759ced6e1c7dbf16bd2c150b968.bindTooltip(
+                `<div>
+                     Amsterdam
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a247d481b03ce704528cf2c2aca7293a = L.marker(
+                [43.6169, 13.5167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_1b9a233448d83cd24eddb37c1c69d5e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2f1bb0db02d8f77767853df04f42539 = $(`<div id="html_b2f1bb0db02d8f77767853df04f42539" style="width: 100.0%; height: 100.0%;">Ancona, Italy</div>`)[0];
+                popup_1b9a233448d83cd24eddb37c1c69d5e5.setContent(html_b2f1bb0db02d8f77767853df04f42539);
+            
+        
+
+        marker_a247d481b03ce704528cf2c2aca7293a.bindPopup(popup_1b9a233448d83cd24eddb37c1c69d5e5)
+        ;
+
+        
+    
+    
+            marker_a247d481b03ce704528cf2c2aca7293a.bindTooltip(
+                `<div>
+                     Ancona
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba4397c7b87a1c15cb4598b647dc2af1 = L.marker(
+                [39.93, 32.85],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b0bdaf39900c441ae82717bdb8cfc3c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62fad750f2c95f01b7a0b2da023662fb = $(`<div id="html_62fad750f2c95f01b7a0b2da023662fb" style="width: 100.0%; height: 100.0%;">Ankara, Turkey</div>`)[0];
+                popup_b0bdaf39900c441ae82717bdb8cfc3c6.setContent(html_62fad750f2c95f01b7a0b2da023662fb);
+            
+        
+
+        marker_ba4397c7b87a1c15cb4598b647dc2af1.bindPopup(popup_b0bdaf39900c441ae82717bdb8cfc3c6)
+        ;
+
+        
+    
+    
+            marker_ba4397c7b87a1c15cb4598b647dc2af1.bindTooltip(
+                `<div>
+                     Ankara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_edbf8feca4809aec5922f68af1601a24 = L.marker(
+                [36.8874, 30.7075],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_73a29dc415752c71c90e6480445de143 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_325829b16deb3b1437c0554ae01a1304 = $(`<div id="html_325829b16deb3b1437c0554ae01a1304" style="width: 100.0%; height: 100.0%;">Antalya, Turkey</div>`)[0];
+                popup_73a29dc415752c71c90e6480445de143.setContent(html_325829b16deb3b1437c0554ae01a1304);
+            
+        
+
+        marker_edbf8feca4809aec5922f68af1601a24.bindPopup(popup_73a29dc415752c71c90e6480445de143)
+        ;
+
+        
+    
+    
+            marker_edbf8feca4809aec5922f68af1601a24.bindTooltip(
+                `<div>
+                     Antalya
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0206fcd141a98420d713e4e444fb46c9 = L.marker(
+                [46.175, 21.3125],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_d1b8af59852498b0784dadf35b449dfd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c6044d996b9f5edc0cdf5d0f209992e = $(`<div id="html_6c6044d996b9f5edc0cdf5d0f209992e" style="width: 100.0%; height: 100.0%;">Arad, Romania</div>`)[0];
+                popup_d1b8af59852498b0784dadf35b449dfd.setContent(html_6c6044d996b9f5edc0cdf5d0f209992e);
+            
+        
+
+        marker_0206fcd141a98420d713e4e444fb46c9.bindPopup(popup_d1b8af59852498b0784dadf35b449dfd)
+        ;
+
+        
+    
+    
+            marker_0206fcd141a98420d713e4e444fb46c9.bindTooltip(
+                `<div>
+                     Arad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a64f84ffb89d805c7af0612d40686dc = L.marker(
+                [64.55, 40.5333],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_f9d8fc17a12e97d556ff817f4349b4ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7123d7f98093a9da1dac6e0bd57efd47 = $(`<div id="html_7123d7f98093a9da1dac6e0bd57efd47" style="width: 100.0%; height: 100.0%;">Arkhangelsk, Russia</div>`)[0];
+                popup_f9d8fc17a12e97d556ff817f4349b4ab.setContent(html_7123d7f98093a9da1dac6e0bd57efd47);
+            
+        
+
+        marker_8a64f84ffb89d805c7af0612d40686dc.bindPopup(popup_f9d8fc17a12e97d556ff817f4349b4ab)
+        ;
+
+        
+    
+    
+            marker_8a64f84ffb89d805c7af0612d40686dc.bindTooltip(
+                `<div>
+                     Arkhangelsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33697595317cd5790c6f927b3ae13071 = L.marker(
+                [46.35, 48.035],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a24e8dfee43fd476fb92849193de48ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a49cef9b230c8a7403f70cdb4b1f7779 = $(`<div id="html_a49cef9b230c8a7403f70cdb4b1f7779" style="width: 100.0%; height: 100.0%;">Astrakhan, Russia</div>`)[0];
+                popup_a24e8dfee43fd476fb92849193de48ea.setContent(html_a49cef9b230c8a7403f70cdb4b1f7779);
+            
+        
+
+        marker_33697595317cd5790c6f927b3ae13071.bindPopup(popup_a24e8dfee43fd476fb92849193de48ea)
+        ;
+
+        
+    
+    
+            marker_33697595317cd5790c6f927b3ae13071.bindTooltip(
+                `<div>
+                     Astrakhan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a35c764f9b96c8e8eebbb5fc1c42f5e7 = L.marker(
+                [47.6667, 23.5833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_87afcad7b4911fe4b33bef6bb4297112 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a39f638bb8a62465364a68624f9fe338 = $(`<div id="html_a39f638bb8a62465364a68624f9fe338" style="width: 100.0%; height: 100.0%;">Baia Mare, Romania</div>`)[0];
+                popup_87afcad7b4911fe4b33bef6bb4297112.setContent(html_a39f638bb8a62465364a68624f9fe338);
+            
+        
+
+        marker_a35c764f9b96c8e8eebbb5fc1c42f5e7.bindPopup(popup_87afcad7b4911fe4b33bef6bb4297112)
+        ;
+
+        
+    
+    
+            marker_a35c764f9b96c8e8eebbb5fc1c42f5e7.bindTooltip(
+                `<div>
+                     Baia Mare
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11bf1f3fdd25777bef6fe7fa98e223c9 = L.marker(
+                [40.3667, 49.8352],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_63d3ec5303193b2480344b8d37f73c3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0a3f4f8fd8d8fc6d767441b2fcbd522 = $(`<div id="html_e0a3f4f8fd8d8fc6d767441b2fcbd522" style="width: 100.0%; height: 100.0%;">Baku, Azerbaijan</div>`)[0];
+                popup_63d3ec5303193b2480344b8d37f73c3a.setContent(html_e0a3f4f8fd8d8fc6d767441b2fcbd522);
+            
+        
+
+        marker_11bf1f3fdd25777bef6fe7fa98e223c9.bindPopup(popup_63d3ec5303193b2480344b8d37f73c3a)
+        ;
+
+        
+    
+    
+            marker_11bf1f3fdd25777bef6fe7fa98e223c9.bindTooltip(
+                `<div>
+                     Baku
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_58554d42109d6d5e710f45a124667827 = L.marker(
+                [41.3825, 2.1769],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6da5ba5904c9c6fe1a26c77352945c13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a63df4ae35ab94200ece21a2c3cc273 = $(`<div id="html_1a63df4ae35ab94200ece21a2c3cc273" style="width: 100.0%; height: 100.0%;">Barcelona, Spain</div>`)[0];
+                popup_6da5ba5904c9c6fe1a26c77352945c13.setContent(html_1a63df4ae35ab94200ece21a2c3cc273);
+            
+        
+
+        marker_58554d42109d6d5e710f45a124667827.bindPopup(popup_6da5ba5904c9c6fe1a26c77352945c13)
+        ;
+
+        
+    
+    
+            marker_58554d42109d6d5e710f45a124667827.bindTooltip(
+                `<div>
+                     Barcelona
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_37992bc5ec4c29c9ff01fe6f89945dd5 = L.marker(
+                [41.1253, 16.8667],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_97ce9627b662c682cb7c1a23566e89c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3f60b272caa4dcae74b3f01b0b67458 = $(`<div id="html_f3f60b272caa4dcae74b3f01b0b67458" style="width: 100.0%; height: 100.0%;">Bari, Italy</div>`)[0];
+                popup_97ce9627b662c682cb7c1a23566e89c9.setContent(html_f3f60b272caa4dcae74b3f01b0b67458);
+            
+        
+
+        marker_37992bc5ec4c29c9ff01fe6f89945dd5.bindPopup(popup_97ce9627b662c682cb7c1a23566e89c9)
+        ;
+
+        
+    
+    
+            marker_37992bc5ec4c29c9ff01fe6f89945dd5.bindTooltip(
+                `<div>
+                     Bari
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ac78b4e7c4901256f6ce835c1fbd36d4 = L.marker(
+                [37.887, 41.132],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_23e6cb8139541316d42e6f654325e930 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a96cabdac6bdd77bc4f1d0b578201fc = $(`<div id="html_5a96cabdac6bdd77bc4f1d0b578201fc" style="width: 100.0%; height: 100.0%;">Batman, Turkey</div>`)[0];
+                popup_23e6cb8139541316d42e6f654325e930.setContent(html_5a96cabdac6bdd77bc4f1d0b578201fc);
+            
+        
+
+        marker_ac78b4e7c4901256f6ce835c1fbd36d4.bindPopup(popup_23e6cb8139541316d42e6f654325e930)
+        ;
+
+        
+    
+    
+            marker_ac78b4e7c4901256f6ce835c1fbd36d4.bindTooltip(
+                `<div>
+                     Batman
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_536f6677c7a2bc673b962bd8a872c83e = L.marker(
+                [44.82, 20.46],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_c34659ca64c2099a46cf7c67318e6caa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8794285922c0487d4fae93cf2b83eed2 = $(`<div id="html_8794285922c0487d4fae93cf2b83eed2" style="width: 100.0%; height: 100.0%;">Belgrade, Serbia</div>`)[0];
+                popup_c34659ca64c2099a46cf7c67318e6caa.setContent(html_8794285922c0487d4fae93cf2b83eed2);
+            
+        
+
+        marker_536f6677c7a2bc673b962bd8a872c83e.bindPopup(popup_c34659ca64c2099a46cf7c67318e6caa)
+        ;
+
+        
+    
+    
+            marker_536f6677c7a2bc673b962bd8a872c83e.bindTooltip(
+                `<div>
+                     Belgrade
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5381a89358baa7a55e11e0eb84d62c3a = L.marker(
+                [60.3894, 5.33],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4e80081ecf286b9b6515dc76423517fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9cf066d5b0f1ca2f5f157cc9ba18fcbf = $(`<div id="html_9cf066d5b0f1ca2f5f157cc9ba18fcbf" style="width: 100.0%; height: 100.0%;">Bergen, Norway</div>`)[0];
+                popup_4e80081ecf286b9b6515dc76423517fd.setContent(html_9cf066d5b0f1ca2f5f157cc9ba18fcbf);
+            
+        
+
+        marker_5381a89358baa7a55e11e0eb84d62c3a.bindPopup(popup_4e80081ecf286b9b6515dc76423517fd)
+        ;
+
+        
+    
+    
+            marker_5381a89358baa7a55e11e0eb84d62c3a.bindTooltip(
+                `<div>
+                     Bergen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_94ef41e957157fa6984467e4353e5e12 = L.marker(
+                [52.52, 13.405],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_33b79cf2a575d60e8ed1a8c4771112f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f12137357e0f26f016000216831d3246 = $(`<div id="html_f12137357e0f26f016000216831d3246" style="width: 100.0%; height: 100.0%;">Berlin, Germany</div>`)[0];
+                popup_33b79cf2a575d60e8ed1a8c4771112f8.setContent(html_f12137357e0f26f016000216831d3246);
+            
+        
+
+        marker_94ef41e957157fa6984467e4353e5e12.bindPopup(popup_33b79cf2a575d60e8ed1a8c4771112f8)
+        ;
+
+        
+    
+    
+            marker_94ef41e957157fa6984467e4353e5e12.bindTooltip(
+                `<div>
+                     Berlin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0c38ee3c9e73a5da0a239eb6f3205186 = L.marker(
+                [44.4939, 11.3428],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b3f2af56615d4e3496d2468e0449928d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15e8084becb5c8f8898c718fe0531868 = $(`<div id="html_15e8084becb5c8f8898c718fe0531868" style="width: 100.0%; height: 100.0%;">Bologna, Italy</div>`)[0];
+                popup_b3f2af56615d4e3496d2468e0449928d.setContent(html_15e8084becb5c8f8898c718fe0531868);
+            
+        
+
+        marker_0c38ee3c9e73a5da0a239eb6f3205186.bindPopup(popup_b3f2af56615d4e3496d2468e0449928d)
+        ;
+
+        
+    
+    
+            marker_0c38ee3c9e73a5da0a239eb6f3205186.bindTooltip(
+                `<div>
+                     Bologna
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_799443283f6f6d9e9bfce955f90e0b7f = L.marker(
+                [44.84, -0.58],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7824f7be0e254b03d5a6edd0aeb68839 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68a0ae7cbd1cc0fcf99bd7d339eeab81 = $(`<div id="html_68a0ae7cbd1cc0fcf99bd7d339eeab81" style="width: 100.0%; height: 100.0%;">Bordeaux, France</div>`)[0];
+                popup_7824f7be0e254b03d5a6edd0aeb68839.setContent(html_68a0ae7cbd1cc0fcf99bd7d339eeab81);
+            
+        
+
+        marker_799443283f6f6d9e9bfce955f90e0b7f.bindPopup(popup_7824f7be0e254b03d5a6edd0aeb68839)
+        ;
+
+        
+    
+    
+            marker_799443283f6f6d9e9bfce955f90e0b7f.bindTooltip(
+                `<div>
+                     Bordeaux
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60bcb3c702b71294bbe2620b81c90e56 = L.marker(
+                [41.5503, -8.42],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a36d0181a01a7cc9d762943b9f2c1cb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e3496927c86943e9906be461f7ccd29 = $(`<div id="html_2e3496927c86943e9906be461f7ccd29" style="width: 100.0%; height: 100.0%;">Braga, Portugal</div>`)[0];
+                popup_a36d0181a01a7cc9d762943b9f2c1cb6.setContent(html_2e3496927c86943e9906be461f7ccd29);
+            
+        
+
+        marker_60bcb3c702b71294bbe2620b81c90e56.bindPopup(popup_a36d0181a01a7cc9d762943b9f2c1cb6)
+        ;
+
+        
+    
+    
+            marker_60bcb3c702b71294bbe2620b81c90e56.bindTooltip(
+                `<div>
+                     Braga
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_25d62f1f4ca5979e2f4a803ce74afa3d = L.marker(
+                [48.1439, 17.1097],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_3f9626ad29383d95aad56bfe9f3dc2be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9f17fa1639a2b91e8e9806aeb9be6e7 = $(`<div id="html_e9f17fa1639a2b91e8e9806aeb9be6e7" style="width: 100.0%; height: 100.0%;">Bratislava, Slovakia</div>`)[0];
+                popup_3f9626ad29383d95aad56bfe9f3dc2be.setContent(html_e9f17fa1639a2b91e8e9806aeb9be6e7);
+            
+        
+
+        marker_25d62f1f4ca5979e2f4a803ce74afa3d.bindPopup(popup_3f9626ad29383d95aad56bfe9f3dc2be)
+        ;
+
+        
+    
+    
+            marker_25d62f1f4ca5979e2f4a803ce74afa3d.bindTooltip(
+                `<div>
+                     Bratislava
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_527a08c661e68804410e7bb3ebd05896 = L.marker(
+                [53.0833, 8.8],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_076e619371dd670e483bef89bec291fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0055f82b28683c81e8ad1a23cb6b4f1 = $(`<div id="html_a0055f82b28683c81e8ad1a23cb6b4f1" style="width: 100.0%; height: 100.0%;">Bremen, Germany</div>`)[0];
+                popup_076e619371dd670e483bef89bec291fc.setContent(html_a0055f82b28683c81e8ad1a23cb6b4f1);
+            
+        
+
+        marker_527a08c661e68804410e7bb3ebd05896.bindPopup(popup_076e619371dd670e483bef89bec291fc)
+        ;
+
+        
+    
+    
+            marker_527a08c661e68804410e7bb3ebd05896.bindTooltip(
+                `<div>
+                     Bremen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_922611021c0e121c54c69fa0658881f9 = L.marker(
+                [52.1347, 23.6569],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_57c12b6b832bef143535916cdab728b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba7c97b06f2166e6b3dc0ab6897054a4 = $(`<div id="html_ba7c97b06f2166e6b3dc0ab6897054a4" style="width: 100.0%; height: 100.0%;">Brest, Belarus</div>`)[0];
+                popup_57c12b6b832bef143535916cdab728b3.setContent(html_ba7c97b06f2166e6b3dc0ab6897054a4);
+            
+        
+
+        marker_922611021c0e121c54c69fa0658881f9.bindPopup(popup_57c12b6b832bef143535916cdab728b3)
+        ;
+
+        
+    
+    
+            marker_922611021c0e121c54c69fa0658881f9.bindTooltip(
+                `<div>
+                     Brest
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b2dd736b1b1a02d9dfbe3eb37f9929a7 = L.marker(
+                [49.1925, 16.6083],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_edee82eab9a641b7b4e120f0a1e25c44 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8f42e3408953f33c7f7d3b6604c64d3 = $(`<div id="html_a8f42e3408953f33c7f7d3b6604c64d3" style="width: 100.0%; height: 100.0%;">Brno, Czechia</div>`)[0];
+                popup_edee82eab9a641b7b4e120f0a1e25c44.setContent(html_a8f42e3408953f33c7f7d3b6604c64d3);
+            
+        
+
+        marker_b2dd736b1b1a02d9dfbe3eb37f9929a7.bindPopup(popup_edee82eab9a641b7b4e120f0a1e25c44)
+        ;
+
+        
+    
+    
+            marker_b2dd736b1b1a02d9dfbe3eb37f9929a7.bindTooltip(
+                `<div>
+                     Brno
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_74ce6d2d566fb8324a5311ae7226327e = L.marker(
+                [50.8467, 4.3525],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_91897e491d3168d6e4f633f8181f8354 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a1a580f63e421248d53ba5bfdc14afc = $(`<div id="html_5a1a580f63e421248d53ba5bfdc14afc" style="width: 100.0%; height: 100.0%;">Brussels, Belgium</div>`)[0];
+                popup_91897e491d3168d6e4f633f8181f8354.setContent(html_5a1a580f63e421248d53ba5bfdc14afc);
+            
+        
+
+        marker_74ce6d2d566fb8324a5311ae7226327e.bindPopup(popup_91897e491d3168d6e4f633f8181f8354)
+        ;
+
+        
+    
+    
+            marker_74ce6d2d566fb8324a5311ae7226327e.bindTooltip(
+                `<div>
+                     Brussels
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_04cb7d2c0daa9b290cc530ccc3429e74 = L.marker(
+                [47.4925, 19.0514],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_844cd9d9d7ef1c1fd5f61355d94a8129 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b26e8bcf4f23a96f8566f1316c95372e = $(`<div id="html_b26e8bcf4f23a96f8566f1316c95372e" style="width: 100.0%; height: 100.0%;">Budapest, Hungary</div>`)[0];
+                popup_844cd9d9d7ef1c1fd5f61355d94a8129.setContent(html_b26e8bcf4f23a96f8566f1316c95372e);
+            
+        
+
+        marker_04cb7d2c0daa9b290cc530ccc3429e74.bindPopup(popup_844cd9d9d7ef1c1fd5f61355d94a8129)
+        ;
+
+        
+    
+    
+            marker_04cb7d2c0daa9b290cc530ccc3429e74.bindTooltip(
+                `<div>
+                     Budapest
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d8c73fb19cdbc89a2ad9e632c8d8081 = L.marker(
+                [42.503, 27.4702],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_fdc4a6f279f92da0e49fcd72de34c60f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_424d2b35517232300bb6af70631f37d0 = $(`<div id="html_424d2b35517232300bb6af70631f37d0" style="width: 100.0%; height: 100.0%;">Burgas, Bulgaria</div>`)[0];
+                popup_fdc4a6f279f92da0e49fcd72de34c60f.setContent(html_424d2b35517232300bb6af70631f37d0);
+            
+        
+
+        marker_5d8c73fb19cdbc89a2ad9e632c8d8081.bindPopup(popup_fdc4a6f279f92da0e49fcd72de34c60f)
+        ;
+
+        
+    
+    
+            marker_5d8c73fb19cdbc89a2ad9e632c8d8081.bindTooltip(
+                `<div>
+                     Burgas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb568f4c0beeb051c9e3b32d75644bbf = L.marker(
+                [40.1833, 29.05],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7efd48c8b28f3f7e05fe17552af841b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_063b87275876487569ca03966c23d9be = $(`<div id="html_063b87275876487569ca03966c23d9be" style="width: 100.0%; height: 100.0%;">Bursa, Turkey</div>`)[0];
+                popup_7efd48c8b28f3f7e05fe17552af841b0.setContent(html_063b87275876487569ca03966c23d9be);
+            
+        
+
+        marker_cb568f4c0beeb051c9e3b32d75644bbf.bindPopup(popup_7efd48c8b28f3f7e05fe17552af841b0)
+        ;
+
+        
+    
+    
+            marker_cb568f4c0beeb051c9e3b32d75644bbf.bindTooltip(
+                `<div>
+                     Bursa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_df38fa94a637c013b2b92e2813693323 = L.marker(
+                [53.1219, 18.0003],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_16d357ef53ba869c64a2bfbdf5cf3770 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6a4c04534c89559a326d7e441c337c9 = $(`<div id="html_a6a4c04534c89559a326d7e441c337c9" style="width: 100.0%; height: 100.0%;">Bydgoszcz, Poland</div>`)[0];
+                popup_16d357ef53ba869c64a2bfbdf5cf3770.setContent(html_a6a4c04534c89559a326d7e441c337c9);
+            
+        
+
+        marker_df38fa94a637c013b2b92e2813693323.bindPopup(popup_16d357ef53ba869c64a2bfbdf5cf3770)
+        ;
+
+        
+    
+    
+            marker_df38fa94a637c013b2b92e2813693323.bindTooltip(
+                `<div>
+                     Bydgoszcz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b223fdbccd8a2b501653442a39356219 = L.marker(
+                [39.2278, 9.1111],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_1fb22857d196b78d823a28574cc5dd91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d18794789714e5fd0bb827c900e289e = $(`<div id="html_9d18794789714e5fd0bb827c900e289e" style="width: 100.0%; height: 100.0%;">Cagliari, Italy</div>`)[0];
+                popup_1fb22857d196b78d823a28574cc5dd91.setContent(html_9d18794789714e5fd0bb827c900e289e);
+            
+        
+
+        marker_b223fdbccd8a2b501653442a39356219.bindPopup(popup_1fb22857d196b78d823a28574cc5dd91)
+        ;
+
+        
+    
+    
+            marker_b223fdbccd8a2b501653442a39356219.bindTooltip(
+                `<div>
+                     Cagliari
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ded63ed302b279c88316bb522813e193 = L.marker(
+                [56.1333, 47.25],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b3c88961a621c2d1b5a115cc80925278 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f53df5ffaafe5da9c34fb4dc91f86fa8 = $(`<div id="html_f53df5ffaafe5da9c34fb4dc91f86fa8" style="width: 100.0%; height: 100.0%;">Cheboksary, Russia</div>`)[0];
+                popup_b3c88961a621c2d1b5a115cc80925278.setContent(html_f53df5ffaafe5da9c34fb4dc91f86fa8);
+            
+        
+
+        marker_ded63ed302b279c88316bb522813e193.bindPopup(popup_b3c88961a621c2d1b5a115cc80925278)
+        ;
+
+        
+    
+    
+            marker_ded63ed302b279c88316bb522813e193.bindTooltip(
+                `<div>
+                     Cheboksary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0200621173f9d7ee921d65a406d93013 = L.marker(
+                [55.15, 61.4],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7ad1b4a781eb7268274650e01994639b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_06bf4bcec879464d025c280ab69b5fbb = $(`<div id="html_06bf4bcec879464d025c280ab69b5fbb" style="width: 100.0%; height: 100.0%;">Chelyabinsk, Russia</div>`)[0];
+                popup_7ad1b4a781eb7268274650e01994639b.setContent(html_06bf4bcec879464d025c280ab69b5fbb);
+            
+        
+
+        marker_0200621173f9d7ee921d65a406d93013.bindPopup(popup_7ad1b4a781eb7268274650e01994639b)
+        ;
+
+        
+    
+    
+            marker_0200621173f9d7ee921d65a406d93013.bindTooltip(
+                `<div>
+                     Chelyabinsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7370e0a1a3bf02edcc67a3f72d4798f8 = L.marker(
+                [46.7667, 23.5833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_172c9705512ae689619f82115365260d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51a8af12308847b4e9ef5ab5dcc0bf63 = $(`<div id="html_51a8af12308847b4e9ef5ab5dcc0bf63" style="width: 100.0%; height: 100.0%;">Cluj-Napoca, Romania</div>`)[0];
+                popup_172c9705512ae689619f82115365260d.setContent(html_51a8af12308847b4e9ef5ab5dcc0bf63);
+            
+        
+
+        marker_7370e0a1a3bf02edcc67a3f72d4798f8.bindPopup(popup_172c9705512ae689619f82115365260d)
+        ;
+
+        
+    
+    
+            marker_7370e0a1a3bf02edcc67a3f72d4798f8.bindTooltip(
+                `<div>
+                     Cluj-Napoca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52e50cdd55b8f4609e133d5fedf3d482 = L.marker(
+                [40.2111, -8.4292],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_56c26649d687af9d1ac6a1d43dee5dd7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83af2873dd334a19b15939f44ca83139 = $(`<div id="html_83af2873dd334a19b15939f44ca83139" style="width: 100.0%; height: 100.0%;">Coimbra, Portugal</div>`)[0];
+                popup_56c26649d687af9d1ac6a1d43dee5dd7.setContent(html_83af2873dd334a19b15939f44ca83139);
+            
+        
+
+        marker_52e50cdd55b8f4609e133d5fedf3d482.bindPopup(popup_56c26649d687af9d1ac6a1d43dee5dd7)
+        ;
+
+        
+    
+    
+            marker_52e50cdd55b8f4609e133d5fedf3d482.bindTooltip(
+                `<div>
+                     Coimbra
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0137b3416568168df79df5c63ecef838 = L.marker(
+                [55.6761, 12.5683],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7135ba1fb1b6eb0766552e0c9b113cea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_daf7e9bc5167c9e09a1c0669b8dc99f3 = $(`<div id="html_daf7e9bc5167c9e09a1c0669b8dc99f3" style="width: 100.0%; height: 100.0%;">Copenhagen, Denmark</div>`)[0];
+                popup_7135ba1fb1b6eb0766552e0c9b113cea.setContent(html_daf7e9bc5167c9e09a1c0669b8dc99f3);
+            
+        
+
+        marker_0137b3416568168df79df5c63ecef838.bindPopup(popup_7135ba1fb1b6eb0766552e0c9b113cea)
+        ;
+
+        
+    
+    
+            marker_0137b3416568168df79df5c63ecef838.bindTooltip(
+                `<div>
+                     Copenhagen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_49b994e3c825de8c94e0af363ac030f5 = L.marker(
+                [51.8972, -8.47],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_66af638f5a4a0e4d73d305c4e8116c53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13b0581e710a1487569f405f6b324269 = $(`<div id="html_13b0581e710a1487569f405f6b324269" style="width: 100.0%; height: 100.0%;">Cork, Ireland</div>`)[0];
+                popup_66af638f5a4a0e4d73d305c4e8116c53.setContent(html_13b0581e710a1487569f405f6b324269);
+            
+        
+
+        marker_49b994e3c825de8c94e0af363ac030f5.bindPopup(popup_66af638f5a4a0e4d73d305c4e8116c53)
+        ;
+
+        
+    
+    
+            marker_49b994e3c825de8c94e0af363ac030f5.bindTooltip(
+                `<div>
+                     Cork
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ea16f4ddd4f724efb81e12d304f5b8e = L.marker(
+                [44.3333, 23.8167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_9deb7621f8547a6306c58e87ce68356b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d53b58ade850b01ed96cef26f4b4348 = $(`<div id="html_4d53b58ade850b01ed96cef26f4b4348" style="width: 100.0%; height: 100.0%;">Craiova, Romania</div>`)[0];
+                popup_9deb7621f8547a6306c58e87ce68356b.setContent(html_4d53b58ade850b01ed96cef26f4b4348);
+            
+        
+
+        marker_3ea16f4ddd4f724efb81e12d304f5b8e.bindPopup(popup_9deb7621f8547a6306c58e87ce68356b)
+        ;
+
+        
+    
+    
+            marker_3ea16f4ddd4f724efb81e12d304f5b8e.bindTooltip(
+                `<div>
+                     Craiova
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c063ab6595409236844736b4898a7aac = L.marker(
+                [47.53, 21.6392],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_76d84464189cc83e766d9a3b3bb6267c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49d32e649b7512f254311b4831c1e792 = $(`<div id="html_49d32e649b7512f254311b4831c1e792" style="width: 100.0%; height: 100.0%;">Debrecen, Hungary</div>`)[0];
+                popup_76d84464189cc83e766d9a3b3bb6267c.setContent(html_49d32e649b7512f254311b4831c1e792);
+            
+        
+
+        marker_c063ab6595409236844736b4898a7aac.bindPopup(popup_76d84464189cc83e766d9a3b3bb6267c)
+        ;
+
+        
+    
+    
+            marker_c063ab6595409236844736b4898a7aac.bindTooltip(
+                `<div>
+                     Debrecen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d2f6838b38395b1399a1faaadf206f11 = L.marker(
+                [37.7667, 29.0833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_d5d486b4109578ffc0e1d1f4b3441265 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e238c463a979cea96c2426a3aac22d00 = $(`<div id="html_e238c463a979cea96c2426a3aac22d00" style="width: 100.0%; height: 100.0%;">Denizli, Turkey</div>`)[0];
+                popup_d5d486b4109578ffc0e1d1f4b3441265.setContent(html_e238c463a979cea96c2426a3aac22d00);
+            
+        
+
+        marker_d2f6838b38395b1399a1faaadf206f11.bindPopup(popup_d5d486b4109578ffc0e1d1f4b3441265)
+        ;
+
+        
+    
+    
+            marker_d2f6838b38395b1399a1faaadf206f11.bindTooltip(
+                `<div>
+                     Denizli
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee09b2161323ef9cfbde1520a75726d9 = L.marker(
+                [47.3167, 5.0167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_8141f8988866d41211129d01265b27ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7beca58efb4addc3a75eb9a651da3f26 = $(`<div id="html_7beca58efb4addc3a75eb9a651da3f26" style="width: 100.0%; height: 100.0%;">Dijon, France</div>`)[0];
+                popup_8141f8988866d41211129d01265b27ed.setContent(html_7beca58efb4addc3a75eb9a651da3f26);
+            
+        
+
+        marker_ee09b2161323ef9cfbde1520a75726d9.bindPopup(popup_8141f8988866d41211129d01265b27ed)
+        ;
+
+        
+    
+    
+            marker_ee09b2161323ef9cfbde1520a75726d9.bindTooltip(
+                `<div>
+                     Dijon
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_315b5b4afd989e66e48f75ca0e36db86 = L.marker(
+                [48.0028, 37.8053],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_109c0eaf1b47ee43f87646676307376c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_539a524cf83c952919be86248619e719 = $(`<div id="html_539a524cf83c952919be86248619e719" style="width: 100.0%; height: 100.0%;">Donetsk, Ukraine</div>`)[0];
+                popup_109c0eaf1b47ee43f87646676307376c.setContent(html_539a524cf83c952919be86248619e719);
+            
+        
+
+        marker_315b5b4afd989e66e48f75ca0e36db86.bindPopup(popup_109c0eaf1b47ee43f87646676307376c)
+        ;
+
+        
+    
+    
+            marker_315b5b4afd989e66e48f75ca0e36db86.bindTooltip(
+                `<div>
+                     Donetsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6fd322231f51ae5696d0c4e02b34df73 = L.marker(
+                [51.05, 13.74],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_de1c6a3783a47fb2978782d15b35b7f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3b24d56d2d8a4ec5f80f6b52f70e090 = $(`<div id="html_f3b24d56d2d8a4ec5f80f6b52f70e090" style="width: 100.0%; height: 100.0%;">Dresden, Germany</div>`)[0];
+                popup_de1c6a3783a47fb2978782d15b35b7f6.setContent(html_f3b24d56d2d8a4ec5f80f6b52f70e090);
+            
+        
+
+        marker_6fd322231f51ae5696d0c4e02b34df73.bindPopup(popup_de1c6a3783a47fb2978782d15b35b7f6)
+        ;
+
+        
+    
+    
+            marker_6fd322231f51ae5696d0c4e02b34df73.bindTooltip(
+                `<div>
+                     Dresden
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b177ce1c985b86ac389c5f3de0063967 = L.marker(
+                [53.35, -6.2603],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_70d50e67e511a33379836b3ee187d909 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fbf4d08cc541e6919908247f740fcdb6 = $(`<div id="html_fbf4d08cc541e6919908247f740fcdb6" style="width: 100.0%; height: 100.0%;">Dublin, Ireland</div>`)[0];
+                popup_70d50e67e511a33379836b3ee187d909.setContent(html_fbf4d08cc541e6919908247f740fcdb6);
+            
+        
+
+        marker_b177ce1c985b86ac389c5f3de0063967.bindPopup(popup_70d50e67e511a33379836b3ee187d909)
+        ;
+
+        
+    
+    
+            marker_b177ce1c985b86ac389c5f3de0063967.bindTooltip(
+                `<div>
+                     Dublin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fbd2270189449d3295a32b6be735f97 = L.marker(
+                [50.9833, 11.0333],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b22230ae2d70fc4ef324268f45bc0c5b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9efbe973e3b7f0a98cc603718c856369 = $(`<div id="html_9efbe973e3b7f0a98cc603718c856369" style="width: 100.0%; height: 100.0%;">Erfurt, Germany</div>`)[0];
+                popup_b22230ae2d70fc4ef324268f45bc0c5b.setContent(html_9efbe973e3b7f0a98cc603718c856369);
+            
+        
+
+        marker_4fbd2270189449d3295a32b6be735f97.bindPopup(popup_b22230ae2d70fc4ef324268f45bc0c5b)
+        ;
+
+        
+    
+    
+            marker_4fbd2270189449d3295a32b6be735f97.bindTooltip(
+                `<div>
+                     Erfurt
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_301325bde243842c44048a7e36bcae72 = L.marker(
+                [39.7464, 39.4914],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_dde42f2f4868bba32aa2e07e307669f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_667e3aa0ef3f04fb7d507a9050e9af44 = $(`<div id="html_667e3aa0ef3f04fb7d507a9050e9af44" style="width: 100.0%; height: 100.0%;">Erzincan, Turkey</div>`)[0];
+                popup_dde42f2f4868bba32aa2e07e307669f9.setContent(html_667e3aa0ef3f04fb7d507a9050e9af44);
+            
+        
+
+        marker_301325bde243842c44048a7e36bcae72.bindPopup(popup_dde42f2f4868bba32aa2e07e307669f9)
+        ;
+
+        
+    
+    
+            marker_301325bde243842c44048a7e36bcae72.bindTooltip(
+                `<div>
+                     Erzincan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2582a71d896170f6fa60796414adfdf2 = L.marker(
+                [39.9086, 41.2769],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_c0dbaf700aaf6ef007e56c8ea8098521 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7be39a8c35b6b88ed52de3b43674e282 = $(`<div id="html_7be39a8c35b6b88ed52de3b43674e282" style="width: 100.0%; height: 100.0%;">Erzurum, Turkey</div>`)[0];
+                popup_c0dbaf700aaf6ef007e56c8ea8098521.setContent(html_7be39a8c35b6b88ed52de3b43674e282);
+            
+        
+
+        marker_2582a71d896170f6fa60796414adfdf2.bindPopup(popup_c0dbaf700aaf6ef007e56c8ea8098521)
+        ;
+
+        
+    
+    
+            marker_2582a71d896170f6fa60796414adfdf2.bindTooltip(
+                `<div>
+                     Erzurum
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6dde4bd499e740b9b10f679791f385d = L.marker(
+                [37.0628, 37.3792],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_324f393cfc9c6c0b36b70222d8d66f71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18e5467bfb084aa78f9bac6d146af1fd = $(`<div id="html_18e5467bfb084aa78f9bac6d146af1fd" style="width: 100.0%; height: 100.0%;">Gaziantep, Turkey</div>`)[0];
+                popup_324f393cfc9c6c0b36b70222d8d66f71.setContent(html_18e5467bfb084aa78f9bac6d146af1fd);
+            
+        
+
+        marker_e6dde4bd499e740b9b10f679791f385d.bindPopup(popup_324f393cfc9c6c0b36b70222d8d66f71)
+        ;
+
+        
+    
+    
+            marker_e6dde4bd499e740b9b10f679791f385d.bindTooltip(
+                `<div>
+                     Gaziantep
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0db745a732ae4a14bf8f99c93b652644 = L.marker(
+                [46.2017, 6.1469],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6d348a5c807816463cd1e562f253c3ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4bf5ee944be8655cdde187b2984f7105 = $(`<div id="html_4bf5ee944be8655cdde187b2984f7105" style="width: 100.0%; height: 100.0%;">Geneva, Switzerland</div>`)[0];
+                popup_6d348a5c807816463cd1e562f253c3ca.setContent(html_4bf5ee944be8655cdde187b2984f7105);
+            
+        
+
+        marker_0db745a732ae4a14bf8f99c93b652644.bindPopup(popup_6d348a5c807816463cd1e562f253c3ca)
+        ;
+
+        
+    
+    
+            marker_0db745a732ae4a14bf8f99c93b652644.bindTooltip(
+                `<div>
+                     Geneva
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a3d1d4996a235be2ed98c041481a95f = L.marker(
+                [53.55, 10.0],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_0915d00b4642323797a612bc285597d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f67ddc12220ac5becefd473aa8a7a641 = $(`<div id="html_f67ddc12220ac5becefd473aa8a7a641" style="width: 100.0%; height: 100.0%;">Hamburg, Germany</div>`)[0];
+                popup_0915d00b4642323797a612bc285597d7.setContent(html_f67ddc12220ac5becefd473aa8a7a641);
+            
+        
+
+        marker_6a3d1d4996a235be2ed98c041481a95f.bindPopup(popup_0915d00b4642323797a612bc285597d7)
+        ;
+
+        
+    
+    
+            marker_6a3d1d4996a235be2ed98c041481a95f.bindTooltip(
+                `<div>
+                     Hamburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3421506c0c8e5bea69cd6a9ee1c60d30 = L.marker(
+                [60.1708, 24.9375],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_8b307b5707857ed00997d3471e30b06e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_884ac65316d479a1a9fa885df2d17d5d = $(`<div id="html_884ac65316d479a1a9fa885df2d17d5d" style="width: 100.0%; height: 100.0%;">Helsinki, Finland</div>`)[0];
+                popup_8b307b5707857ed00997d3471e30b06e.setContent(html_884ac65316d479a1a9fa885df2d17d5d);
+            
+        
+
+        marker_3421506c0c8e5bea69cd6a9ee1c60d30.bindPopup(popup_8b307b5707857ed00997d3471e30b06e)
+        ;
+
+        
+    
+    
+            marker_3421506c0c8e5bea69cd6a9ee1c60d30.bindTooltip(
+                `<div>
+                     Helsinki
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_197c93726457359d7ec7f1778b25ad77 = L.marker(
+                [47.2683, 11.3933],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_696148db99da6e1113c2b15225bc425b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48dc87cb7c5071e443dbabc6ace2c131 = $(`<div id="html_48dc87cb7c5071e443dbabc6ace2c131" style="width: 100.0%; height: 100.0%;">Innsbruck, Austria</div>`)[0];
+                popup_696148db99da6e1113c2b15225bc425b.setContent(html_48dc87cb7c5071e443dbabc6ace2c131);
+            
+        
+
+        marker_197c93726457359d7ec7f1778b25ad77.bindPopup(popup_696148db99da6e1113c2b15225bc425b)
+        ;
+
+        
+    
+    
+            marker_197c93726457359d7ec7f1778b25ad77.bindTooltip(
+                `<div>
+                     Innsbruck
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_91752efde4d03a549bd4d985585f39e4 = L.marker(
+                [39.6636, 20.8522],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_975a47cb73cb6f0dff9b6072225f7775 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1b864e5853b71c5389ad431f6011f1f = $(`<div id="html_a1b864e5853b71c5389ad431f6011f1f" style="width: 100.0%; height: 100.0%;">Ioannina, Greece</div>`)[0];
+                popup_975a47cb73cb6f0dff9b6072225f7775.setContent(html_a1b864e5853b71c5389ad431f6011f1f);
+            
+        
+
+        marker_91752efde4d03a549bd4d985585f39e4.bindPopup(popup_975a47cb73cb6f0dff9b6072225f7775)
+        ;
+
+        
+    
+    
+            marker_91752efde4d03a549bd4d985585f39e4.bindTooltip(
+                `<div>
+                     Ioannina
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b891ac2c5029215d9bc088d910ced948 = L.marker(
+                [37.7647, 30.5567],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_13ae3060893a631353f714f6520a720a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6b52b81c0e4a6c877bbe3f99e8428cf = $(`<div id="html_b6b52b81c0e4a6c877bbe3f99e8428cf" style="width: 100.0%; height: 100.0%;">Isparta, Turkey</div>`)[0];
+                popup_13ae3060893a631353f714f6520a720a.setContent(html_b6b52b81c0e4a6c877bbe3f99e8428cf);
+            
+        
+
+        marker_b891ac2c5029215d9bc088d910ced948.bindPopup(popup_13ae3060893a631353f714f6520a720a)
+        ;
+
+        
+    
+    
+            marker_b891ac2c5029215d9bc088d910ced948.bindTooltip(
+                `<div>
+                     Isparta
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dea520e55161c04618ead7a33ff2f1cb = L.marker(
+                [41.0136, 28.955],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_e840aca26d1b99191b2a78519b130e39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fd2bfb52c3a43d2ccf6ad5ecd568d46 = $(`<div id="html_5fd2bfb52c3a43d2ccf6ad5ecd568d46" style="width: 100.0%; height: 100.0%;">Istanbul, Turkey</div>`)[0];
+                popup_e840aca26d1b99191b2a78519b130e39.setContent(html_5fd2bfb52c3a43d2ccf6ad5ecd568d46);
+            
+        
+
+        marker_dea520e55161c04618ead7a33ff2f1cb.bindPopup(popup_e840aca26d1b99191b2a78519b130e39)
+        ;
+
+        
+    
+    
+            marker_dea520e55161c04618ead7a33ff2f1cb.bindTooltip(
+                `<div>
+                     Istanbul
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_601e4510e1780cae9f7478b2217fdc71 = L.marker(
+                [48.9228, 24.7106],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_494634f8c88e9a1c22beb943d9042b8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ff9dae69e986fc183c696a1527bc0e2 = $(`<div id="html_0ff9dae69e986fc183c696a1527bc0e2" style="width: 100.0%; height: 100.0%;">Ivano-Frankivsk, Ukraine</div>`)[0];
+                popup_494634f8c88e9a1c22beb943d9042b8a.setContent(html_0ff9dae69e986fc183c696a1527bc0e2);
+            
+        
+
+        marker_601e4510e1780cae9f7478b2217fdc71.bindPopup(popup_494634f8c88e9a1c22beb943d9042b8a)
+        ;
+
+        
+    
+    
+            marker_601e4510e1780cae9f7478b2217fdc71.bindTooltip(
+                `<div>
+                     Ivano-Frankivsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_32d35617a4a7855423418d5f827f790f = L.marker(
+                [38.42, 27.14],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4a6987170e5ac68af608e15eb5e8112e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffeb535738c5e1874a0a057e677e0f47 = $(`<div id="html_ffeb535738c5e1874a0a057e677e0f47" style="width: 100.0%; height: 100.0%;">Izmir, Turkey</div>`)[0];
+                popup_4a6987170e5ac68af608e15eb5e8112e.setContent(html_ffeb535738c5e1874a0a057e677e0f47);
+            
+        
+
+        marker_32d35617a4a7855423418d5f827f790f.bindPopup(popup_4a6987170e5ac68af608e15eb5e8112e)
+        ;
+
+        
+    
+    
+            marker_32d35617a4a7855423418d5f827f790f.bindTooltip(
+                `<div>
+                     Izmir
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85080d50b74ed4c4ecf14d780e8637ef = L.marker(
+                [37.5833, 36.9333],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_1c47ed2631f6313e81fc8ac65c69020c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36d655510b980bfa3b1df4ea0580ff75 = $(`<div id="html_36d655510b980bfa3b1df4ea0580ff75" style="width: 100.0%; height: 100.0%;">Kahramanmaras, Turkey</div>`)[0];
+                popup_1c47ed2631f6313e81fc8ac65c69020c.setContent(html_36d655510b980bfa3b1df4ea0580ff75);
+            
+        
+
+        marker_85080d50b74ed4c4ecf14d780e8637ef.bindPopup(popup_1c47ed2631f6313e81fc8ac65c69020c)
+        ;
+
+        
+    
+    
+            marker_85080d50b74ed4c4ecf14d780e8637ef.bindTooltip(
+                `<div>
+                     Kahramanmaras
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eaf6c15ecacafa0d314a2696f2cfcd43 = L.marker(
+                [54.7003, 20.4531],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_c5d6bdfafa428a63e8b15bb99c9e14ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3d1282de0e3e492b6760f6ff1ca1562 = $(`<div id="html_a3d1282de0e3e492b6760f6ff1ca1562" style="width: 100.0%; height: 100.0%;">Kaliningrad, Russia</div>`)[0];
+                popup_c5d6bdfafa428a63e8b15bb99c9e14ea.setContent(html_a3d1282de0e3e492b6760f6ff1ca1562);
+            
+        
+
+        marker_eaf6c15ecacafa0d314a2696f2cfcd43.bindPopup(popup_c5d6bdfafa428a63e8b15bb99c9e14ea)
+        ;
+
+        
+    
+    
+            marker_eaf6c15ecacafa0d314a2696f2cfcd43.bindTooltip(
+                `<div>
+                     Kaliningrad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_62fdd508c523240526bbc32cd35280ef = L.marker(
+                [40.6078, 43.0958],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_95fd748a9882a747a9516f11b5f938a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fb96a8388048400fc62d337099f6229 = $(`<div id="html_3fb96a8388048400fc62d337099f6229" style="width: 100.0%; height: 100.0%;">Kars, Turkey</div>`)[0];
+                popup_95fd748a9882a747a9516f11b5f938a6.setContent(html_3fb96a8388048400fc62d337099f6229);
+            
+        
+
+        marker_62fdd508c523240526bbc32cd35280ef.bindPopup(popup_95fd748a9882a747a9516f11b5f938a6)
+        ;
+
+        
+    
+    
+            marker_62fdd508c523240526bbc32cd35280ef.bindTooltip(
+                `<div>
+                     Kars
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d5462198fbc821274c52cf808407e491 = L.marker(
+                [54.8972, 23.8861],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4c081e5943c0840088ea8f4d0830ee6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_158ee01666853edf9bfdfce9b19d328e = $(`<div id="html_158ee01666853edf9bfdfce9b19d328e" style="width: 100.0%; height: 100.0%;">Kaunas, Lithuania</div>`)[0];
+                popup_4c081e5943c0840088ea8f4d0830ee6e.setContent(html_158ee01666853edf9bfdfce9b19d328e);
+            
+        
+
+        marker_d5462198fbc821274c52cf808407e491.bindPopup(popup_4c081e5943c0840088ea8f4d0830ee6e)
+        ;
+
+        
+    
+    
+            marker_d5462198fbc821274c52cf808407e491.bindTooltip(
+                `<div>
+                     Kaunas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33778a7639eccd65789f1fd50ed9c7a9 = L.marker(
+                [38.7225, 35.4875],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_eab95644a660373d4eb0745eba160dab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43b354026cb5447af4857a7d5ba4c9e7 = $(`<div id="html_43b354026cb5447af4857a7d5ba4c9e7" style="width: 100.0%; height: 100.0%;">Kayseri, Turkey</div>`)[0];
+                popup_eab95644a660373d4eb0745eba160dab.setContent(html_43b354026cb5447af4857a7d5ba4c9e7);
+            
+        
+
+        marker_33778a7639eccd65789f1fd50ed9c7a9.bindPopup(popup_eab95644a660373d4eb0745eba160dab)
+        ;
+
+        
+    
+    
+            marker_33778a7639eccd65789f1fd50ed9c7a9.bindTooltip(
+                `<div>
+                     Kayseri
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_44a8a930cf340ff9c03d1df8dbd04a8f = L.marker(
+                [55.7964, 49.1089],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_f526027332dacf4a63866ea68a0b6245 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a1c44a93b5f351ba58071833c8e2358 = $(`<div id="html_9a1c44a93b5f351ba58071833c8e2358" style="width: 100.0%; height: 100.0%;">Kazan, Russia</div>`)[0];
+                popup_f526027332dacf4a63866ea68a0b6245.setContent(html_9a1c44a93b5f351ba58071833c8e2358);
+            
+        
+
+        marker_44a8a930cf340ff9c03d1df8dbd04a8f.bindPopup(popup_f526027332dacf4a63866ea68a0b6245)
+        ;
+
+        
+    
+    
+            marker_44a8a930cf340ff9c03d1df8dbd04a8f.bindTooltip(
+                `<div>
+                     Kazan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b5563c020fffd628b27c4f82a42dc07a = L.marker(
+                [49.9925, 36.2311],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b3434dce22fb9f3190c827960863a7c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8948e5478438dcdb6e6595f723243eb4 = $(`<div id="html_8948e5478438dcdb6e6595f723243eb4" style="width: 100.0%; height: 100.0%;">Kharkiv, Ukraine</div>`)[0];
+                popup_b3434dce22fb9f3190c827960863a7c8.setContent(html_8948e5478438dcdb6e6595f723243eb4);
+            
+        
+
+        marker_b5563c020fffd628b27c4f82a42dc07a.bindPopup(popup_b3434dce22fb9f3190c827960863a7c8)
+        ;
+
+        
+    
+    
+            marker_b5563c020fffd628b27c4f82a42dc07a.bindTooltip(
+                `<div>
+                     Kharkiv
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5c817887b29832e7819af82507bd0512 = L.marker(
+                [54.3233, 10.1394],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b717bcaf15d3a4c0fabbd3d391643168 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9794411e2de27d795d22af8b7f0be245 = $(`<div id="html_9794411e2de27d795d22af8b7f0be245" style="width: 100.0%; height: 100.0%;">Kiel, Germany</div>`)[0];
+                popup_b717bcaf15d3a4c0fabbd3d391643168.setContent(html_9794411e2de27d795d22af8b7f0be245);
+            
+        
+
+        marker_5c817887b29832e7819af82507bd0512.bindPopup(popup_b717bcaf15d3a4c0fabbd3d391643168)
+        ;
+
+        
+    
+    
+            marker_5c817887b29832e7819af82507bd0512.bindTooltip(
+                `<div>
+                     Kiel
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fccd44042aee08e4daadd2323100b860 = L.marker(
+                [58.6, 49.65],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b12981719c87db62dcf9bc53d230ecaa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac1ceec248fe0d450c65d1ff185ab24a = $(`<div id="html_ac1ceec248fe0d450c65d1ff185ab24a" style="width: 100.0%; height: 100.0%;">Kirov, Russia</div>`)[0];
+                popup_b12981719c87db62dcf9bc53d230ecaa.setContent(html_ac1ceec248fe0d450c65d1ff185ab24a);
+            
+        
+
+        marker_fccd44042aee08e4daadd2323100b860.bindPopup(popup_b12981719c87db62dcf9bc53d230ecaa)
+        ;
+
+        
+    
+    
+            marker_fccd44042aee08e4daadd2323100b860.bindTooltip(
+                `<div>
+                     Kirov
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d8f202b4867ea5d93e1f0926026c44c = L.marker(
+                [46.6167, 14.3],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_3d5e31317ce9c329a3568d66ce1f67fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f62d8ce5ff87ab6b929b519410e2215b = $(`<div id="html_f62d8ce5ff87ab6b929b519410e2215b" style="width: 100.0%; height: 100.0%;">Klagenfurt, Austria</div>`)[0];
+                popup_3d5e31317ce9c329a3568d66ce1f67fd.setContent(html_f62d8ce5ff87ab6b929b519410e2215b);
+            
+        
+
+        marker_2d8f202b4867ea5d93e1f0926026c44c.bindPopup(popup_3d5e31317ce9c329a3568d66ce1f67fd)
+        ;
+
+        
+    
+    
+            marker_2d8f202b4867ea5d93e1f0926026c44c.bindTooltip(
+                `<div>
+                     Klagenfurt
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_226485c11ac5f462173a6388df77c839 = L.marker(
+                [37.8667, 32.4833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_dfe190a5def2efe3f7a48ccd6bb0b054 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a2c1ded62b5a2bdca9656b1d6b63d80 = $(`<div id="html_4a2c1ded62b5a2bdca9656b1d6b63d80" style="width: 100.0%; height: 100.0%;">Konya, Turkey</div>`)[0];
+                popup_dfe190a5def2efe3f7a48ccd6bb0b054.setContent(html_4a2c1ded62b5a2bdca9656b1d6b63d80);
+            
+        
+
+        marker_226485c11ac5f462173a6388df77c839.bindPopup(popup_dfe190a5def2efe3f7a48ccd6bb0b054)
+        ;
+
+        
+    
+    
+            marker_226485c11ac5f462173a6388df77c839.bindTooltip(
+                `<div>
+                     Konya
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1343b21541fed8f46d1826701282edab = L.marker(
+                [45.0333, 38.9667],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_876d7f1e980fe897a9a9ec58db036827 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1bf6939e423975eb1c4273ce6238d1e = $(`<div id="html_d1bf6939e423975eb1c4273ce6238d1e" style="width: 100.0%; height: 100.0%;">Krasnodar, Russia</div>`)[0];
+                popup_876d7f1e980fe897a9a9ec58db036827.setContent(html_d1bf6939e423975eb1c4273ce6238d1e);
+            
+        
+
+        marker_1343b21541fed8f46d1826701282edab.bindPopup(popup_876d7f1e980fe897a9a9ec58db036827)
+        ;
+
+        
+    
+    
+            marker_1343b21541fed8f46d1826701282edab.bindTooltip(
+                `<div>
+                     Krasnodar
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f18764831fbc55d6fb089013cd30a9b = L.marker(
+                [42.25, 42.7],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_0360fc0e3a2e2808d1fc2bc497e28c64 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9544dbc008cebf81ee74d10255097161 = $(`<div id="html_9544dbc008cebf81ee74d10255097161" style="width: 100.0%; height: 100.0%;">Kutaisi, Georgia</div>`)[0];
+                popup_0360fc0e3a2e2808d1fc2bc497e28c64.setContent(html_9544dbc008cebf81ee74d10255097161);
+            
+        
+
+        marker_9f18764831fbc55d6fb089013cd30a9b.bindPopup(popup_0360fc0e3a2e2808d1fc2bc497e28c64)
+        ;
+
+        
+    
+    
+            marker_9f18764831fbc55d6fb089013cd30a9b.bindTooltip(
+                `<div>
+                     Kutaisi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8f72d6ee1c4cf1aa9e95ed1d3eca919 = L.marker(
+                [50.6278, 3.0583],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_e984c21ba5599536b5f1e99953ca44b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d53f3b27d44ef5edf318a389f2a7e825 = $(`<div id="html_d53f3b27d44ef5edf318a389f2a7e825" style="width: 100.0%; height: 100.0%;">Lille, France</div>`)[0];
+                popup_e984c21ba5599536b5f1e99953ca44b5.setContent(html_d53f3b27d44ef5edf318a389f2a7e825);
+            
+        
+
+        marker_a8f72d6ee1c4cf1aa9e95ed1d3eca919.bindPopup(popup_e984c21ba5599536b5f1e99953ca44b5)
+        ;
+
+        
+    
+    
+            marker_a8f72d6ee1c4cf1aa9e95ed1d3eca919.bindTooltip(
+                `<div>
+                     Lille
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0bc542a37797961903b822f0d24c275b = L.marker(
+                [46.0514, 14.5061],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_ed0f8cf2f5b49617a7cc84f196d9ca11 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88beffa18c21464b944b8437a9a082d4 = $(`<div id="html_88beffa18c21464b944b8437a9a082d4" style="width: 100.0%; height: 100.0%;">Ljubljana, Slovenia</div>`)[0];
+                popup_ed0f8cf2f5b49617a7cc84f196d9ca11.setContent(html_88beffa18c21464b944b8437a9a082d4);
+            
+        
+
+        marker_0bc542a37797961903b822f0d24c275b.bindPopup(popup_ed0f8cf2f5b49617a7cc84f196d9ca11)
+        ;
+
+        
+    
+    
+            marker_0bc542a37797961903b822f0d24c275b.bindTooltip(
+                `<div>
+                     Ljubljana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d8008c61879ada6be3bba1477c84a90e = L.marker(
+                [51.5072, -0.1275],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_034cbafe24066dc5c9ae8d7c1508580b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c60260d4194c9c0a308a31a309630b2 = $(`<div id="html_2c60260d4194c9c0a308a31a309630b2" style="width: 100.0%; height: 100.0%;">London, United Kingdom</div>`)[0];
+                popup_034cbafe24066dc5c9ae8d7c1508580b.setContent(html_2c60260d4194c9c0a308a31a309630b2);
+            
+        
+
+        marker_d8008c61879ada6be3bba1477c84a90e.bindPopup(popup_034cbafe24066dc5c9ae8d7c1508580b)
+        ;
+
+        
+    
+    
+            marker_d8008c61879ada6be3bba1477c84a90e.bindTooltip(
+                `<div>
+                     London
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bae35772b5b1f946beeccfdca68188a0 = L.marker(
+                [49.6117, 6.1319],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_20865654e06247789c41c9e60c71ba2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1947eefafd4e22492efa30a36af5fd3 = $(`<div id="html_f1947eefafd4e22492efa30a36af5fd3" style="width: 100.0%; height: 100.0%;">Luxembourg, Luxembourg</div>`)[0];
+                popup_20865654e06247789c41c9e60c71ba2f.setContent(html_f1947eefafd4e22492efa30a36af5fd3);
+            
+        
+
+        marker_bae35772b5b1f946beeccfdca68188a0.bindPopup(popup_20865654e06247789c41c9e60c71ba2f)
+        ;
+
+        
+    
+    
+            marker_bae35772b5b1f946beeccfdca68188a0.bindTooltip(
+                `<div>
+                     Luxembourg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b971d3c2685cadf7ff97a5577500f8c = L.marker(
+                [49.8425, 24.0322],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_542a7ccbcc943cbfae4229d6fdf9044a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5d13a6ae74cd6db2cfe9419db08cb72 = $(`<div id="html_f5d13a6ae74cd6db2cfe9419db08cb72" style="width: 100.0%; height: 100.0%;">Lviv, Ukraine</div>`)[0];
+                popup_542a7ccbcc943cbfae4229d6fdf9044a.setContent(html_f5d13a6ae74cd6db2cfe9419db08cb72);
+            
+        
+
+        marker_2b971d3c2685cadf7ff97a5577500f8c.bindPopup(popup_542a7ccbcc943cbfae4229d6fdf9044a)
+        ;
+
+        
+    
+    
+            marker_2b971d3c2685cadf7ff97a5577500f8c.bindTooltip(
+                `<div>
+                     Lviv
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_937016c5dafe675d239f608ffe0d3cee = L.marker(
+                [45.76, 4.84],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b1fc9e51617d214dcff157f582efdf48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8ae0971b0a99238f3a2d63c305bf8a3 = $(`<div id="html_a8ae0971b0a99238f3a2d63c305bf8a3" style="width: 100.0%; height: 100.0%;">Lyon, France</div>`)[0];
+                popup_b1fc9e51617d214dcff157f582efdf48.setContent(html_a8ae0971b0a99238f3a2d63c305bf8a3);
+            
+        
+
+        marker_937016c5dafe675d239f608ffe0d3cee.bindPopup(popup_b1fc9e51617d214dcff157f582efdf48)
+        ;
+
+        
+    
+    
+            marker_937016c5dafe675d239f608ffe0d3cee.bindTooltip(
+                `<div>
+                     Lyon
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_89bb5f8e4c1fc84b4ca427bf6c24f359 = L.marker(
+                [50.85, 5.6833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_59da7a4c5bd0feff840f9f57887cb2ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c094068790c01b47b71de4c1edaf6eb3 = $(`<div id="html_c094068790c01b47b71de4c1edaf6eb3" style="width: 100.0%; height: 100.0%;">Maastricht, Netherlands</div>`)[0];
+                popup_59da7a4c5bd0feff840f9f57887cb2ac.setContent(html_c094068790c01b47b71de4c1edaf6eb3);
+            
+        
+
+        marker_89bb5f8e4c1fc84b4ca427bf6c24f359.bindPopup(popup_59da7a4c5bd0feff840f9f57887cb2ac)
+        ;
+
+        
+    
+    
+            marker_89bb5f8e4c1fc84b4ca427bf6c24f359.bindTooltip(
+                `<div>
+                     Maastricht
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_272e23df254a64fe384ae8fb73685aa7 = L.marker(
+                [40.4169, -3.7033],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_8cb319f4f58ee61f9d4d5a304ace9e4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_818137fd6e7e6596ca06a62739b8fe4b = $(`<div id="html_818137fd6e7e6596ca06a62739b8fe4b" style="width: 100.0%; height: 100.0%;">Madrid, Spain</div>`)[0];
+                popup_8cb319f4f58ee61f9d4d5a304ace9e4c.setContent(html_818137fd6e7e6596ca06a62739b8fe4b);
+            
+        
+
+        marker_272e23df254a64fe384ae8fb73685aa7.bindPopup(popup_8cb319f4f58ee61f9d4d5a304ace9e4c)
+        ;
+
+        
+    
+    
+            marker_272e23df254a64fe384ae8fb73685aa7.bindTooltip(
+                `<div>
+                     Madrid
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61fd3256349397b8c51bb50a0b149217 = L.marker(
+                [52.1317, 11.6392],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_ed6810b3293dfb40c22857a20ecf0882 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6aebd2f77708a975122386f2ca69067b = $(`<div id="html_6aebd2f77708a975122386f2ca69067b" style="width: 100.0%; height: 100.0%;">Magdeburg, Germany</div>`)[0];
+                popup_ed6810b3293dfb40c22857a20ecf0882.setContent(html_6aebd2f77708a975122386f2ca69067b);
+            
+        
+
+        marker_61fd3256349397b8c51bb50a0b149217.bindPopup(popup_ed6810b3293dfb40c22857a20ecf0882)
+        ;
+
+        
+    
+    
+            marker_61fd3256349397b8c51bb50a0b149217.bindTooltip(
+                `<div>
+                     Magdeburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_850990ca01e726f5be3b4b65dfc7baa4 = L.marker(
+                [38.3486, 38.3194],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a4fd3d410791d427ff18982f70f505c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f1adc22d8d424bf80d328069b12296e = $(`<div id="html_5f1adc22d8d424bf80d328069b12296e" style="width: 100.0%; height: 100.0%;">Malatya, Turkey</div>`)[0];
+                popup_a4fd3d410791d427ff18982f70f505c2.setContent(html_5f1adc22d8d424bf80d328069b12296e);
+            
+        
+
+        marker_850990ca01e726f5be3b4b65dfc7baa4.bindPopup(popup_a4fd3d410791d427ff18982f70f505c2)
+        ;
+
+        
+    
+    
+            marker_850990ca01e726f5be3b4b65dfc7baa4.bindTooltip(
+                `<div>
+                     Malatya
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e1d016270feeae2c3db9affc15f8d9a2 = L.marker(
+                [45.4669, 9.19],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a8a04d86e083d5a9cfbf88d6154c98da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6b7935aefc9741de1a8996e2d0c6e96 = $(`<div id="html_a6b7935aefc9741de1a8996e2d0c6e96" style="width: 100.0%; height: 100.0%;">Milan, Italy</div>`)[0];
+                popup_a8a04d86e083d5a9cfbf88d6154c98da.setContent(html_a6b7935aefc9741de1a8996e2d0c6e96);
+            
+        
+
+        marker_e1d016270feeae2c3db9affc15f8d9a2.bindPopup(popup_a8a04d86e083d5a9cfbf88d6154c98da)
+        ;
+
+        
+    
+    
+            marker_e1d016270feeae2c3db9affc15f8d9a2.bindTooltip(
+                `<div>
+                     Milan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b1a36beedd459c95d7aaf407d93bad5 = L.marker(
+                [53.9, 27.5667],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_210fa9f74a0bdae4ffd890e75da7234c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c3c46113977c33a6f5ad49c25c43a40 = $(`<div id="html_1c3c46113977c33a6f5ad49c25c43a40" style="width: 100.0%; height: 100.0%;">Minsk, Belarus</div>`)[0];
+                popup_210fa9f74a0bdae4ffd890e75da7234c.setContent(html_1c3c46113977c33a6f5ad49c25c43a40);
+            
+        
+
+        marker_4b1a36beedd459c95d7aaf407d93bad5.bindPopup(popup_210fa9f74a0bdae4ffd890e75da7234c)
+        ;
+
+        
+    
+    
+            marker_4b1a36beedd459c95d7aaf407d93bad5.bindTooltip(
+                `<div>
+                     Minsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f01bed8b71ac45a4814c221d770e9609 = L.marker(
+                [48.0833, 20.6667],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a1ebc963e6fde450e44fae95ed594da8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10b223284a235636b04bfb97287ed273 = $(`<div id="html_10b223284a235636b04bfb97287ed273" style="width: 100.0%; height: 100.0%;">Miskolc, Hungary</div>`)[0];
+                popup_a1ebc963e6fde450e44fae95ed594da8.setContent(html_10b223284a235636b04bfb97287ed273);
+            
+        
+
+        marker_f01bed8b71ac45a4814c221d770e9609.bindPopup(popup_a1ebc963e6fde450e44fae95ed594da8)
+        ;
+
+        
+    
+    
+            marker_f01bed8b71ac45a4814c221d770e9609.bindTooltip(
+                `<div>
+                     Miskolc
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_71dc597106d1d66683d882ba6c7e3e80 = L.marker(
+                [55.7558, 37.6178],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_94a0a3efd1899a5ce8623de953ddd40c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bb7d818b75f196d5f399d87b8b0e149 = $(`<div id="html_3bb7d818b75f196d5f399d87b8b0e149" style="width: 100.0%; height: 100.0%;">Moscow, Russia</div>`)[0];
+                popup_94a0a3efd1899a5ce8623de953ddd40c.setContent(html_3bb7d818b75f196d5f399d87b8b0e149);
+            
+        
+
+        marker_71dc597106d1d66683d882ba6c7e3e80.bindPopup(popup_94a0a3efd1899a5ce8623de953ddd40c)
+        ;
+
+        
+    
+    
+            marker_71dc597106d1d66683d882ba6c7e3e80.bindTooltip(
+                `<div>
+                     Moscow
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_01b984dcd5ef63a2b5d3163de2926747 = L.marker(
+                [48.1375, 11.575],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_aa8d411a040ab3eb7a6774634640b951 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b3e5771d0366380a5deb84485b8b660 = $(`<div id="html_2b3e5771d0366380a5deb84485b8b660" style="width: 100.0%; height: 100.0%;">Munich, Germany</div>`)[0];
+                popup_aa8d411a040ab3eb7a6774634640b951.setContent(html_2b3e5771d0366380a5deb84485b8b660);
+            
+        
+
+        marker_01b984dcd5ef63a2b5d3163de2926747.bindPopup(popup_aa8d411a040ab3eb7a6774634640b951)
+        ;
+
+        
+    
+    
+            marker_01b984dcd5ef63a2b5d3163de2926747.bindTooltip(
+                `<div>
+                     Munich
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_96c66a7c7a10c82edc58dc9362eee8ea = L.marker(
+                [37.9861, -1.1303],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6f6a29cafefe1d1f6bfb8aec83095a5b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67888681737043d1087edd86c93a8af9 = $(`<div id="html_67888681737043d1087edd86c93a8af9" style="width: 100.0%; height: 100.0%;">Murcia, Spain</div>`)[0];
+                popup_6f6a29cafefe1d1f6bfb8aec83095a5b.setContent(html_67888681737043d1087edd86c93a8af9);
+            
+        
+
+        marker_96c66a7c7a10c82edc58dc9362eee8ea.bindPopup(popup_6f6a29cafefe1d1f6bfb8aec83095a5b)
+        ;
+
+        
+    
+    
+            marker_96c66a7c7a10c82edc58dc9362eee8ea.bindTooltip(
+                `<div>
+                     Murcia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0e2daf5644af6961b393d5943667ced3 = L.marker(
+                [68.9706, 33.075],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4d25baa32f2bf15efab1a1c083e8d82e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa1683cc91b02885ea6b44c8e95a6441 = $(`<div id="html_aa1683cc91b02885ea6b44c8e95a6441" style="width: 100.0%; height: 100.0%;">Murmansk, Russia</div>`)[0];
+                popup_4d25baa32f2bf15efab1a1c083e8d82e.setContent(html_aa1683cc91b02885ea6b44c8e95a6441);
+            
+        
+
+        marker_0e2daf5644af6961b393d5943667ced3.bindPopup(popup_4d25baa32f2bf15efab1a1c083e8d82e)
+        ;
+
+        
+    
+    
+            marker_0e2daf5644af6961b393d5943667ced3.bindTooltip(
+                `<div>
+                     Murmansk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_12195e47b427f12ebcd396cdd6854620 = L.marker(
+                [46.975, 31.995],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_74daf88632d4b41627eaae56933c0ebb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27e088c56bd1e71aeefafa12fb2e00b5 = $(`<div id="html_27e088c56bd1e71aeefafa12fb2e00b5" style="width: 100.0%; height: 100.0%;">Mykolaiv, Ukraine</div>`)[0];
+                popup_74daf88632d4b41627eaae56933c0ebb.setContent(html_27e088c56bd1e71aeefafa12fb2e00b5);
+            
+        
+
+        marker_12195e47b427f12ebcd396cdd6854620.bindPopup(popup_74daf88632d4b41627eaae56933c0ebb)
+        ;
+
+        
+    
+    
+            marker_12195e47b427f12ebcd396cdd6854620.bindTooltip(
+                `<div>
+                     Mykolaiv
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5580aa2a842c273c959cc4d1a051935 = L.marker(
+                [43.4833, 43.6167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a2162dc9c92129b79d464b2286d2331c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b7e12669addbae1f05ba9d850bf843f = $(`<div id="html_4b7e12669addbae1f05ba9d850bf843f" style="width: 100.0%; height: 100.0%;">Nalchik, Russia</div>`)[0];
+                popup_a2162dc9c92129b79d464b2286d2331c.setContent(html_4b7e12669addbae1f05ba9d850bf843f);
+            
+        
+
+        marker_e5580aa2a842c273c959cc4d1a051935.bindPopup(popup_a2162dc9c92129b79d464b2286d2331c)
+        ;
+
+        
+    
+    
+            marker_e5580aa2a842c273c959cc4d1a051935.bindTooltip(
+                `<div>
+                     Nalchik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e329ee39e64922b625dac865896051f4 = L.marker(
+                [47.2181, -1.5528],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_79f93a1578242556a3a65dce14b8c193 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92b72555c2008d227a7ad129ab0818dc = $(`<div id="html_92b72555c2008d227a7ad129ab0818dc" style="width: 100.0%; height: 100.0%;">Nantes, France</div>`)[0];
+                popup_79f93a1578242556a3a65dce14b8c193.setContent(html_92b72555c2008d227a7ad129ab0818dc);
+            
+        
+
+        marker_e329ee39e64922b625dac865896051f4.bindPopup(popup_79f93a1578242556a3a65dce14b8c193)
+        ;
+
+        
+    
+    
+            marker_e329ee39e64922b625dac865896051f4.bindTooltip(
+                `<div>
+                     Nantes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c515b03ed4444125a79449a3eba6e4a0 = L.marker(
+                [40.8333, 14.25],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_45152755b63c546ce9716fc40ed94318 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83f214593cab1f421213981bc8360fca = $(`<div id="html_83f214593cab1f421213981bc8360fca" style="width: 100.0%; height: 100.0%;">Naples, Italy</div>`)[0];
+                popup_45152755b63c546ce9716fc40ed94318.setContent(html_83f214593cab1f421213981bc8360fca);
+            
+        
+
+        marker_c515b03ed4444125a79449a3eba6e4a0.bindPopup(popup_45152755b63c546ce9716fc40ed94318)
+        ;
+
+        
+    
+    
+            marker_c515b03ed4444125a79449a3eba6e4a0.bindTooltip(
+                `<div>
+                     Naples
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a1112e1a01c1a0ba0fc5dc70ab3ef4aa = L.marker(
+                [38.6264, 34.7139],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7eff7fb8e66840e653bcb6dc97d54dd4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_688faacc90f8ee73c92d835356f4cb13 = $(`<div id="html_688faacc90f8ee73c92d835356f4cb13" style="width: 100.0%; height: 100.0%;">Nevsehir, Turkey</div>`)[0];
+                popup_7eff7fb8e66840e653bcb6dc97d54dd4.setContent(html_688faacc90f8ee73c92d835356f4cb13);
+            
+        
+
+        marker_a1112e1a01c1a0ba0fc5dc70ab3ef4aa.bindPopup(popup_7eff7fb8e66840e653bcb6dc97d54dd4)
+        ;
+
+        
+    
+    
+            marker_a1112e1a01c1a0ba0fc5dc70ab3ef4aa.bindTooltip(
+                `<div>
+                     Nevsehir
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f1760dd4bea1c5f3f1489596fc36bdeb = L.marker(
+                [35.1725, 33.365],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_d0040b984158244ec7edc380af114368 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97a003b596d1c626696d973d24a93c0e = $(`<div id="html_97a003b596d1c626696d973d24a93c0e" style="width: 100.0%; height: 100.0%;">Nicosia, Cyprus</div>`)[0];
+                popup_d0040b984158244ec7edc380af114368.setContent(html_97a003b596d1c626696d973d24a93c0e);
+            
+        
+
+        marker_f1760dd4bea1c5f3f1489596fc36bdeb.bindPopup(popup_d0040b984158244ec7edc380af114368)
+        ;
+
+        
+    
+    
+            marker_f1760dd4bea1c5f3f1489596fc36bdeb.bindTooltip(
+                `<div>
+                     Nicosia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e7e306b6d12b49d7aa9152488e1e143 = L.marker(
+                [45.2542, 19.8425],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6b7ac3e485dffb43263a1659b352d131 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c10e6f5176fcf4dd174887332a10150d = $(`<div id="html_c10e6f5176fcf4dd174887332a10150d" style="width: 100.0%; height: 100.0%;">Novi Sad, Serbia</div>`)[0];
+                popup_6b7ac3e485dffb43263a1659b352d131.setContent(html_c10e6f5176fcf4dd174887332a10150d);
+            
+        
+
+        marker_2e7e306b6d12b49d7aa9152488e1e143.bindPopup(popup_6b7ac3e485dffb43263a1659b352d131)
+        ;
+
+        
+    
+    
+            marker_2e7e306b6d12b49d7aa9152488e1e143.bindTooltip(
+                `<div>
+                     Novi Sad
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61f3688d475df65b0f008dc698746c9b = L.marker(
+                [47.0722, 21.9211],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_82f24f7d41a0bf5e5031428b9dcb0012 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be8033c82bdec4f2b5d963865974c27d = $(`<div id="html_be8033c82bdec4f2b5d963865974c27d" style="width: 100.0%; height: 100.0%;">Oradea, Romania</div>`)[0];
+                popup_82f24f7d41a0bf5e5031428b9dcb0012.setContent(html_be8033c82bdec4f2b5d963865974c27d);
+            
+        
+
+        marker_61f3688d475df65b0f008dc698746c9b.bindPopup(popup_82f24f7d41a0bf5e5031428b9dcb0012)
+        ;
+
+        
+    
+    
+            marker_61f3688d475df65b0f008dc698746c9b.bindTooltip(
+                `<div>
+                     Oradea
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_587e1c707b5d4b992e104344c299ff09 = L.marker(
+                [51.7667, 55.1],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6bc592c2d72390006a3c9e1cea8f90db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb15df74792d33b7537ab39db642acf6 = $(`<div id="html_bb15df74792d33b7537ab39db642acf6" style="width: 100.0%; height: 100.0%;">Orenburg, Russia</div>`)[0];
+                popup_6bc592c2d72390006a3c9e1cea8f90db.setContent(html_bb15df74792d33b7537ab39db642acf6);
+            
+        
+
+        marker_587e1c707b5d4b992e104344c299ff09.bindPopup(popup_6bc592c2d72390006a3c9e1cea8f90db)
+        ;
+
+        
+    
+    
+            marker_587e1c707b5d4b992e104344c299ff09.bindTooltip(
+                `<div>
+                     Orenburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2395625446bf23cf6efaac8bfc0a06de = L.marker(
+                [42.8167, -1.65],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_fd345984f5ef8286613d99465a3838b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e23621159948ae0cafe8e40776a61cb3 = $(`<div id="html_e23621159948ae0cafe8e40776a61cb3" style="width: 100.0%; height: 100.0%;">Pamplona, Spain</div>`)[0];
+                popup_fd345984f5ef8286613d99465a3838b6.setContent(html_e23621159948ae0cafe8e40776a61cb3);
+            
+        
+
+        marker_2395625446bf23cf6efaac8bfc0a06de.bindPopup(popup_fd345984f5ef8286613d99465a3838b6)
+        ;
+
+        
+    
+    
+            marker_2395625446bf23cf6efaac8bfc0a06de.bindTooltip(
+                `<div>
+                     Pamplona
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3fe9fab2d58727ee8fb727575339a767 = L.marker(
+                [48.8567, 2.3522],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4becebd06e4012b37e450e80715d9ada = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a105d61f4fb594ac1bcf6a95149a6a7e = $(`<div id="html_a105d61f4fb594ac1bcf6a95149a6a7e" style="width: 100.0%; height: 100.0%;">Paris, France</div>`)[0];
+                popup_4becebd06e4012b37e450e80715d9ada.setContent(html_a105d61f4fb594ac1bcf6a95149a6a7e);
+            
+        
+
+        marker_3fe9fab2d58727ee8fb727575339a767.bindPopup(popup_4becebd06e4012b37e450e80715d9ada)
+        ;
+
+        
+    
+    
+            marker_3fe9fab2d58727ee8fb727575339a767.bindTooltip(
+                `<div>
+                     Paris
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa13a25b4b2c23b396b5f953464a3177 = L.marker(
+                [53.2, 45.0],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_e30d9d929958b473b20fd5aaff348bea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2dfb337ff5dff48e96f9b883f993f860 = $(`<div id="html_2dfb337ff5dff48e96f9b883f993f860" style="width: 100.0%; height: 100.0%;">Penza, Russia</div>`)[0];
+                popup_e30d9d929958b473b20fd5aaff348bea.setContent(html_2dfb337ff5dff48e96f9b883f993f860);
+            
+        
+
+        marker_aa13a25b4b2c23b396b5f953464a3177.bindPopup(popup_e30d9d929958b473b20fd5aaff348bea)
+        ;
+
+        
+    
+    
+            marker_aa13a25b4b2c23b396b5f953464a3177.bindTooltip(
+                `<div>
+                     Penza
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_838f747ba4f0b9a5ba52de6c9665a263 = L.marker(
+                [58.0139, 56.2489],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_9cfb909b0b03812335768ff03c2a9063 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b14e11b049daaa7a19fb046df28e736 = $(`<div id="html_3b14e11b049daaa7a19fb046df28e736" style="width: 100.0%; height: 100.0%;">Perm, Russia</div>`)[0];
+                popup_9cfb909b0b03812335768ff03c2a9063.setContent(html_3b14e11b049daaa7a19fb046df28e736);
+            
+        
+
+        marker_838f747ba4f0b9a5ba52de6c9665a263.bindPopup(popup_9cfb909b0b03812335768ff03c2a9063)
+        ;
+
+        
+    
+    
+            marker_838f747ba4f0b9a5ba52de6c9665a263.bindTooltip(
+                `<div>
+                     Perm
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_69392b486319fbf44a43a570faa7f261 = L.marker(
+                [43.1122, 12.3889],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_f9043f9b4f8fa19e8b3dac531fba6c0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_335f9fb02d6e3734d6582a14cbbc45a7 = $(`<div id="html_335f9fb02d6e3734d6582a14cbbc45a7" style="width: 100.0%; height: 100.0%;">Perugia, Italy</div>`)[0];
+                popup_f9043f9b4f8fa19e8b3dac531fba6c0e.setContent(html_335f9fb02d6e3734d6582a14cbbc45a7);
+            
+        
+
+        marker_69392b486319fbf44a43a570faa7f261.bindPopup(popup_f9043f9b4f8fa19e8b3dac531fba6c0e)
+        ;
+
+        
+    
+    
+            marker_69392b486319fbf44a43a570faa7f261.bindTooltip(
+                `<div>
+                     Perugia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_abd6cbcaf1079d98ef62073ff36b11ce = L.marker(
+                [61.7833, 34.35],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_607f2e22307c0a574e581a4c6298c59b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e009e0461381563eee2e08c548eba4d3 = $(`<div id="html_e009e0461381563eee2e08c548eba4d3" style="width: 100.0%; height: 100.0%;">Petrozavodsk, Russia</div>`)[0];
+                popup_607f2e22307c0a574e581a4c6298c59b.setContent(html_e009e0461381563eee2e08c548eba4d3);
+            
+        
+
+        marker_abd6cbcaf1079d98ef62073ff36b11ce.bindPopup(popup_607f2e22307c0a574e581a4c6298c59b)
+        ;
+
+        
+    
+    
+            marker_abd6cbcaf1079d98ef62073ff36b11ce.bindTooltip(
+                `<div>
+                     Petrozavodsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7af311e9a2ff9ea227fb4559c208442f = L.marker(
+                [42.15, 24.75],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_c01a631b588f3790d84358c6c287b329 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43b2be7f66b2689896fb355a7c481de6 = $(`<div id="html_43b2be7f66b2689896fb355a7c481de6" style="width: 100.0%; height: 100.0%;">Plovdiv, Bulgaria</div>`)[0];
+                popup_c01a631b588f3790d84358c6c287b329.setContent(html_43b2be7f66b2689896fb355a7c481de6);
+            
+        
+
+        marker_7af311e9a2ff9ea227fb4559c208442f.bindPopup(popup_c01a631b588f3790d84358c6c287b329)
+        ;
+
+        
+    
+    
+            marker_7af311e9a2ff9ea227fb4559c208442f.bindTooltip(
+                `<div>
+                     Plovdiv
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c9ba42490ab7403ad9ca8cb1d23da66 = L.marker(
+                [42.4413, 19.2629],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6724173537e3a0ceb74e4879dc974812 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a3904a2235928056e3853635ee0060e = $(`<div id="html_9a3904a2235928056e3853635ee0060e" style="width: 100.0%; height: 100.0%;">Podgorica, Montenegro</div>`)[0];
+                popup_6724173537e3a0ceb74e4879dc974812.setContent(html_9a3904a2235928056e3853635ee0060e);
+            
+        
+
+        marker_7c9ba42490ab7403ad9ca8cb1d23da66.bindPopup(popup_6724173537e3a0ceb74e4879dc974812)
+        ;
+
+        
+    
+    
+            marker_7c9ba42490ab7403ad9ca8cb1d23da66.bindTooltip(
+                `<div>
+                     Podgorica
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d89810ea6e2c3455a0908ac9bcc9e699 = L.marker(
+                [41.1621, -8.622],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_fa21b5081cb05aa0980972783f9bb718 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_547e0f7cde7bc6c85a0bd8757502ab16 = $(`<div id="html_547e0f7cde7bc6c85a0bd8757502ab16" style="width: 100.0%; height: 100.0%;">Porto, Portugal</div>`)[0];
+                popup_fa21b5081cb05aa0980972783f9bb718.setContent(html_547e0f7cde7bc6c85a0bd8757502ab16);
+            
+        
+
+        marker_d89810ea6e2c3455a0908ac9bcc9e699.bindPopup(popup_fa21b5081cb05aa0980972783f9bb718)
+        ;
+
+        
+    
+    
+            marker_d89810ea6e2c3455a0908ac9bcc9e699.bindTooltip(
+                `<div>
+                     Porto
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_236f614662ab0f784593ca1f2f78832e = L.marker(
+                [50.0875, 14.4214],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_e76e79ad71a47a6184924bcc7a71c63b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75a3dfa97ea9f824fe8c9623f065a7fe = $(`<div id="html_75a3dfa97ea9f824fe8c9623f065a7fe" style="width: 100.0%; height: 100.0%;">Prague, Czechia</div>`)[0];
+                popup_e76e79ad71a47a6184924bcc7a71c63b.setContent(html_75a3dfa97ea9f824fe8c9623f065a7fe);
+            
+        
+
+        marker_236f614662ab0f784593ca1f2f78832e.bindPopup(popup_e76e79ad71a47a6184924bcc7a71c63b)
+        ;
+
+        
+    
+    
+            marker_236f614662ab0f784593ca1f2f78832e.bindTooltip(
+                `<div>
+                     Prague
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1b1b0c27ed4ee5737fb7b2b7eb3dc95b = L.marker(
+                [42.6633, 21.1622],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_88c3c6443c97c8466a71d6cead246f08 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9b44605ca034c54fe4ea38e7b680fa4 = $(`<div id="html_f9b44605ca034c54fe4ea38e7b680fa4" style="width: 100.0%; height: 100.0%;">Pristina, Kosovo</div>`)[0];
+                popup_88c3c6443c97c8466a71d6cead246f08.setContent(html_f9b44605ca034c54fe4ea38e7b680fa4);
+            
+        
+
+        marker_1b1b0c27ed4ee5737fb7b2b7eb3dc95b.bindPopup(popup_88c3c6443c97c8466a71d6cead246f08)
+        ;
+
+        
+    
+    
+            marker_1b1b0c27ed4ee5737fb7b2b7eb3dc95b.bindTooltip(
+                `<div>
+                     Pristina
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b5de720b089c2df663bba5ef8f1fcef = L.marker(
+                [57.8167, 28.3333],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_0b0d8b3bb089013f8048cc5351f0cea6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff04e2b7e6e3c1020b2d3f755cc0e084 = $(`<div id="html_ff04e2b7e6e3c1020b2d3f755cc0e084" style="width: 100.0%; height: 100.0%;">Pskov, Russia</div>`)[0];
+                popup_0b0d8b3bb089013f8048cc5351f0cea6.setContent(html_ff04e2b7e6e3c1020b2d3f755cc0e084);
+            
+        
+
+        marker_4b5de720b089c2df663bba5ef8f1fcef.bindPopup(popup_0b0d8b3bb089013f8048cc5351f0cea6)
+        ;
+
+        
+    
+    
+            marker_4b5de720b089c2df663bba5ef8f1fcef.bindTooltip(
+                `<div>
+                     Pskov
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3fc9f6bfbf902209773a03481dd036c0 = L.marker(
+                [48.1147, -1.6794],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6f89a007c9806dc0305cdaabbb880dbc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f81e664023e206abccb6501c23337f5d = $(`<div id="html_f81e664023e206abccb6501c23337f5d" style="width: 100.0%; height: 100.0%;">Rennes, France</div>`)[0];
+                popup_6f89a007c9806dc0305cdaabbb880dbc.setContent(html_f81e664023e206abccb6501c23337f5d);
+            
+        
+
+        marker_3fc9f6bfbf902209773a03481dd036c0.bindPopup(popup_6f89a007c9806dc0305cdaabbb880dbc)
+        ;
+
+        
+    
+    
+            marker_3fc9f6bfbf902209773a03481dd036c0.bindTooltip(
+                `<div>
+                     Rennes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5dc7a70a535a55877ef5c6ebef740f35 = L.marker(
+                [56.9489, 24.1064],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_13cc83c8a5794bb643bbeaed22d82fb7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9629a5f939aedb99f5b5a093b1801376 = $(`<div id="html_9629a5f939aedb99f5b5a093b1801376" style="width: 100.0%; height: 100.0%;">Riga, Latvia</div>`)[0];
+                popup_13cc83c8a5794bb643bbeaed22d82fb7.setContent(html_9629a5f939aedb99f5b5a093b1801376);
+            
+        
+
+        marker_5dc7a70a535a55877ef5c6ebef740f35.bindPopup(popup_13cc83c8a5794bb643bbeaed22d82fb7)
+        ;
+
+        
+    
+    
+            marker_5dc7a70a535a55877ef5c6ebef740f35.bindTooltip(
+                `<div>
+                     Riga
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2685c08fb02ff7b76b32b431f16cfaa2 = L.marker(
+                [45.3272, 14.4411],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4db7d2f3bbdcf113717337960a5e157f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ff04289a0449587a25a13053908af17 = $(`<div id="html_9ff04289a0449587a25a13053908af17" style="width: 100.0%; height: 100.0%;">Rijeka, Croatia</div>`)[0];
+                popup_4db7d2f3bbdcf113717337960a5e157f.setContent(html_9ff04289a0449587a25a13053908af17);
+            
+        
+
+        marker_2685c08fb02ff7b76b32b431f16cfaa2.bindPopup(popup_4db7d2f3bbdcf113717337960a5e157f)
+        ;
+
+        
+    
+    
+            marker_2685c08fb02ff7b76b32b431f16cfaa2.bindTooltip(
+                `<div>
+                     Rijeka
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8307c551fe6d7a48f9995195e0b3122 = L.marker(
+                [50.6192, 26.2519],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_69ee6c67fa877583aad647218576b648 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_beebda52b787757247adc45803109ef5 = $(`<div id="html_beebda52b787757247adc45803109ef5" style="width: 100.0%; height: 100.0%;">Rivne, Ukraine</div>`)[0];
+                popup_69ee6c67fa877583aad647218576b648.setContent(html_beebda52b787757247adc45803109ef5);
+            
+        
+
+        marker_a8307c551fe6d7a48f9995195e0b3122.bindPopup(popup_69ee6c67fa877583aad647218576b648)
+        ;
+
+        
+    
+    
+            marker_a8307c551fe6d7a48f9995195e0b3122.bindTooltip(
+                `<div>
+                     Rivne
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_71e2003f1cac4b78b688972cfac7881a = L.marker(
+                [41.8931, 12.4828],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_26c95b6f74d26c9ca1cc5a556549c87a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b272468e250bc3f8b00fc2199cac9fe8 = $(`<div id="html_b272468e250bc3f8b00fc2199cac9fe8" style="width: 100.0%; height: 100.0%;">Rome, Italy</div>`)[0];
+                popup_26c95b6f74d26c9ca1cc5a556549c87a.setContent(html_b272468e250bc3f8b00fc2199cac9fe8);
+            
+        
+
+        marker_71e2003f1cac4b78b688972cfac7881a.bindPopup(popup_26c95b6f74d26c9ca1cc5a556549c87a)
+        ;
+
+        
+    
+    
+            marker_71e2003f1cac4b78b688972cfac7881a.bindTooltip(
+                `<div>
+                     Rome
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_489200c4833e9355053665373a03ed06 = L.marker(
+                [49.4428, 1.0886],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_3eba95da4819bb0f5493c321149fc112 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d11ed3c0de5508dee9795e71533cd7c = $(`<div id="html_7d11ed3c0de5508dee9795e71533cd7c" style="width: 100.0%; height: 100.0%;">Rouen, France</div>`)[0];
+                popup_3eba95da4819bb0f5493c321149fc112.setContent(html_7d11ed3c0de5508dee9795e71533cd7c);
+            
+        
+
+        marker_489200c4833e9355053665373a03ed06.bindPopup(popup_3eba95da4819bb0f5493c321149fc112)
+        ;
+
+        
+    
+    
+            marker_489200c4833e9355053665373a03ed06.bindTooltip(
+                `<div>
+                     Rouen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3345ecf6289378b195b00d8420823da9 = L.marker(
+                [59.95, 30.3167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_9ad1daf95c0683875ef22822c79e28d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2217a6296afcc4eb410bb4a7ce6e555 = $(`<div id="html_c2217a6296afcc4eb410bb4a7ce6e555" style="width: 100.0%; height: 100.0%;">Saint Petersburg, Russia</div>`)[0];
+                popup_9ad1daf95c0683875ef22822c79e28d9.setContent(html_c2217a6296afcc4eb410bb4a7ce6e555);
+            
+        
+
+        marker_3345ecf6289378b195b00d8420823da9.bindPopup(popup_9ad1daf95c0683875ef22822c79e28d9)
+        ;
+
+        
+    
+    
+            marker_3345ecf6289378b195b00d8420823da9.bindTooltip(
+                `<div>
+                     Saint Petersburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23832320d9bcd6a5a265768d9bcf4dc2 = L.marker(
+                [47.8, 13.045],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4a478ae09bbb2c0e21a1b362d2ab30fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f509f3aae89cd674fcc95c2e46f21607 = $(`<div id="html_f509f3aae89cd674fcc95c2e46f21607" style="width: 100.0%; height: 100.0%;">Salzburg, Austria</div>`)[0];
+                popup_4a478ae09bbb2c0e21a1b362d2ab30fd.setContent(html_f509f3aae89cd674fcc95c2e46f21607);
+            
+        
+
+        marker_23832320d9bcd6a5a265768d9bcf4dc2.bindPopup(popup_4a478ae09bbb2c0e21a1b362d2ab30fd)
+        ;
+
+        
+    
+    
+            marker_23832320d9bcd6a5a265768d9bcf4dc2.bindTooltip(
+                `<div>
+                     Salzburg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bfce62a40aa62920c00d997243b28a82 = L.marker(
+                [53.2028, 50.1408],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_d46ef1c6b0b6fb92b43ffaee28af8c55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_044b8233d5caf2970816470801e179ac = $(`<div id="html_044b8233d5caf2970816470801e179ac" style="width: 100.0%; height: 100.0%;">Samara, Russia</div>`)[0];
+                popup_d46ef1c6b0b6fb92b43ffaee28af8c55.setContent(html_044b8233d5caf2970816470801e179ac);
+            
+        
+
+        marker_bfce62a40aa62920c00d997243b28a82.bindPopup(popup_d46ef1c6b0b6fb92b43ffaee28af8c55)
+        ;
+
+        
+    
+    
+            marker_bfce62a40aa62920c00d997243b28a82.bindTooltip(
+                `<div>
+                     Samara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_edfcd96b35e1cecde68a4e817a24ea1d = L.marker(
+                [41.2903, 36.3336],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_1a191d0ecbf67586b149a0dda87fd924 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_091acff8666fdbec36845ad3c97794f2 = $(`<div id="html_091acff8666fdbec36845ad3c97794f2" style="width: 100.0%; height: 100.0%;">Samsun, Turkey</div>`)[0];
+                popup_1a191d0ecbf67586b149a0dda87fd924.setContent(html_091acff8666fdbec36845ad3c97794f2);
+            
+        
+
+        marker_edfcd96b35e1cecde68a4e817a24ea1d.bindPopup(popup_1a191d0ecbf67586b149a0dda87fd924)
+        ;
+
+        
+    
+    
+            marker_edfcd96b35e1cecde68a4e817a24ea1d.bindTooltip(
+                `<div>
+                     Samsun
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3c19d7c3aab59edf886068f6bb19270 = L.marker(
+                [43.4628, -3.805],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_9c300d692c9fb2b7f6c4c66d9eb7aeef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed671fa8c65f2b9d87ae9ae5dbc9883d = $(`<div id="html_ed671fa8c65f2b9d87ae9ae5dbc9883d" style="width: 100.0%; height: 100.0%;">Santander, Spain</div>`)[0];
+                popup_9c300d692c9fb2b7f6c4c66d9eb7aeef.setContent(html_ed671fa8c65f2b9d87ae9ae5dbc9883d);
+            
+        
+
+        marker_d3c19d7c3aab59edf886068f6bb19270.bindPopup(popup_9c300d692c9fb2b7f6c4c66d9eb7aeef)
+        ;
+
+        
+    
+    
+            marker_d3c19d7c3aab59edf886068f6bb19270.bindTooltip(
+                `<div>
+                     Santander
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0e4bc1f6dc879542c47076c5dc9087e8 = L.marker(
+                [43.8564, 18.4131],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_214dc082cb928df767fbfd35a563916a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9126b305f14007bcc3d006f49e0b7189 = $(`<div id="html_9126b305f14007bcc3d006f49e0b7189" style="width: 100.0%; height: 100.0%;">Sarajevo, Bosnia and Herzegovina</div>`)[0];
+                popup_214dc082cb928df767fbfd35a563916a.setContent(html_9126b305f14007bcc3d006f49e0b7189);
+            
+        
+
+        marker_0e4bc1f6dc879542c47076c5dc9087e8.bindPopup(popup_214dc082cb928df767fbfd35a563916a)
+        ;
+
+        
+    
+    
+            marker_0e4bc1f6dc879542c47076c5dc9087e8.bindTooltip(
+                `<div>
+                     Sarajevo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87bade74434a8c70679c760a8d484bba = L.marker(
+                [51.5333, 46.0167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_1b5a7ba00953c210c4c4dbf0a7e4b776 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07768e2895be9d5f00daecc7973e28b7 = $(`<div id="html_07768e2895be9d5f00daecc7973e28b7" style="width: 100.0%; height: 100.0%;">Saratov, Russia</div>`)[0];
+                popup_1b5a7ba00953c210c4c4dbf0a7e4b776.setContent(html_07768e2895be9d5f00daecc7973e28b7);
+            
+        
+
+        marker_87bade74434a8c70679c760a8d484bba.bindPopup(popup_1b5a7ba00953c210c4c4dbf0a7e4b776)
+        ;
+
+        
+    
+    
+            marker_87bade74434a8c70679c760a8d484bba.bindTooltip(
+                `<div>
+                     Saratov
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_92ff664fc47f3a294e239eeb0b3f43bd = L.marker(
+                [47.79, 22.89],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_61ecf5974f41d0b0a21b0a4d1167c3e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51676edd14c49aa618b41e92fa57db95 = $(`<div id="html_51676edd14c49aa618b41e92fa57db95" style="width: 100.0%; height: 100.0%;">Satu Mare, Romania</div>`)[0];
+                popup_61ecf5974f41d0b0a21b0a4d1167c3e2.setContent(html_51676edd14c49aa618b41e92fa57db95);
+            
+        
+
+        marker_92ff664fc47f3a294e239eeb0b3f43bd.bindPopup(popup_61ecf5974f41d0b0a21b0a4d1167c3e2)
+        ;
+
+        
+    
+    
+            marker_92ff664fc47f3a294e239eeb0b3f43bd.bindTooltip(
+                `<div>
+                     Satu Mare
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3168aaf9381d7514974ebec8442e178d = L.marker(
+                [45.7928, 24.1519],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4eb842710253e3e00e23cbfdb8c55517 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_410d0ce10218c914a60f454af96d3613 = $(`<div id="html_410d0ce10218c914a60f454af96d3613" style="width: 100.0%; height: 100.0%;">Sibiu, Romania</div>`)[0];
+                popup_4eb842710253e3e00e23cbfdb8c55517.setContent(html_410d0ce10218c914a60f454af96d3613);
+            
+        
+
+        marker_3168aaf9381d7514974ebec8442e178d.bindPopup(popup_4eb842710253e3e00e23cbfdb8c55517)
+        ;
+
+        
+    
+    
+            marker_3168aaf9381d7514974ebec8442e178d.bindTooltip(
+                `<div>
+                     Sibiu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_757038d7f1a7de5a7c40eaab2f6ced4e = L.marker(
+                [37.925, 41.9458],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_8f8f325db03b5f3bf7552295b3a991e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_603c5e5998c57c424ff26b4e2732ac46 = $(`<div id="html_603c5e5998c57c424ff26b4e2732ac46" style="width: 100.0%; height: 100.0%;">Siirt, Turkey</div>`)[0];
+                popup_8f8f325db03b5f3bf7552295b3a991e8.setContent(html_603c5e5998c57c424ff26b4e2732ac46);
+            
+        
+
+        marker_757038d7f1a7de5a7c40eaab2f6ced4e.bindPopup(popup_8f8f325db03b5f3bf7552295b3a991e8)
+        ;
+
+        
+    
+    
+            marker_757038d7f1a7de5a7c40eaab2f6ced4e.bindTooltip(
+                `<div>
+                     Siirt
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c7561dbac6898d9004ebbd4aaaa59546 = L.marker(
+                [44.9484, 34.1],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_fa9b14c7c04871c22aa7f5ecbe32b6ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_368533b3b96788899c634bc171348f7f = $(`<div id="html_368533b3b96788899c634bc171348f7f" style="width: 100.0%; height: 100.0%;">Simferopol, Ukraine</div>`)[0];
+                popup_fa9b14c7c04871c22aa7f5ecbe32b6ae.setContent(html_368533b3b96788899c634bc171348f7f);
+            
+        
+
+        marker_c7561dbac6898d9004ebbd4aaaa59546.bindPopup(popup_fa9b14c7c04871c22aa7f5ecbe32b6ae)
+        ;
+
+        
+    
+    
+            marker_c7561dbac6898d9004ebbd4aaaa59546.bindTooltip(
+                `<div>
+                     Simferopol
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f4ef852a2ec87aa5fbeb0eb011bf393 = L.marker(
+                [39.75, 37.0167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_813270f9a6f5911b97ebdff43d1ec5f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b4220914effee49a6e1b69fd804fb8b2 = $(`<div id="html_b4220914effee49a6e1b69fd804fb8b2" style="width: 100.0%; height: 100.0%;">Sivas, Turkey</div>`)[0];
+                popup_813270f9a6f5911b97ebdff43d1ec5f2.setContent(html_b4220914effee49a6e1b69fd804fb8b2);
+            
+        
+
+        marker_3f4ef852a2ec87aa5fbeb0eb011bf393.bindPopup(popup_813270f9a6f5911b97ebdff43d1ec5f2)
+        ;
+
+        
+    
+    
+            marker_3f4ef852a2ec87aa5fbeb0eb011bf393.bindTooltip(
+                `<div>
+                     Sivas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4cf0133c28d22078952780b35af56901 = L.marker(
+                [41.9961, 21.4317],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b01b48ec4518b7de19bdf3da489cc78b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9c2345f56eca95b9781262aa0dfc45c = $(`<div id="html_d9c2345f56eca95b9781262aa0dfc45c" style="width: 100.0%; height: 100.0%;">Skopje, Macedonia</div>`)[0];
+                popup_b01b48ec4518b7de19bdf3da489cc78b.setContent(html_d9c2345f56eca95b9781262aa0dfc45c);
+            
+        
+
+        marker_4cf0133c28d22078952780b35af56901.bindPopup(popup_b01b48ec4518b7de19bdf3da489cc78b)
+        ;
+
+        
+    
+    
+            marker_4cf0133c28d22078952780b35af56901.bindTooltip(
+                `<div>
+                     Skopje
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_034c45e44b949415beec6546a113fd97 = L.marker(
+                [42.7, 23.33],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_42fb54838d7ea9fb6a1cc43a9fe96c73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f65cf62d5e7b8f47fb1889314a703cf1 = $(`<div id="html_f65cf62d5e7b8f47fb1889314a703cf1" style="width: 100.0%; height: 100.0%;">Sofia, Bulgaria</div>`)[0];
+                popup_42fb54838d7ea9fb6a1cc43a9fe96c73.setContent(html_f65cf62d5e7b8f47fb1889314a703cf1);
+            
+        
+
+        marker_034c45e44b949415beec6546a113fd97.bindPopup(popup_42fb54838d7ea9fb6a1cc43a9fe96c73)
+        ;
+
+        
+    
+    
+            marker_034c45e44b949415beec6546a113fd97.bindTooltip(
+                `<div>
+                     Sofia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e4e20fa3915a62dd72087a0b0e56c9ab = L.marker(
+                [58.97, 5.7314],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_f899dfd0f600b6e498aa445756a16c0c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8794440cc06e756c01a6d3a0e7a9d7c = $(`<div id="html_a8794440cc06e756c01a6d3a0e7a9d7c" style="width: 100.0%; height: 100.0%;">Stavanger, Norway</div>`)[0];
+                popup_f899dfd0f600b6e498aa445756a16c0c.setContent(html_a8794440cc06e756c01a6d3a0e7a9d7c);
+            
+        
+
+        marker_e4e20fa3915a62dd72087a0b0e56c9ab.bindPopup(popup_f899dfd0f600b6e498aa445756a16c0c)
+        ;
+
+        
+    
+    
+            marker_e4e20fa3915a62dd72087a0b0e56c9ab.bindTooltip(
+                `<div>
+                     Stavanger
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1e17f0eaee1ffe338f43d6cc29e9ad0 = L.marker(
+                [45.05, 41.9833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_0a97cf5991af3f4691c79ee77a42a26d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e13f5ad4e38c074e0d1bf0400e41483 = $(`<div id="html_8e13f5ad4e38c074e0d1bf0400e41483" style="width: 100.0%; height: 100.0%;">Stavropol, Russia</div>`)[0];
+                popup_0a97cf5991af3f4691c79ee77a42a26d.setContent(html_8e13f5ad4e38c074e0d1bf0400e41483);
+            
+        
+
+        marker_b1e17f0eaee1ffe338f43d6cc29e9ad0.bindPopup(popup_0a97cf5991af3f4691c79ee77a42a26d)
+        ;
+
+        
+    
+    
+            marker_b1e17f0eaee1ffe338f43d6cc29e9ad0.bindTooltip(
+                `<div>
+                     Stavropol
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_901221dd0f27325baa325a854247cc25 = L.marker(
+                [59.3294, 18.0686],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_d7aa0fb4f434e81a64aa9f932e076e55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0097e426771c52636f87b14856fc0e68 = $(`<div id="html_0097e426771c52636f87b14856fc0e68" style="width: 100.0%; height: 100.0%;">Stockholm, Sweden</div>`)[0];
+                popup_d7aa0fb4f434e81a64aa9f932e076e55.setContent(html_0097e426771c52636f87b14856fc0e68);
+            
+        
+
+        marker_901221dd0f27325baa325a854247cc25.bindPopup(popup_d7aa0fb4f434e81a64aa9f932e076e55)
+        ;
+
+        
+    
+    
+            marker_901221dd0f27325baa325a854247cc25.bindTooltip(
+                `<div>
+                     Stockholm
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e7b7d19034963e81ed7ed7bd298ce19 = L.marker(
+                [48.5833, 7.7458],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_bf98c73a80c9b3a6b7638caa2f5a2eda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b561e72a93a2576b0860711b9f108346 = $(`<div id="html_b561e72a93a2576b0860711b9f108346" style="width: 100.0%; height: 100.0%;">Strasbourg, France</div>`)[0];
+                popup_bf98c73a80c9b3a6b7638caa2f5a2eda.setContent(html_b561e72a93a2576b0860711b9f108346);
+            
+        
+
+        marker_2e7b7d19034963e81ed7ed7bd298ce19.bindPopup(popup_bf98c73a80c9b3a6b7638caa2f5a2eda)
+        ;
+
+        
+    
+    
+            marker_2e7b7d19034963e81ed7ed7bd298ce19.bindTooltip(
+                `<div>
+                     Strasbourg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4d49b2aa6ee1347302448198b4ea48c2 = L.marker(
+                [48.7775, 9.18],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_17d5262f776addbdaa9b85f08847d3a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0eb1226b8c31da1679305bd9b075b615 = $(`<div id="html_0eb1226b8c31da1679305bd9b075b615" style="width: 100.0%; height: 100.0%;">Stuttgart, Germany</div>`)[0];
+                popup_17d5262f776addbdaa9b85f08847d3a4.setContent(html_0eb1226b8c31da1679305bd9b075b615);
+            
+        
+
+        marker_4d49b2aa6ee1347302448198b4ea48c2.bindPopup(popup_17d5262f776addbdaa9b85f08847d3a4)
+        ;
+
+        
+    
+    
+            marker_4d49b2aa6ee1347302448198b4ea48c2.bindTooltip(
+                `<div>
+                     Stuttgart
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9664f4e9617c349e6264e9bffc839b1 = L.marker(
+                [61.6667, 50.8167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_5899a8ea0b2a09ad4de5ff53d74261b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33dd79d101d50379c528b4bc19ddc97a = $(`<div id="html_33dd79d101d50379c528b4bc19ddc97a" style="width: 100.0%; height: 100.0%;">Syktyvkar, Russia</div>`)[0];
+                popup_5899a8ea0b2a09ad4de5ff53d74261b0.setContent(html_33dd79d101d50379c528b4bc19ddc97a);
+            
+        
+
+        marker_c9664f4e9617c349e6264e9bffc839b1.bindPopup(popup_5899a8ea0b2a09ad4de5ff53d74261b0)
+        ;
+
+        
+    
+    
+            marker_c9664f4e9617c349e6264e9bffc839b1.bindTooltip(
+                `<div>
+                     Syktyvkar
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d9c1d14a0de1ceb003d16a242d036fe = L.marker(
+                [53.4325, 14.5481],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4ce7512b5c6fcd5ec412466e6b2a00b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8df495417730f4a593c883bb1b27fa3 = $(`<div id="html_a8df495417730f4a593c883bb1b27fa3" style="width: 100.0%; height: 100.0%;">Szczecin, Poland</div>`)[0];
+                popup_4ce7512b5c6fcd5ec412466e6b2a00b6.setContent(html_a8df495417730f4a593c883bb1b27fa3);
+            
+        
+
+        marker_1d9c1d14a0de1ceb003d16a242d036fe.bindPopup(popup_4ce7512b5c6fcd5ec412466e6b2a00b6)
+        ;
+
+        
+    
+    
+            marker_1d9c1d14a0de1ceb003d16a242d036fe.bindTooltip(
+                `<div>
+                     Szczecin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_71268c2b37e44f261ebbf1f302c0062c = L.marker(
+                [59.4372, 24.7453],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_139f3bcb0da989c02964eb1c401e1de4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_524f332c1ab346fec9ab61d59eefa948 = $(`<div id="html_524f332c1ab346fec9ab61d59eefa948" style="width: 100.0%; height: 100.0%;">Tallinn, Estonia</div>`)[0];
+                popup_139f3bcb0da989c02964eb1c401e1de4.setContent(html_524f332c1ab346fec9ab61d59eefa948);
+            
+        
+
+        marker_71268c2b37e44f261ebbf1f302c0062c.bindPopup(popup_139f3bcb0da989c02964eb1c401e1de4)
+        ;
+
+        
+    
+    
+            marker_71268c2b37e44f261ebbf1f302c0062c.bindTooltip(
+                `<div>
+                     Tallinn
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9e63b3809fa3cbdae87f09051273249 = L.marker(
+                [61.4981, 23.76],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_b4e83d5fc3929b079af721ce2ce453a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe0df63b24ef60441d9647e154ca9a4e = $(`<div id="html_fe0df63b24ef60441d9647e154ca9a4e" style="width: 100.0%; height: 100.0%;">Tampere, Finland</div>`)[0];
+                popup_b4e83d5fc3929b079af721ce2ce453a7.setContent(html_fe0df63b24ef60441d9647e154ca9a4e);
+            
+        
+
+        marker_c9e63b3809fa3cbdae87f09051273249.bindPopup(popup_b4e83d5fc3929b079af721ce2ce453a7)
+        ;
+
+        
+    
+    
+            marker_c9e63b3809fa3cbdae87f09051273249.bindTooltip(
+                `<div>
+                     Tampere
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19ebdccbbc109c7312e89c275258b8e6 = L.marker(
+                [41.7225, 44.7925],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4c7f8ae1d207eed9589900399b169c8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1ebd382ed0777435f7fa873abb357c2 = $(`<div id="html_a1ebd382ed0777435f7fa873abb357c2" style="width: 100.0%; height: 100.0%;">Tbilisi, Georgia</div>`)[0];
+                popup_4c7f8ae1d207eed9589900399b169c8e.setContent(html_a1ebd382ed0777435f7fa873abb357c2);
+            
+        
+
+        marker_19ebdccbbc109c7312e89c275258b8e6.bindPopup(popup_4c7f8ae1d207eed9589900399b169c8e)
+        ;
+
+        
+    
+    
+            marker_19ebdccbbc109c7312e89c275258b8e6.bindTooltip(
+                `<div>
+                     Tbilisi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a44c88e830d010952d522fba70a0b07 = L.marker(
+                [40.6403, 22.9347],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7dd09066ea8b003f805c1fecff2ccf08 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fbcb3d68ee155c13a1fc2bfa2295a713 = $(`<div id="html_fbcb3d68ee155c13a1fc2bfa2295a713" style="width: 100.0%; height: 100.0%;">Thessaloniki, Greece</div>`)[0];
+                popup_7dd09066ea8b003f805c1fecff2ccf08.setContent(html_fbcb3d68ee155c13a1fc2bfa2295a713);
+            
+        
+
+        marker_3a44c88e830d010952d522fba70a0b07.bindPopup(popup_7dd09066ea8b003f805c1fecff2ccf08)
+        ;
+
+        
+    
+    
+            marker_3a44c88e830d010952d522fba70a0b07.bindTooltip(
+                `<div>
+                     Thessaloniki
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_127b261dba8350b26a5aad62d295d662 = L.marker(
+                [41.3289, 19.8178],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_a6eb5fbfd56e34559513c2da1f560e58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35c11a9cc6a680faf74f7c639fa787ce = $(`<div id="html_35c11a9cc6a680faf74f7c639fa787ce" style="width: 100.0%; height: 100.0%;">Tirana, Albania</div>`)[0];
+                popup_a6eb5fbfd56e34559513c2da1f560e58.setContent(html_35c11a9cc6a680faf74f7c639fa787ce);
+            
+        
+
+        marker_127b261dba8350b26a5aad62d295d662.bindPopup(popup_a6eb5fbfd56e34559513c2da1f560e58)
+        ;
+
+        
+    
+    
+            marker_127b261dba8350b26a5aad62d295d662.bindTooltip(
+                `<div>
+                     Tirana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7bccd9de075a8df268fc7abeb9ef717f = L.marker(
+                [43.6045, 1.444],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_7a50fdb8bf5d8d7a6b5b68ebb8037e52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fda584fcba6d54b73dcc025f4adc047f = $(`<div id="html_fda584fcba6d54b73dcc025f4adc047f" style="width: 100.0%; height: 100.0%;">Toulouse, France</div>`)[0];
+                popup_7a50fdb8bf5d8d7a6b5b68ebb8037e52.setContent(html_fda584fcba6d54b73dcc025f4adc047f);
+            
+        
+
+        marker_7bccd9de075a8df268fc7abeb9ef717f.bindPopup(popup_7a50fdb8bf5d8d7a6b5b68ebb8037e52)
+        ;
+
+        
+    
+    
+            marker_7bccd9de075a8df268fc7abeb9ef717f.bindTooltip(
+                `<div>
+                     Toulouse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_080bfebee57d4de16325eb1bd1c9555c = L.marker(
+                [41.005, 39.7225],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_2eaf9a4a9247111c2f7ec37c1543a197 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_854d207308eea59d27ee0547cdcfc2ac = $(`<div id="html_854d207308eea59d27ee0547cdcfc2ac" style="width: 100.0%; height: 100.0%;">Trabzon, Turkey</div>`)[0];
+                popup_2eaf9a4a9247111c2f7ec37c1543a197.setContent(html_854d207308eea59d27ee0547cdcfc2ac);
+            
+        
+
+        marker_080bfebee57d4de16325eb1bd1c9555c.bindPopup(popup_2eaf9a4a9247111c2f7ec37c1543a197)
+        ;
+
+        
+    
+    
+            marker_080bfebee57d4de16325eb1bd1c9555c.bindTooltip(
+                `<div>
+                     Trabzon
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc535ff5a900aa2481139865da004f80 = L.marker(
+                [60.45, 22.2667],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_53ac5d413c3d98010902d8bec29e0018 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d01ad8e2255a784c95bbc3f74d8e1d1f = $(`<div id="html_d01ad8e2255a784c95bbc3f74d8e1d1f" style="width: 100.0%; height: 100.0%;">Turku, Finland</div>`)[0];
+                popup_53ac5d413c3d98010902d8bec29e0018.setContent(html_d01ad8e2255a784c95bbc3f74d8e1d1f);
+            
+        
+
+        marker_cc535ff5a900aa2481139865da004f80.bindPopup(popup_53ac5d413c3d98010902d8bec29e0018)
+        ;
+
+        
+    
+    
+            marker_cc535ff5a900aa2481139865da004f80.bindTooltip(
+                `<div>
+                     Turku
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9e1a3a9bde3b1c7104ee8e17e023b2a = L.marker(
+                [54.7261, 55.9475],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_ce8c22531938d89f9adbdbcba51679fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b957da3205f372ed41704f61df94590 = $(`<div id="html_9b957da3205f372ed41704f61df94590" style="width: 100.0%; height: 100.0%;">Ufa, Russia</div>`)[0];
+                popup_ce8c22531938d89f9adbdbcba51679fc.setContent(html_9b957da3205f372ed41704f61df94590);
+            
+        
+
+        marker_c9e1a3a9bde3b1c7104ee8e17e023b2a.bindPopup(popup_ce8c22531938d89f9adbdbcba51679fc)
+        ;
+
+        
+    
+    
+            marker_c9e1a3a9bde3b1c7104ee8e17e023b2a.bindTooltip(
+                `<div>
+                     Ufa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad0c5a1dcb8c3eeb922ca8ce4f43693e = L.marker(
+                [48.6239, 22.295],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_abc65fa2a4fb79b1184802ee7cf795da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38b5f7396136514ba4f67a3e8df5e65d = $(`<div id="html_38b5f7396136514ba4f67a3e8df5e65d" style="width: 100.0%; height: 100.0%;">Uzhhorod, Ukraine</div>`)[0];
+                popup_abc65fa2a4fb79b1184802ee7cf795da.setContent(html_38b5f7396136514ba4f67a3e8df5e65d);
+            
+        
+
+        marker_ad0c5a1dcb8c3eeb922ca8ce4f43693e.bindPopup(popup_abc65fa2a4fb79b1184802ee7cf795da)
+        ;
+
+        
+    
+    
+            marker_ad0c5a1dcb8c3eeb922ca8ce4f43693e.bindTooltip(
+                `<div>
+                     Uzhhorod
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a6635e8a37adaa3cc83a66301a07fddf = L.marker(
+                [39.47, -0.3764],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_34da0d021590c1b923ad5d7631dacfde = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ceee3e6d8a9832a82b66ba3a7f46bab2 = $(`<div id="html_ceee3e6d8a9832a82b66ba3a7f46bab2" style="width: 100.0%; height: 100.0%;">Valencia, Spain</div>`)[0];
+                popup_34da0d021590c1b923ad5d7631dacfde.setContent(html_ceee3e6d8a9832a82b66ba3a7f46bab2);
+            
+        
+
+        marker_a6635e8a37adaa3cc83a66301a07fddf.bindPopup(popup_34da0d021590c1b923ad5d7631dacfde)
+        ;
+
+        
+    
+    
+            marker_a6635e8a37adaa3cc83a66301a07fddf.bindTooltip(
+                `<div>
+                     Valencia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6bda44091b57610d41510ef0e0af5770 = L.marker(
+                [41.6528, -4.7236],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_dc8a3d4a7e6e3a7a0eb5863df78d50df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ccca90e69416d01def9f30ae5aa96a6 = $(`<div id="html_0ccca90e69416d01def9f30ae5aa96a6" style="width: 100.0%; height: 100.0%;">Valladolid, Spain</div>`)[0];
+                popup_dc8a3d4a7e6e3a7a0eb5863df78d50df.setContent(html_0ccca90e69416d01def9f30ae5aa96a6);
+            
+        
+
+        marker_6bda44091b57610d41510ef0e0af5770.bindPopup(popup_dc8a3d4a7e6e3a7a0eb5863df78d50df)
+        ;
+
+        
+    
+    
+            marker_6bda44091b57610d41510ef0e0af5770.bindTooltip(
+                `<div>
+                     Valladolid
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_636606a302bc745bcb0bd3392f8f678c = L.marker(
+                [38.4942, 43.38],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_75f0cced0e7743fb4ab003f0ed4d2586 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e97d0097067a903286ea7c00d06bc28f = $(`<div id="html_e97d0097067a903286ea7c00d06bc28f" style="width: 100.0%; height: 100.0%;">Van, Turkey</div>`)[0];
+                popup_75f0cced0e7743fb4ab003f0ed4d2586.setContent(html_e97d0097067a903286ea7c00d06bc28f);
+            
+        
+
+        marker_636606a302bc745bcb0bd3392f8f678c.bindPopup(popup_75f0cced0e7743fb4ab003f0ed4d2586)
+        ;
+
+        
+    
+    
+            marker_636606a302bc745bcb0bd3392f8f678c.bindTooltip(
+                `<div>
+                     Van
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e6bcb2899acc9b20d1d3f598c81e6b45 = L.marker(
+                [43.2167, 27.9167],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_068831ae220e0a4afdbae425e9ca91e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_869647c42198cdf86bc7ebfe912843db = $(`<div id="html_869647c42198cdf86bc7ebfe912843db" style="width: 100.0%; height: 100.0%;">Varna, Bulgaria</div>`)[0];
+                popup_068831ae220e0a4afdbae425e9ca91e5.setContent(html_869647c42198cdf86bc7ebfe912843db);
+            
+        
+
+        marker_e6bcb2899acc9b20d1d3f598c81e6b45.bindPopup(popup_068831ae220e0a4afdbae425e9ca91e5)
+        ;
+
+        
+    
+    
+            marker_e6bcb2899acc9b20d1d3f598c81e6b45.bindTooltip(
+                `<div>
+                     Varna
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3bc7e88b65be784fcfa0223a5a8919f = L.marker(
+                [48.2083, 16.3725],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_ce8a1c57c36385d3ad17f42e5325c63b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b31488ddb66cf924e39cf1ed870edcc = $(`<div id="html_1b31488ddb66cf924e39cf1ed870edcc" style="width: 100.0%; height: 100.0%;">Vienna, Austria</div>`)[0];
+                popup_ce8a1c57c36385d3ad17f42e5325c63b.setContent(html_1b31488ddb66cf924e39cf1ed870edcc);
+            
+        
+
+        marker_e3bc7e88b65be784fcfa0223a5a8919f.bindPopup(popup_ce8a1c57c36385d3ad17f42e5325c63b)
+        ;
+
+        
+    
+    
+            marker_e3bc7e88b65be784fcfa0223a5a8919f.bindTooltip(
+                `<div>
+                     Vienna
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fd7cfb149dcad085446455294990b6bd = L.marker(
+                [54.6872, 25.28],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_c903acbc7bbe6c16237a45f0742498e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11331a8d55ed84c24f28119dec7919a8 = $(`<div id="html_11331a8d55ed84c24f28119dec7919a8" style="width: 100.0%; height: 100.0%;">Vilnius, Lithuania</div>`)[0];
+                popup_c903acbc7bbe6c16237a45f0742498e9.setContent(html_11331a8d55ed84c24f28119dec7919a8);
+            
+        
+
+        marker_fd7cfb149dcad085446455294990b6bd.bindPopup(popup_c903acbc7bbe6c16237a45f0742498e9)
+        ;
+
+        
+    
+    
+            marker_fd7cfb149dcad085446455294990b6bd.bindTooltip(
+                `<div>
+                     Vilnius
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5b6c79a5b4a96ed00ddb6e98c529747 = L.marker(
+                [49.2333, 28.4833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_4c22abf8eb6fbfe235f33e67ca540264 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9f744a2eb8682db35fd79fd7983bdd6 = $(`<div id="html_a9f744a2eb8682db35fd79fd7983bdd6" style="width: 100.0%; height: 100.0%;">Vinnytsia, Ukraine</div>`)[0];
+                popup_4c22abf8eb6fbfe235f33e67ca540264.setContent(html_a9f744a2eb8682db35fd79fd7983bdd6);
+            
+        
+
+        marker_e5b6c79a5b4a96ed00ddb6e98c529747.bindPopup(popup_4c22abf8eb6fbfe235f33e67ca540264)
+        ;
+
+        
+    
+    
+            marker_e5b6c79a5b4a96ed00ddb6e98c529747.bindTooltip(
+                `<div>
+                     Vinnytsia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1f89f8fb5760370e7f8b8b3d487017d = L.marker(
+                [42.85, -2.6833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_eb60891b8e94e9119379b8a16124df35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19bb253d07335c4e288b78bcd4e33f76 = $(`<div id="html_19bb253d07335c4e288b78bcd4e33f76" style="width: 100.0%; height: 100.0%;">Vitoria-Gasteiz, Spain</div>`)[0];
+                popup_eb60891b8e94e9119379b8a16124df35.setContent(html_19bb253d07335c4e288b78bcd4e33f76);
+            
+        
+
+        marker_c1f89f8fb5760370e7f8b8b3d487017d.bindPopup(popup_eb60891b8e94e9119379b8a16124df35)
+        ;
+
+        
+    
+    
+            marker_c1f89f8fb5760370e7f8b8b3d487017d.bindTooltip(
+                `<div>
+                     Vitoria-Gasteiz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_08ae43ddc81370167c175611e2323ecb = L.marker(
+                [43.04, 44.6775],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_2a31ca8d81e6ac5c6f2eea9a18e4c9f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_feb3f5af4ed65213636ada9c662ea011 = $(`<div id="html_feb3f5af4ed65213636ada9c662ea011" style="width: 100.0%; height: 100.0%;">Vladikavkaz, Russia</div>`)[0];
+                popup_2a31ca8d81e6ac5c6f2eea9a18e4c9f7.setContent(html_feb3f5af4ed65213636ada9c662ea011);
+            
+        
+
+        marker_08ae43ddc81370167c175611e2323ecb.bindPopup(popup_2a31ca8d81e6ac5c6f2eea9a18e4c9f7)
+        ;
+
+        
+    
+    
+            marker_08ae43ddc81370167c175611e2323ecb.bindTooltip(
+                `<div>
+                     Vladikavkaz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f621f680e8ce00b052aac89681e79ce = L.marker(
+                [48.7086, 44.5147],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_c32c23ae1ac0c389330a1f7c1a1f2139 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a15d8e443668538bf7bdcede566204ef = $(`<div id="html_a15d8e443668538bf7bdcede566204ef" style="width: 100.0%; height: 100.0%;">Volgograd, Russia</div>`)[0];
+                popup_c32c23ae1ac0c389330a1f7c1a1f2139.setContent(html_a15d8e443668538bf7bdcede566204ef);
+            
+        
+
+        marker_7f621f680e8ce00b052aac89681e79ce.bindPopup(popup_c32c23ae1ac0c389330a1f7c1a1f2139)
+        ;
+
+        
+    
+    
+            marker_7f621f680e8ce00b052aac89681e79ce.bindTooltip(
+                `<div>
+                     Volgograd
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8848f74388a61c2a8cdd58f74021818a = L.marker(
+                [51.6717, 39.2106],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_660670359516a1163565fca04c4beac8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_527947837e6f5ed4d6a03c8813911864 = $(`<div id="html_527947837e6f5ed4d6a03c8813911864" style="width: 100.0%; height: 100.0%;">Voronezh, Russia</div>`)[0];
+                popup_660670359516a1163565fca04c4beac8.setContent(html_527947837e6f5ed4d6a03c8813911864);
+            
+        
+
+        marker_8848f74388a61c2a8cdd58f74021818a.bindPopup(popup_660670359516a1163565fca04c4beac8)
+        ;
+
+        
+    
+    
+            marker_8848f74388a61c2a8cdd58f74021818a.bindTooltip(
+                `<div>
+                     Voronezh
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d44153cc0076fcac3dd8b3b32ef65848 = L.marker(
+                [52.23, 21.0111],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_6beff508090c26124bd8ce3f90589924 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ed26014de1df491f25b5b1ec5e180f2 = $(`<div id="html_3ed26014de1df491f25b5b1ec5e180f2" style="width: 100.0%; height: 100.0%;">Warsaw, Poland</div>`)[0];
+                popup_6beff508090c26124bd8ce3f90589924.setContent(html_3ed26014de1df491f25b5b1ec5e180f2);
+            
+        
+
+        marker_d44153cc0076fcac3dd8b3b32ef65848.bindPopup(popup_6beff508090c26124bd8ce3f90589924)
+        ;
+
+        
+    
+    
+            marker_d44153cc0076fcac3dd8b3b32ef65848.bindTooltip(
+                `<div>
+                     Warsaw
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9eacfc4f58e09db3527d490494ad9107 = L.marker(
+                [45.8167, 15.9833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_85d478e441e2fd7fd0b2329e42e63117 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3ac629bd8e688c200c879180516a915 = $(`<div id="html_b3ac629bd8e688c200c879180516a915" style="width: 100.0%; height: 100.0%;">Zagreb, Croatia</div>`)[0];
+                popup_85d478e441e2fd7fd0b2329e42e63117.setContent(html_b3ac629bd8e688c200c879180516a915);
+            
+        
+
+        marker_9eacfc4f58e09db3527d490494ad9107.bindPopup(popup_85d478e441e2fd7fd0b2329e42e63117)
+        ;
+
+        
+    
+    
+            marker_9eacfc4f58e09db3527d490494ad9107.bindTooltip(
+                `<div>
+                     Zagreb
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a9375c637354bfb3229d8765998043a = L.marker(
+                [47.85, 35.1175],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_766f9699956f1a37841e8427c87c57b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_032d54570f187203782f4d8cdcc2d90e = $(`<div id="html_032d54570f187203782f4d8cdcc2d90e" style="width: 100.0%; height: 100.0%;">Zaporizhzhia, Ukraine</div>`)[0];
+                popup_766f9699956f1a37841e8427c87c57b0.setContent(html_032d54570f187203782f4d8cdcc2d90e);
+            
+        
+
+        marker_5a9375c637354bfb3229d8765998043a.bindPopup(popup_766f9699956f1a37841e8427c87c57b0)
+        ;
+
+        
+    
+    
+            marker_5a9375c637354bfb3229d8765998043a.bindTooltip(
+                `<div>
+                     Zaporizhzhia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e4eb17c46e11f95bb27c4cf29b0c502 = L.marker(
+                [41.65, -0.8833],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_1795b1fae685de9f07e1659905904fd6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb97d2d360d1bd294cf30217ddbe296a = $(`<div id="html_eb97d2d360d1bd294cf30217ddbe296a" style="width: 100.0%; height: 100.0%;">Zaragoza, Spain</div>`)[0];
+                popup_1795b1fae685de9f07e1659905904fd6.setContent(html_eb97d2d360d1bd294cf30217ddbe296a);
+            
+        
+
+        marker_2e4eb17c46e11f95bb27c4cf29b0c502.bindPopup(popup_1795b1fae685de9f07e1659905904fd6)
+        ;
+
+        
+    
+    
+            marker_2e4eb17c46e11f95bb27c4cf29b0c502.bindTooltip(
+                `<div>
+                     Zaragoza
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b97d04b1599ebc0011d9200c5b7214f = L.marker(
+                [47.3744, 8.5411],
+                {}
+            ).addTo(map_e8ce066fae2432ce38b8eca4f704611b);
+        
+    
+        var popup_dafbad22a27367665dc3bbfd01209798 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b576c0fa6404dda04ce215f52613b8b8 = $(`<div id="html_b576c0fa6404dda04ce215f52613b8b8" style="width: 100.0%; height: 100.0%;">Zurich, Switzerland</div>`)[0];
+                popup_dafbad22a27367665dc3bbfd01209798.setContent(html_b576c0fa6404dda04ce215f52613b8b8);
+            
+        
+
+        marker_0b97d04b1599ebc0011d9200c5b7214f.bindPopup(popup_dafbad22a27367665dc3bbfd01209798)
+        ;
+
+        
+    
+    
+            marker_0b97d04b1599ebc0011d9200c5b7214f.bindTooltip(
+                `<div>
+                     Zurich
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
