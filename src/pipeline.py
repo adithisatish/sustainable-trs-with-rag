@@ -111,7 +111,7 @@ def pipeline(query, model_name, test = 0, **params):
     
 if __name__ == "__main__":
     query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest some European cities?"
-    model_name = "Llama3-Instruct"
+    model_name = "Mistral-Instruct"
 
     response = pipeline(
         query=query,
