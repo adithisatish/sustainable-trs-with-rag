@@ -8,3 +8,4 @@ __pycache__/
 .env
 test_results/
 .idea/
+european-city-data/
