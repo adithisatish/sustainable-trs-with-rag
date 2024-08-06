@@ -11,5 +11,6 @@ lancedb==0.10.2
 bitsandbytes==0.42.0
 sentencepiece==0.2.0
 protobuf==5.27.2
-transformers==4.43.3
+transformers==4.43.4
 openai==1.37.2
+Jinja2==3.1.4

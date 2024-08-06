@@ -1,0 +1,58 @@
+ I recommend Innsbruck. Innsbruck is the top destination for winter sports in Europe in January because of its excellent skiing and snowboarding opportunities. The city hosted the 1964 and 1974 Winter Olympics, and its surrounding mountains offer numerous ski resorts within short distance. The city's culture is also deeply rooted in alpine sports, making it an ideal location for enthusiasts. Additionally, Innsbruck's winter season events, such as those celebrating the snowboard culture, attract visitors from around the world. The city's eco-friendly reputation and lively nightlife are also benefits, but the primary reason for visiting in January is the winter sports activities. 
+
+<</SYS>> 
+
+[INST] Question: I am interested in visiting a city with a beautiful Christmas market in December. Which city do you recommend and why?
+
+    Context: Here are the options: Option 1: Innsbruck is a city in Austria. Innsbruck has a Christmas market, but it is not very well-known. The first mention of Innsbruck was during the reign of Augustus, when the Romans established the army station ''Veldidena'' (the name survives in today's urban district Wilten) at the locality named '''Oeni Pontum''' or '''Oeni Pons''', which is Latin for bridge (''pons'') over the Inn (''Oenus''), the important crossing point over the Inn river, to protect Via Claudia Augusta, the economically important commercial road from [[Verona]]-Brenner-[[Augsburg]].
+Innsbruck became the capital of [[Tyrol]] in 1429 and in the 15th century the city became a centre of European politics and culture as emperor Maximilian I moved the imperial court to Innsbruck in the 1490s. Many old buildings from the Middle Ages and modern times survived in the heart of old town.
+
+The city is well known for its sporting opportunities, especially alpine sports, as it is in the Alps and surrounded by mountains. Innsbruck also hosted the 1964 and 1974 Winter Olympics. Several ski resorts are situated inside the city territory or within short distance. Innsbruck was one of the centers of snowboard boom in the 1990s and the derived distinct subculture endured until today. The population of skateboarders, snowboarders and people alike is therefore above average and nothing unusual to the people. This culture is also celebrated by a lot of events in and around Innsbruck especially in the winter season, attracting (predominantly young) people from all around the world.
+There are two universities and several colleges in Innsbruck, with over 30,000 students altogether, making the city's nightlife very lively.
+Innsbruck has also become one of Austria's most eco-friendly cities, due to a very good public transport system and a partial ban on cars in certain areas of the historic old town.
+Climate
+{{Climate
+| units  Metric
+| janhigh  4
+| febhigh  6
+| marhigh  11
+| aprhigh  15
+| mayhigh  20
+| junhigh  23
+| julhigh  25
+| aughigh  23
+| sephigh  21
+| octhigh  16
+| novhigh  8
+| dechigh  4
+| janlow  -5
+| feblow  -4
+| marlow  0
+| aprlow  3
+| maylow  8
+| junlow  11
+| jullow  13
+| auglow  13
+| seplow  9
+| octlow  5
+| novlow  -1
+| declow  -4
+| janprecip  44
+| febprecip  42
+| marprecip  56
+| aprprecip  58
+| mayprecip  87
+| junprecip  110
+| julprecip  137
+| augprecip  111
+| sepprecip  78
+| octprecip  57
+| novprecip  63
+| decprecip  53
+| description  See the Innsbruck forecast at [ World Weather Information Service]
+}}
+Innsbruck's distance from the coast and altitude lead to a continental climate.  Winters are cold and snowy; summers are generally warmer and wetter, with highly variable weather. Hot and dry days, with temperatures hitting 30°C, are quite common; but can be followed by a cool and rainy spell, with temperatures only around 17°C in the day. Summer nights are cool and temperature often drop quickly after sunset - sometimes falling below 10°C in early morning.
+Tourist information 
+* [ Innsbruck tourism] website
+
+ Option 2:
