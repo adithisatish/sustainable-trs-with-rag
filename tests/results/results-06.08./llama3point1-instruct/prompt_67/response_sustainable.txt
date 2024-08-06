@@ -1,0 +1,56 @@
+ I recommend Paris. I recommend Paris because it is known for its vibrant street art and graffiti, especially during the summer months. The city has a rich history of artistic expression, and its streets are filled with beautiful murals and graffiti. Additionally, Paris is a popular tourist destination, and its art scene is thriving, making it an ideal place to experience vibrant street art and graffiti in the summer. 
+
+<</SYS>> 
+
+[INST] Question: I'm planning a trip to Europe in July. I'm interested in visiting cities with a rich history and culture. Which city should I visit in Europe in July?
+
+    Context: Here are the options: Option 1: Craiova is a city in Romania.The sustainability (or s-fairness) score for Craiova in Jul is 0.234. 
+ Here is some information about the city. Visit Art Palace.
+Visit Nicolae Romanescu Park.
+Art Museum is interesting and well worth the walk there.
+
+ Option 2: Strasbourg is a city in France.The sustainability (or s-fairness) score for Strasbourg in Jul is 0.188. 
+ Here is some information about the city. Strasbourg is the ninth largest city in France with nearly half a million inhabitants in a metropolitan area spanning across the river into the [[Germany|German]] city of [[Kehl]], on the eastern bank of the Rhine.
+The city is the seat of the Council of Europe, the European Court of Human Rights, the European Ombudsman, the Eurocorps, the European Audiovisual Observatory and, most famously, the [ European Parliament], which also holds sessions in [[Brussels]].
+Strasbourg is a popular tourist destination primarily thanks to the beautifully preserved and pedestrian friendly city centre, which can be explored on foot or bicycle in a few days. Don't forget that Strasbourg's appeal now brings tourists to the city throughout the year, with large tour groups especially frequent during the summer months and during the annual winter market.
+* {{listing
+| nameThe main Tourist Office | alt | url | email
+| addressPlace de la Cathédrale | lat | long | directions
+| phone | tollfree | fax
+| hours09:00 to 19:00 | price
+| lastedit2010-09-30
+| contentIf you ask whether they have maps they try to sell you one for €1.50 - be sure to ask if they have free maps, what you then get is basically the same as the paid one. They also sell a variety of self-guided walking tours through the town (Middle Ages, Renaissance, Modern and Contemporary) for €1 each, and can arrange bike tours through the Faubourgs (the suburbs of Neudorf and Neuhof).
+}}
+* {{listing
+| nameA smaller tourist office | alt | url | email
+| address | lat | long | directionsin the concourse level of the railway station
+| phone | tollfree
+| hours 09:00 to 19:00| price
+| wikipedia | wikidata
+| lastedit2010-09-30
+| content
+}}
+
+ Option 3: Mykolaiv is a city in Ukraine.The sustainability (or s-fairness) score for Mykolaiv in Jul is 0.253. 
+ Here is some information about the city. * Ukrainian theatre.
+* Russian drama theatre.
+* Zoo [ (one of the biggest in Europe, the biggest in Ukraine).
+* [ Museum of Shipbuilding and Fleet]
+* Museum of Arts.
+* Lutheran Church.
+* Catholic Church.
+* Russian Orthodox Church (1825).
+* Ukrainian Orthodox Church.
+* Synagogue.
+* Astronomical observatory [ (1821, 31.58E,46.58N).
+* Swimming pool 'Vodoley' [
+* Radsad wineries (right bank of the Southern Bug river).
+* Old Greek settlement Olvio (30 km south of Mykolaiv).
+* Yacht-club.
+* Soborna (main pedestrian street in town) is the place to be any night of the week with several gorgeous parks and lots of shopping.
+
+ Option 4: Paris is a city in France.The sustainability (or s-fairness) score for Paris in Jul is 0.268. 
+ Here is some information about the city. {{other uses}}
+{{printDistricts}}
+
+'''Paris''', the cosmopolitan capital of [[France]], is one of the largest agglomerations in [[Europe]], with 2.2&nbsp;million people living in the dense (105&nbsp;km<sup>2</sup>) central city in 2022, 10 million people in the ''Métropole du Grand Paris'' (814 km<sup>2</sup>) and almost 13&nbsp;million people living in the metropolitan area. In the centre-north of the country on the river Seine, Paris has the reputation of being the most beautiful and romantic of all cities, brimming with historic associations and remaining
