@@ -5,14 +5,13 @@ from text_generation.model_init import (
     Mistral,
     Gemma2,
     Llama3Point1,
+    GPT4,
 )
-import os 
-import sys 
-import ollama
-import logging 
+import logging
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+
 
 def generate_response(model, prompt):
     """
@@ -29,13 +28,14 @@ def generate_response(model, prompt):
     llm = model()
 
     logger.info("Generating response")
-    try: 
+    try:
         response = llm.generate(prompt)
     except Exception as e:
         logger.error(f"Error while generating response for {model}: {e}")
         response = 'ERROR'
 
     return response
+
 
 def test(model):
     context_params = {
@@ -44,7 +44,8 @@ def test(model):
     }
     # model = Llama3Point1
 
-    query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing in winter."
+    query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing " \
+            "in winter. "
 
     # without sustainability
     logger.info("Retrieving context..")
@@ -53,11 +54,11 @@ def test(model):
     except Exception as e:
         logger.error(f"Error while trying to get context: {e}")
         return None
-    
+
     logger.info("Retrieved context, augmenting prompt (without sustainability)..")
     try:
         without_sfairness = pg.augment_prompt(
-            query=query, 
+            query=query,
             context=context,
             sustainability=0,
             params=context_params
@@ -65,13 +66,13 @@ def test(model):
     except Exception as e:
         logger.error(f"Error while trying to augment prompt: {e}")
         return None
-    
+
     # return without_sfairness
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
         response = generate_response(model, without_sfairness)
-    except Exception as e: 
+    except Exception as e:
         logger.info(f"Error while generating response: {e}")
         return None
 
@@ -81,5 +82,3 @@ def test(model):
 if __name__ == "__main__":
     response = test(Llama3)
     print(response)
-
-    

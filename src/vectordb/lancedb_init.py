@@ -1,21 +1,14 @@
-import pandas as pd 
-import lancedb
-import numpy as np 
-import os 
+import os
 import sys
-import re 
-from sentence_transformers import SentenceTransformer
-from lancedb.rerankers import CrossEncoderReranker, ColbertReranker
 from lancedb.embeddings import get_registry
-from lancedb.util import attempt_import_or_raise
 from lancedb.pydantic import LanceModel, Vector
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from data_directories import *
 
 model = get_registry().get("sentence-transformers").create()
+
 
 class WikivoyageDocuments(LanceModel):
     """
@@ -28,6 +21,7 @@ class WikivoyageDocuments(LanceModel):
     section: str = model.SourceField()
     text: str = model.SourceField()
     vector: Vector(model.ndims()) = model.VectorField()
+
 
 class WikivoyageListings(LanceModel):
     """
