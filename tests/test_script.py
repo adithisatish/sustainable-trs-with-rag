@@ -52,11 +52,11 @@ def test(prompt_file_name, results_dir, start_idx, end_idx, sustainability=0):
         else:
             dir_name = model_name.lower()
 
-        results_dir = os.path.join(os.getcwd(), {results_dir}, dir_name) # change for new iteration
+        results_dir = os.path.join(os.getcwd(), {results_dir}, dir_name)
 
         for i, item in enumerate(prompts):
             
-            logger.info(f"Prompt {i + start_idx}") #change this after script executes
+            logger.info(f"Prompt {i + start_idx}")
             prompt_results_dir = os.path.join(results_dir, f"prompt_{i+1+ start_idx}") 
 
             try:
