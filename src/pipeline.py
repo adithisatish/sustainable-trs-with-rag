@@ -12,6 +12,7 @@ from text_generation.model_init import (
     Llama3Instruct,
     MistralInstruct,
     Llama3Point1Instruct,
+    Phi3SmallInstruct,
     GPT4,
 )
 from text_generation import text_generation as tg
@@ -30,6 +31,7 @@ MODELS = {
     'Llama3-Instruct': Llama3Instruct,
     'Mistral-Instruct': MistralInstruct,
     'Llama3.1-Instruct': Llama3Point1Instruct,
+    'Phi3-Instruct': Phi3SmallInstruct
 }
 
 
@@ -91,7 +93,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
         logger.error(f"Error at line {exc_tb.tb_lineno} while trying to augment prompt: {e}")
         return None
 
-    return prompt
+    # return prompt
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
@@ -102,7 +104,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
         return None
 
     if test:
-        return retrieved_cities, response
+        return retrieved_cities, prompt[1]['content'], response
 
     else:
         return response

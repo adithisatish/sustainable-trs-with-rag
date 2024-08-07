@@ -14,11 +14,13 @@ Tested for n = 10 and n = 100
 import sys
 import os
 import json
+import re
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 src_dir = os.path.join(current_dir, '../src')
 sys.path.insert(0, src_dir)
 
+from data_directories import *
 from pipeline import pipeline
 import logging
 
@@ -26,46 +28,46 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 MODEL_NAMES = ['Llama3', 'Mistral', 'Gemma2', 'Llama3.1']
-INSTRUCTION_TUNED_MODELS = ['Llama3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct', ]
+INSTRUCTION_TUNED_MODELS = ['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct', 'Llama3-Instruct']
 
-
-def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustainability=0):
+def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, sustainability=0):
     """
     
-    Test function - runs the pipeline twice (once without sustainability, once with sustainability enabled) for 10
-    prompts for each model and stores the results. The default settings of limit/k = 5 and reranking = 0 for the
+    Test function - runs the pipeline for the prompt file and models provided and stores the results. The default settings of limit/k = 10 and reranking = 0 for the
     retrieval are used. The argument "test" in the pipeline must be set to True so that the retrieved list of cities
     are returned along with the LLM response.
 
     Args: 
+        - models: list; of model names
         - prompt_file_name: str
+        - results_dir: str
         - start_idx: int
         - end_idx: int
 
     """
-    with open(f"prompts/{prompt_file_name}", "r") as file:
+    with open(prompt_file_name, "r") as file:
         prompts = json.load(file)
 
     # print(prompts)
     prompts = prompts[start_idx:end_idx]  # Only because of limited GPU space;
 
-    for model_name in INSTRUCTION_TUNED_MODELS:  # To run the normal models, switch "INSTRUCTION_TUNED" to "MODEL_NAMES"
+    for model_name in models:  
         if 'Llama3.1' in model_name:
             dir_name = 'llama3point1-instruct'  # change to "llama3point1" for normal models
         else:
             dir_name = model_name.lower()
 
-        results_dir = os.path.join(os.getcwd(), {results_dir}, dir_name)
+        model_results_dir = os.path.join(results_dir, dir_name)
 
-        for i, item in enumerate(prompts):
+        for item in prompts:
 
-            logger.info(f"Prompt {i + start_idx}")
-            prompt_results_dir = os.path.join(results_dir, f"prompt_{i + 1 + start_idx}")
+            logger.info(f"Prompt: {item['id']}")
+            prompt_results_dir = os.path.join(model_results_dir, f"prompt_{item['id']}")
 
             try:
                 if not sustainability:
                     logger.info(f"Running pipeline for {model_name} without sustainability..")
-                    cities, response = pipeline(
+                    cities, context, response = pipeline(
                         query=item['prompt'],
                         model_name=model_name,
                         test=1,
@@ -73,7 +75,7 @@ def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustaina
                     )
                 else:
                     logger.info(f"Running pipeline for {model_name} with sustainability..")
-                    cities, response = pipeline(
+                    cities, context, response = pipeline(
                         query=item['prompt'],
                         model_name=model_name,
                         test=1,
@@ -88,10 +90,10 @@ def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustaina
 
             else:
                 logger.info("Pipeline execution complete. Storing response..")
-                filenames = ['response.txt', 'cities.json']
+                filenames = ['response.txt', 'context.txt', 'cities.json']
 
                 if sustainability:
-                    filenames = ['response_sustainable.txt', 'cities_sustainable.json']
+                    filenames = ['response.txt', 'context.txt', 'cities_sustainable.json']
 
                 if not os.path.exists(prompt_results_dir):
                     # Create the folder and any necessary intermediate directories
@@ -99,26 +101,41 @@ def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustaina
 
                 with open(f"{prompt_results_dir}/{filenames[0]}", "w") as f:
                     f.write(response)
+                
+                with open(f"{prompt_results_dir}/{filenames[1]}", "w") as f:
+                    f.write(context)
 
-                with open(f"{prompt_results_dir}/{filenames[1]}", 'w') as file:
+                with open(f"{prompt_results_dir}/{filenames[2]}", 'w') as file:
                     json.dump(cities, file)
 
                 logger.info(f"Stored response in {prompt_results_dir}")
 
 
 if __name__ == "__main__":
-    # NEEDS TO BE RUN 
-    # generate_results(
-    #     prompt_file_name="prompts_100.json",
-    #     results_dir="results/results-06.08.",
-    #     start_idx=0,
-    #     end_idx=100,
-    #     sustainability=1
-    # )
+    
+    results_path = os.path.join(results_dir, 'results-combined_prompts')
+    prompt_file = os.path.join(prompts_dir, "prompts_combined.json")
 
+    # define the indices
+    start = 0
+    end = 100
+
+    # without sustainability
     generate_results(
-        prompt_file_name="prompts_100.json",
-        results_dir="results/results-06.08.",
-        start_idx=70,
-        end_idx=100,
+        models=['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct'],
+        prompt_file_name=prompt_file,
+        results_dir=results_path,
+        start_idx=start,
+        end_idx=end,
+        sustainability=0
+    )
+
+    # with sustainability
+    generate_results(
+        models=['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct'],
+        prompt_file_name=prompt_file,
+        results_dir=results_path,
+        start_idx=start,
+        end_idx=end,
+        sustainability=1
     )

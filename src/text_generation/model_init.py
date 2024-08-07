@@ -155,6 +155,14 @@ class Llama3Point1Instruct(LLMBaseClass):
         self.model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
         super().__init__(self.model_id)
 
+class Phi3SmallInstruct(LLMBaseClass):
+    """
+    Initializes a Phi3-Small-Instruct object
+    """
+
+    def __init__(self) -> None:
+        self.model_id = "microsoft/Phi-3-small-128k-instruct"
+        super().__init__(self.model_id)
 
 class GPT4(LLMBaseClass):
     """
