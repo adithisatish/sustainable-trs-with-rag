@@ -10,3 +10,5 @@ test_results/
 .idea/
 european-city-data/
 
+tests/prompts
+tests/results
