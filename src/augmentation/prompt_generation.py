@@ -100,7 +100,7 @@ def format_context(context):
     return formatted_context
 
 
-def augment_prompt(query, context, sustainability=0, **params):
+def augment_prompt(query, context, **params):
     """
     Function that accepts the user query as input, obtains relevant documents and augments the prompt with the retrieved context, which can be passed to the LLM. 
 
@@ -119,7 +119,7 @@ def augment_prompt(query, context, sustainability=0, **params):
     # format context
     formatted_context = format_context(context)
 
-    if sustainability:
+    if "sustainability" in params and params['sustainability']:
         prompt = generate_prompt(query, formatted_context, prompt_with_sustainability)
     else:
         prompt = generate_prompt(query, formatted_context)
@@ -130,7 +130,8 @@ def augment_prompt(query, context, sustainability=0, **params):
 def test():
     context_params = {
         'limit': 3,
-        'reranking': 0
+        'reranking': 0, 
+        'sustainability': 0
     }
 
     query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing in winter."
@@ -142,7 +143,6 @@ def test():
     without_sfairness = augment_prompt(
         query=query,
         context=context,
-        sustainability=0,
         params=context_params
     )
 
@@ -154,7 +154,6 @@ def test():
     with_sfairness = augment_prompt(
         query=query,
         context=s_context,
-        sustainability=1,
         params=context_params
     )
 

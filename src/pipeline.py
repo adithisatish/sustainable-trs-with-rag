@@ -84,7 +84,6 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
         prompt = pg.augment_prompt(
             query=query,
             context=context,
-            sustainability=0,
             params=context_params
         )
     except Exception as e:
@@ -92,7 +91,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
         logger.error(f"Error at line {exc_tb.tb_lineno} while trying to augment prompt: {e}")
         return None
 
-    # return without_sfairness
+    return prompt
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
@@ -118,6 +117,7 @@ if __name__ == "__main__":
     pipeline_response = pipeline(
         query=sample_query,
         model_name=model,
+        sustainability=1
     )
 
     print(pipeline_response)
