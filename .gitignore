@@ -10,9 +10,6 @@ test_results/
 .idea/
 european-city-data/
 
-<<<<<<< HEAD
-=======
 tests/prompts
 tests/results
 city_abstracts_embeddings.csv
->>>>>>> adb3219a85d1a11e3293ab89c2323f0d71805869
