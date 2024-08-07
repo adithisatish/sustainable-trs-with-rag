@@ -55,7 +55,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
     context_params = {
         'limit': 5,
         'reranking': 0,
-        'sustainability': 0
+        'sustainability': 1,
     }
 
     if 'limit' in params:
@@ -109,9 +109,11 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
 
 
 if __name__ == "__main__":
-    sample_query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest " \
-                   "some " \
-                   "European cities? "
+    # sample_query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest " \
+    #                "some " \
+    #                "European cities? "
+    sample_query = "I'm planning a trip in July and enjoy beaches, nightlife, and vibrant cities. Recommend some " \
+                   "cities. "
     model = "GPT-4"
 
     pipeline_response = pipeline(
