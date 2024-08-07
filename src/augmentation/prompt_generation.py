@@ -7,7 +7,8 @@ logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 def generate_prompt(query, context, template=None):
     """
-    Function that generates the prompt given the user query and retrieved context. A specific prompt template will be used if provided, otherwise the default base_prompt template is used.
+    Function that generates the prompt given the user query and retrieved context. A specific prompt template will be
+    used if provided, otherwise the default base_prompt template is used.
 
     Args: 
         - query: str
@@ -19,7 +20,13 @@ def generate_prompt(query, context, template=None):
     if template:
         SYS_PROMPT = template
     else:
-        SYS_PROMPT = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to suggest the city that is best suited to the user's question, as well as the month of travel. If the user has already provided the month of travel in the question, use the same month; otherwise, provide the ideal month of travel. Your answer must begin with "I recommend " followed by the city name and why you recommended it. Your answers are correct, high-quality, and written by a domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
+        SYS_PROMPT = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel 
+        based on the user's question. You should use the provided contexts to suggest a list of the 3 best cities 
+        that are best suited to the user's question, as well as the month of travel. If the user has already provided 
+        the month of travel in the question, use the same month; otherwise, provide the ideal month of travel. Your 
+        answer must begin with "I recommend " followed by the city name and why you recommended it. Your answers are 
+        correct, high-quality, and written by a domain expert. If the provided context does not contain the answer, 
+        simply state, "The provided context does not have the answer." """
 
     USER_PROMPT = """ Question: {} Which city do you recommend and why?
 
@@ -114,7 +121,18 @@ def augment_prompt(query, context, sustainability=0, **params):
 
     # what about the cities without s-fairness scores? i.e. they don't have seasonality data 
 
-    prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe for travel based on the user's question. You should use the provided contexts to suggest the city that is best suited to the user's question. You recommend the most sustainable city to the user, as well as the best month of travel. The context contains a sustainability score for each city, also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness score indicates that the city is a more sustainable travel destination for the month provided. A city without a sustainability score should not be considered. You should only consider the s-fairness score while choosing the best city. However, your answer should not contain the numeric score itself. Your answer must begin with "I recommend " followed by the city name and why you recommended it. Your answers are correct, high-quality, and written by a domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
+    prompt_with_sustainability = """You are an AI recommendation system. Your task is to recommend cities in Europe 
+    for travel based on the user's question. You should use the provided contexts to suggest the city that is best 
+    suited to the user's question. You recommend a list of the top 3 most sustainable cities to the user, as well as 
+    the best month of travel. Each recommendation should also contain an explanation of why it is being recommended, 
+    on sustainability grounds based on the context. The context contains a sustainability score for each city, 
+    also known as the s-fairness score, along with the ideal month of travel. A lower s-fairness score indicates that 
+    the city is a better destination for the month provided. A city without a sustainability score should not be 
+    considered. You should only consider the s-fairness score while choosing the best city. However, your answer 
+    should not contain the numeric score itself or any mention of the sustainability score. Your answer must begin 
+    with "I recommend " followed by the city names and why you recommended it. Your answers are correct, high-quality, 
+    and written by a domain expert. If the provided context does not contain the answer, simply state, "The provided 
+    context does not have the answer. """
 
     # format context
     formatted_context = format_context(context)
@@ -133,7 +151,8 @@ def test():
         'reranking': 0
     }
 
-    query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing in winter."
+    query = "Suggest some places to visit during winter. I like hiking, nature and the mountains and I enjoy skiing " \
+            "in winter. "
 
     # without sustainability
     context = ir.get_context(query, **context_params)
