@@ -12,3 +12,4 @@ european-city-data/
 
 tests/prompts
 tests/results
+city_abstracts_embeddings.csv
