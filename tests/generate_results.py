@@ -58,15 +58,9 @@ def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustaina
         results_dir = os.path.join(os.getcwd(), {results_dir}, dir_name)
 
         for i, item in enumerate(prompts):
-<<<<<<< HEAD:tests/test_script.py
-            
-            logger.info(f"Prompt {i + start_idx}")
-            prompt_results_dir = os.path.join(results_dir, f"prompt_{i+1+ start_idx}") 
-=======
 
             logger.info(f"Prompt {i + start_idx}")
             prompt_results_dir = os.path.join(results_dir, f"prompt_{i + 1 + start_idx}")
->>>>>>> adb3219a85d1a11e3293ab89c2323f0d71805869:tests/generate_results.py
 
             try:
                 if not sustainability:
@@ -114,7 +108,7 @@ def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustaina
 
 if __name__ == "__main__":
     # NEEDS TO BE RUN 
-    # test(
+    # generate_results(
     #     prompt_file_name="prompts_100.json",
     #     results_dir="results/results-06.08.",
     #     start_idx=0,
@@ -122,17 +116,9 @@ if __name__ == "__main__":
     #     sustainability=1
     # )
 
-<<<<<<< HEAD:tests/test_script.py
-    test(
-=======
     generate_results(
->>>>>>> adb3219a85d1a11e3293ab89c2323f0d71805869:tests/generate_results.py
         prompt_file_name="prompts_100.json",
         results_dir="results/results-06.08.",
         start_idx=70,
         end_idx=100,
-<<<<<<< HEAD:tests/test_script.py
     )
-=======
-    )
->>>>>>> adb3219a85d1a11e3293ab89c2323f0d71805869:tests/generate_results.py
