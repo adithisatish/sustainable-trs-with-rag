@@ -52,14 +52,4 @@ Steps to run the code locally: (add detailed steps - TODO)
 |       |-- lancedb_init.py
 |       |-- vectordb.py
 |-- tests
-    |-- __init__.py
-    |-- evaluate_q_a_sim.py
-    |-- prompts
-    |   |-- gemini-1.5-flash-001.json
-    |   |-- gemini-1.5-pro-001.json
-    |   |-- gemini-ui.json
-    |   |-- gpt-4o-mini.json
-    |   |-- prompts.json
-    |   |-- prompts_100.json
-    |-- test_script.py
 ```
