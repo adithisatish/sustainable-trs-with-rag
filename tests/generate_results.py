@@ -108,7 +108,7 @@ def generate_results(prompt_file_name, results_dir, start_idx, end_idx, sustaina
 
 if __name__ == "__main__":
     # NEEDS TO BE RUN 
-    # test(
+    # generate_results(
     #     prompt_file_name="prompts_100.json",
     #     results_dir="results/results-06.08.",
     #     start_idx=0,
