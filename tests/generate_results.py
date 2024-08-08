@@ -113,6 +113,8 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
 
 
 if __name__ == "__main__":
+
+    # 08.08. EOD - Start from 90 for llama with sustainability
     
     results_path = os.path.join(results_dir, 'results-combined_prompts')
     prompt_file = os.path.join(prompts_dir, "prompts_combined.json")
