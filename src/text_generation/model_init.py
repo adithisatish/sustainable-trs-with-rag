@@ -19,15 +19,17 @@ class LLMBaseClass():
 
     def __init__(self, model_id) -> None:
         # Initialize quantization to use less GPU
-        self.api_key = OAI_API_KEY
+        
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True, bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.bfloat16
         )
 
         if "gpt" in model_id[0].lower():
+            self.api_key = OAI_API_KEY
             self.model = OpenAI(api_key=self.api_key)
         else:
+            self.api_key = None
             self.tokenizer = AutoTokenizer.from_pretrained(model_id)
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
@@ -39,12 +41,23 @@ class LLMBaseClass():
                                            "ASST] ' " \
                                            " + message['content'] + ' [/ASST]' + eos_token }}{%- endif %}{%- endfor %} "
 
-            self.model = AutoModelForCausalLM.from_pretrained(
-                model_id,
-                torch_dtype=torch.bfloat16,
-                device_map="auto",
-                quantization_config=bnb_config,
-            )
+            if "phi" in model_id.lower(): 
+                # print("microsoft\n\n")
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_id,
+                    torch_dtype=torch.bfloat16,
+                    device_map="auto",
+                    quantization_config=bnb_config,
+                    trust_remote_code=True
+                )
+            else:
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    model_id,
+                    torch_dtype=torch.bfloat16,
+                    device_map="auto",
+                    quantization_config=bnb_config,
+                )
+
             self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
             self.terminators = [

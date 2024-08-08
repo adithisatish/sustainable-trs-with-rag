@@ -116,7 +116,7 @@ if __name__ == "__main__":
     #                "European cities? "
     sample_query = "I'm planning a trip in July and enjoy beaches, nightlife, and vibrant cities. Recommend some " \
                    "cities. "
-    model = "Phi3-Instruct"
+    model = "Mistral-Instruct"
 
     pipeline_response = pipeline(
         query=sample_query,

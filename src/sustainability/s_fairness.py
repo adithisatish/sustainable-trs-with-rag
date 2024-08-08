@@ -22,10 +22,14 @@ def get_popularity(destination):
         - destination: str
     
     """
-    if "src" in os.getcwd():
+
+    parent_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+
+    if "src" in os.getcwd() and os.path.exists(os.path.join(parent_path, "european-city-data")):
         popularity_path = popularity_dir.replace("../../", "../")
     else:
         popularity_path = popularity_dir
+
     popularity_df = pd.read_csv(popularity_path + "popularity_scores.csv")
 
     if not len(popularity_df[popularity_df['city'] == destination]):
@@ -46,7 +50,9 @@ def get_seasonality(destination, month=None):
         - month: str (default: None)
     
     """
-    if "src" in os.getcwd():
+    parent_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+
+    if "src" in os.getcwd() and os.path.exists(os.path.join(parent_path, "european-city-data")):
         seasonality_path = seasonality_dir.replace("../../", "../")
     else:
         seasonality_path = seasonality_dir

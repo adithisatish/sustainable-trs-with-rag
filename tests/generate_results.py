@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     # without sustainability
     generate_results(
-        models=['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct'],
+        models=['Mistral-Instruct', 'Llama3.1-Instruct'],
         prompt_file_name=prompt_file,
         results_dir=results_path,
         start_idx=start,
