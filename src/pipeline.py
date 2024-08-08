@@ -57,7 +57,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
     context_params = {
         'limit': 5,
         'reranking': 0,
-        'sustainability': 1,
+        'sustainability': 0,
     }
 
     if 'limit' in params:

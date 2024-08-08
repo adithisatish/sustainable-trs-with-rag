@@ -19,6 +19,11 @@ def create_wikivoyage_docs_db_and_add_data():
 
     """
     uri = database_dir
+    current_dir = os.path.split(os.getcwd())[1]
+
+    if "src" or "tests" in current_dir: # hacky way to get the correct path
+        uri = uri.replace("../../", "../")
+
     db = lancedb.connect(uri)
     logger.info("Connected to DB. Reading data now...")
     df = read_docs()
@@ -39,6 +44,11 @@ def create_wikivoyage_listings_db_and_add_data():
 
     """
     uri = database_dir
+    current_dir = os.path.split(os.getcwd())[1]
+
+    if "src" or "tests" in current_dir: # hacky way to get the correct path
+        uri = uri.replace("../../", "../")
+        
     db = lancedb.connect(uri)
     logger.info("Connected to DB. Reading data now...")
     df = read_listings()
@@ -65,9 +75,12 @@ def search_wikivoyage_docs(query, limit=10, reranking=0):
     """
 
     uri = database_dir
-    if "src" in os.getcwd(): # hacky way to get the correct path
+    current_dir = os.path.split(os.getcwd())[1]
+
+    if "src" or "tests" in current_dir: # hacky way to get the correct path
         uri = uri.replace("../../", "../")
     # print(uri)
+
     db = lancedb.connect(uri)
     logger.info("Connected to Wikivoyage DB.")
 
@@ -121,8 +134,11 @@ def search_wikivoyage_listings(query, cities, limit=10, reranking=0):
 
     """
     uri = database_dir
-    if "src" in os.getcwd():  # hacky way to get the correct path
+    current_dir = os.path.split(os.getcwd())[1]
+
+    if "src" or "tests" in current_dir: # hacky way to get the correct path
         uri = uri.replace("../../", "../")
+
     db = lancedb.connect(uri)
     logger.info("Connected to Wikivoyage Listings DB.")
 
