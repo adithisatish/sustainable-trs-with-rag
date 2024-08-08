@@ -71,6 +71,7 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
                         query=item['prompt'],
                         model_name=model_name,
                         test=1,
+                        sustainability=0,
                         limit=10,
                     )
                 else:
@@ -93,7 +94,7 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
                 filenames = ['response.txt', 'context.txt', 'cities.json']
 
                 if sustainability:
-                    filenames = ['response.txt', 'context.txt', 'cities_sustainable.json']
+                    filenames = ['response_sustainable.txt', 'context_sustainable.txt', 'cities_sustainable.json']
 
                 if not os.path.exists(prompt_results_dir):
                     # Create the folder and any necessary intermediate directories
