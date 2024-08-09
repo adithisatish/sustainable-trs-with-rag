@@ -118,8 +118,8 @@ if __name__ == "__main__":
     prompt_file = os.path.join(prompts_dir, "prompts_combined.json")
 
     # define the indices
-    start = 0
-    end = 100
+    start = 100
+    end = 200
 
     # without sustainability
     generate_results(
