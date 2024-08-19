@@ -21,3 +21,5 @@ nltk>=3.8.2
 geopy==2.4.1
 spacy==3.7.5
 geonamescache==2.0.0
+matplotlib==3.9.2
+seaborn==0.13.2
