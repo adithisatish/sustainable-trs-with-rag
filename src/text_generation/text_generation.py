@@ -1,11 +1,12 @@
 from augmentation import prompt_generation as pg
 from information_retrieval import info_retrieval as ir
-from text_generation.model_init import (
+from src.text_generation.models import (
     Llama3,
     Mistral,
     Gemma2,
     Llama3Point1,
     GPT4,
+    Claude3Point5Sonnet,
 )
 import logging
 
@@ -80,5 +81,5 @@ def test(model):
 
 
 if __name__ == "__main__":
-    response = test(Llama3)
+    response = test(Claude3Point5Sonnet)
     print(response)

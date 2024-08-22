@@ -1,11 +1,12 @@
 import pandas as pd
-from text_generation.model_init import (GPT4)
+from text_generation.models import (GPT4, Claude3Point5Sonnet)
 from text_generation import text_generation as tg
 from data_directories import results_dir, prompts_dir
 import json, re
 
 MODELS = {
     'GPT-4': GPT4,
+    'Claude3Point5Sonnet': Claude3Point5Sonnet,
 }
 JUDGE_PROMPT = """You will be given a user_question and system_answer couple. Your task is to provide a 'total 
 rating' scoring how well the system_answer answers the user concerns expressed in the user_question. Give your answer 
@@ -75,15 +76,16 @@ def generate(data: pd.DataFrame, model, col_to_judge: str) -> pd.DataFrame:
     return data
 
 
-def judge(model_name):
+def judge(model_name: str, file_to_save: str):
     model = MODELS[model_name]
     data = prepare_data()
+    # data = data[:1]
     print("Data prepared successfully.")
     data = generate(data, model, "response")
     print("Data generated successfully for vanilla.")
     data = generate(data, model, "response_sustainable")
     print("Data generated successfully for sustainability.")
-    data.to_csv(results_dir + f"results-combined_prompts/judged_cities_{model_name}.csv", index=False)
+    data.to_csv(file_to_save, index=False)
 
 
 def extract_judge_score(answer: str, split_str: str = "Total rating:") -> int:
@@ -100,11 +102,13 @@ def extract_judge_score(answer: str, split_str: str = "Total rating:") -> int:
 
 
 def main():
-    # judge('GPT-4')
-    data = read_data(results_dir + "results-combined_prompts/judged_cities_GPT-4.csv")
+    model_name = "Claude3Point5Sonnet"
+    file_to_save = results_dir + f"results-combined_prompts/llm-judge/judged_cities_{model_name}.csv"
+    judge(model_name, file_to_save)
+    data = read_data(file_to_save)
     data['total_rating'] = data['llm_judge_response'].apply(lambda x: extract_judge_score(x))
     data['total_rating_sustainable'] = data['llm_judge_response_sustainable'].apply(lambda x: extract_judge_score(x))
-    data.to_csv(results_dir + "results-combined_prompts/judged_cities_GPT-4.csv", index=False)
+    data.to_csv(file_to_save, index=False)
 
 
 if __name__ == '__main__':
