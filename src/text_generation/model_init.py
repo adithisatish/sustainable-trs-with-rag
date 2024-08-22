@@ -19,7 +19,7 @@ class LLMBaseClass():
 
     def __init__(self, model_id) -> None:
         # Initialize quantization to use less GPU
-        
+
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True, bnb_4bit_use_double_quant=True, bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.bfloat16
@@ -41,7 +41,7 @@ class LLMBaseClass():
                                            "ASST] ' " \
                                            " + message['content'] + ' [/ASST]' + eos_token }}{%- endif %}{%- endfor %} "
 
-            if "phi" in model_id.lower(): 
+            if "phi" in model_id.lower():
                 # print("microsoft\n\n")
                 self.model = AutoModelForCausalLM.from_pretrained(
                     model_id,
@@ -168,6 +168,7 @@ class Llama3Point1Instruct(LLMBaseClass):
         self.model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
         super().__init__(self.model_id)
 
+
 class Phi3SmallInstruct(LLMBaseClass):
     """
     Initializes a Phi3-Small-Instruct object
@@ -177,6 +178,7 @@ class Phi3SmallInstruct(LLMBaseClass):
         self.model_id = "microsoft/Phi-3-small-128k-instruct"
         super().__init__(self.model_id)
 
+
 class GPT4(LLMBaseClass):
     """
     Initializes a GPT-4 Instruct object
@@ -185,16 +187,3 @@ class GPT4(LLMBaseClass):
     def __init__(self) -> None:
         self.model_id = "gpt-4o-mini",
         super().__init__(self.model_id)
-
-    # def generate(self, messages):
-    #     client = OpenAI(api_key=self.api_key)
-    #
-    #     completion = client.chat.completions.create(
-    #         model="gpt-4o",
-    #         messages=messages,
-    #         temperature=0.6,
-    #         top_p=0.9,
-    #     )
-    #
-    #     # Return the generated content from the API response
-    #     return completion['choices'][0]['message']['content']
