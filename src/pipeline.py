@@ -4,7 +4,7 @@ Main file to execute the TRS Pipeline.
 import sys
 from augmentation import prompt_generation as pg
 from information_retrieval import info_retrieval as ir
-from text_generation.model_init import (
+from text_generation.models import (
     Llama3,
     Mistral,
     Gemma2,
