@@ -23,3 +23,7 @@ spacy==3.7.5
 geonamescache==2.0.0
 matplotlib==3.9.2
 seaborn==0.13.2
+wordcloud==1.9.3
+gensim==4.3.3
+pyLDAvis==3.4.1
+bertopic==0.16.3
