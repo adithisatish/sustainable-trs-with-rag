@@ -10,6 +10,7 @@ test_results/
 .idea/
 european-city-data/
 wikivoyage_listings_topics
+*.pdf
 
 tests/prompts
 tests/results
