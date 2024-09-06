@@ -49,7 +49,7 @@ def get_prompts(prompt_ids: list):
 
 
 def prepare_data():
-    results_file_path = results_dir + "results-combined_prompts/recommended_cities.csv"
+    results_file_path = results_dir + "results-combined_prompts_SAR/recommended_cities_sar.csv"
     results = read_data(results_file_path)
     prompt_ids = list(results.prompt_id.unique())
     prompt_ids = [prompt_id.replace("prompt_", "") for prompt_id in prompt_ids]
@@ -59,6 +59,7 @@ def prepare_data():
     results.drop('new_prompt_id', axis=1, inplace=True)
     prompts = get_prompts(prompt_ids)
     merged_df = pd.merge(prompts, results, on="prompt_id")
+    merged_df.rename(columns={"rec_cities_sar": "response", "response_sar": "response_sustainable"}, inplace=True)
     merged_df = merged_df[["prompt_id", "model", "prompt", "response", "response_sustainable"]]
     print("Data merged successfully.")
     return merged_df
@@ -102,8 +103,9 @@ def extract_judge_score(answer: str, split_str: str = "Total rating:") -> int:
 
 
 def main():
-    model_name = "Claude3Point5Sonnet"
-    file_to_save = results_dir + f"results-combined_prompts/llm-judge/judged_cities_{model_name}.csv"
+    # model_name = "Claude3Point5Sonnet"
+    model_name = "GPT-4"
+    file_to_save = results_dir + f"results-combined_prompts_SAR/llm-judge/judged_cities_{model_name}.csv"
     judge(model_name, file_to_save)
     data = read_data(file_to_save)
     data['total_rating'] = data['llm_judge_response'].apply(lambda x: extract_judge_score(x))
