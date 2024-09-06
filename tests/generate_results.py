@@ -81,7 +81,7 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
                         model_name=model_name,
                         test=1,
                         sustainability=1,
-                        limit=10,  # RUN THIS AGAIN => param was not included in results-06.08. !!!
+                        limit=10, 
                     )
 
             except Exception as e:
@@ -114,11 +114,11 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
 
 if __name__ == "__main__":
     
-    results_path = os.path.join(results_dir, 'results-combined_prompts')
+    results_path = os.path.join(results_dir, 'results-combined_prompts_SAR')
     prompt_file = os.path.join(prompts_dir, "prompts_combined.json")
 
     # define the indices
-    start = 100
+    start = 0
     end = 200
 
     # without sustainability
@@ -128,15 +128,15 @@ if __name__ == "__main__":
         results_dir=results_path,
         start_idx=start,
         end_idx=end,
-        sustainability=0
+        sustainability=1
     )
 
     # with sustainability
-    generate_results(
-        models=['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct'],
-        prompt_file_name=prompt_file,
-        results_dir=results_path,
-        start_idx=start,
-        end_idx=end,
-        sustainability=1
-    )
+    # generate_results(
+    #     models=['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct'],
+    #     prompt_file_name=prompt_file,
+    #     results_dir=results_path,
+    #     start_idx=start,
+    #     end_idx=end,
+    #     sustainability=1
+    # )

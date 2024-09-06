@@ -25,7 +25,7 @@ def generate_prompt(query, context, template=None):
         that are best suited to the user's question, as well as the month of travel. If the user has already provided 
         the month of travel in the question, use the same month; otherwise, provide the ideal month of travel. Each recommendation should also contain an explanation of why it is being recommended, based on the context. Your answer must begin with "I recommend " followed by the city name and why you recommended it. Your answers are correct, high-quality, and written by a domain expert. If the provided context does not contain the answer, simply state, "The provided context does not have the answer." """
 
-    USER_PROMPT = """ Question: {} Which city do you recommend and why?
+    USER_PROMPT = """ Question: {} Which cities do you recommend and why?
 
     Context: Here are the options: {} 
     
@@ -135,8 +135,10 @@ def augment_prompt(query, context, **params):
     formatted_context = format_context(context)
 
     if "sustainability" in params and params['sustainability']:
+        logger.info("Augmenting Prompt with SAR")
         prompt = generate_prompt(query, formatted_context, prompt_with_sustainability)
     else:
+        logger.info("Augmenting Prompt without SAR")
         prompt = generate_prompt(query, formatted_context)
 
     return prompt
@@ -159,7 +161,7 @@ def test():
     without_sfairness = augment_prompt(
         query=query,
         context=context,
-        params=context_params
+        sustainability = context_params['sustainability']
     )
 
     # with sustainability
@@ -170,7 +172,7 @@ def test():
     with_sfairness = augment_prompt(
         query=query,
         context=s_context,
-        params=context_params
+        sustainability = context_params['sustainability']
     )
 
     return with_sfairness

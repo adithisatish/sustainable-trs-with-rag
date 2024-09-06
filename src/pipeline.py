@@ -86,7 +86,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
         prompt = pg.augment_prompt(
             query=query,
             context=context,
-            params=context_params
+            sustainability=context_params['sustainability']
         )
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -116,7 +116,8 @@ if __name__ == "__main__":
     #                "European cities? "
     sample_query = "I'm planning a trip in July and enjoy beaches, nightlife, and vibrant cities. Recommend some " \
                    "cities. "
-    model = "GPT-4"
+    # model = "GPT-4"
+    model='Llama3.1-Instruct'
 
     pipeline_response = pipeline(
         query=sample_query,
