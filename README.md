@@ -3,7 +3,7 @@ license: mit
 language:
 - en
 ---
-# Enhancing Sustainable Travel Recommendations using Retrieval-Augmented Generation
+# Enhancing Tourism Recommender Systems for Sustainable City Trips Using Retrieval-Augmented Generation
 
 In this project, we use RAGs to enhance the recommendation capability of LLMs by curating a knowledge base of tourism information for European cities, along with relevant sustainability information. 
 
@@ -16,7 +16,7 @@ In this project, we use RAGs to enhance the recommendation capability of LLMs by
 - VectorDB: LanceDB (needs to be set up before the pipeline can be run)
 - LLMs already included: Llama3-8B, Mistral-7B, Llama3.1.-8B, Llama3-Instruct-8B, Mistral-Instruct-7B, Llama3.1-Instruct-8B, Phi3-Small-Instruct, GPT-4o-mini (other LLMs can also be used, provided they are initialized in `src.text_generation.model_init.py`)
 
-## Steps to run the code locally (add detailed steps - TODO)
+## Steps to run the code locally
 
 ### Directory Structure
 ```
