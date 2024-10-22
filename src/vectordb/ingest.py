@@ -1,5 +1,7 @@
 from typing import Optional, Callable
 import logging
+import sys
+sys.path.append("../")
 logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 from src.vectordb.helpers import read_docs, read_listings, preprocess_df
