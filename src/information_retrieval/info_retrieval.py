@@ -2,8 +2,11 @@ import sys
 import re
 import os
 import json
+
+from vectordb import ingest
+
 sys.path.append("../")
-from src.vectordb import vectordb
+from src.vectordb import search as vectordb
 from src.sustainability import s_fairness
 import logging
 
@@ -65,7 +68,7 @@ def get_wikivoyage_context(query, limit=10, reranking=0):
     # limit = params['limit']
     # reranking = params['reranking']
 
-    docs = vectordb.search_wikivoyage_docs(query, limit, reranking)
+    docs = vectordb.search_wikivoyage_docs(query, limit, reranking, run_local=True)
     logger.info("Finished getting chunked wikivoyage docs.")
 
     results = {}
@@ -75,7 +78,7 @@ def get_wikivoyage_context(query, limit=10, reranking=0):
 
     cities = [result['city'] for result in docs]
 
-    listings = vectordb.search_wikivoyage_listings(query, cities, limit, reranking)
+    listings = vectordb.search_wikivoyage_listings(query, cities, limit, reranking, run_local=True)
     logger.info("Finished getting wikivoyage listings.")
     # logger.info(type(docs), type(listings))
 
@@ -234,8 +237,8 @@ def test():
         # print(cities)
     except FileNotFoundError as e:
         try:
-            vectordb.create_wikivoyage_docs_db_and_add_data()
-            vectordb.create_wikivoyage_listings_db_and_add_data()
+            ingest.create_wikivoyage_docs_db_and_add_data()
+            ingest.create_wikivoyage_listings_db_and_add_data()
 
             try:
                 context = get_context(query, sustainability=1)
@@ -262,6 +265,6 @@ def test():
 
 
 if __name__ == "__main__":
-    context = test()
+    retrieved_context = test()
 
-    print(context)
+    print(retrieved_context)

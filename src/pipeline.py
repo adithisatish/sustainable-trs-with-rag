@@ -111,13 +111,12 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
 
 
 if __name__ == "__main__":
-    # sample_query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest " \
-    #                "some " \
-    #                "European cities? "
+    # sample_query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you
+    # suggest " \ "some " \ "European cities? "
     sample_query = "I'm planning a trip in July and enjoy beaches, nightlife, and vibrant cities. Recommend some " \
                    "cities. "
-    # model = "GPT-4"
-    model='Llama3.1-Instruct'
+    model = "GPT-4"
+    # model='Llama3.1-Instruct'
 
     pipeline_response = pipeline(
         query=sample_query,

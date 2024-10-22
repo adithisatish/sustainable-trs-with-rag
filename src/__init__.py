@@ -1,6 +1,6 @@
-from src.vectordb.vectordb import *
+from src.vectordb.search import *
 from src.vectordb.helpers import *
-from src.vectordb.lancedb_init import *
+from src.vectordb.schema import *
 
 from src.sustainability.s_fairness import *
 from src.information_retrieval.info_retrieval import *
