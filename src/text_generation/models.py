@@ -91,6 +91,7 @@ class GPT4(LLMBaseClass):
         self.model_id = "gpt-4o-mini",
         super().__init__(self.model_id)
 
+
 class Claude3Point5Sonnet(LLMBaseClass):
     """
        Initializes a GPT-4 Instruct object
