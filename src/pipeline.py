@@ -97,7 +97,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
-        response = tg.generate_response(model, prompt)
+        response = tg.generate_response(model, prompt, use_ollama=True)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         logger.info(f"Error at line {exc_tb.tb_lineno} while generating response: {e}")
@@ -105,7 +105,6 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
 
     if test:
         return retrieved_cities, prompt[1]['content'], response
-
     else:
         return response
 
