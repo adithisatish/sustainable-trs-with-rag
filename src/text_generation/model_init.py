@@ -39,9 +39,9 @@ class LLMBaseClass:
     def __init__(self, model_id) -> None:
         self.model_id = model_id
         self.bnb_config = initialize_bnb_config()
-        self.model = self._initialize_model()
         self.terminators = None
         self.tokenizer = None
+        self.model = self._initialize_model()
 
     def _initialize_model(self):
         """
@@ -59,7 +59,7 @@ class LLMBaseClass:
             tokenizer = AutoTokenizer.from_pretrained(self.model_id)
             tokenizer.pad_token = tokenizer.eos_token
             tokenizer.chat_template = get_chat_template()
-
+            print("tokenizer loaded.")
             model = AutoModelForCausalLM.from_pretrained(
                 self.model_id,
                 torch_dtype=torch.bfloat16,
@@ -70,7 +70,7 @@ class LLMBaseClass:
 
             self.tokenizer = tokenizer
             self.terminators = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_id|>")]
-
+            print("updating tokenizer")
             return model
 
     def _generate_openai(self, messages):

@@ -115,9 +115,9 @@ if __name__ == "__main__":
     # suggest " \ "some " \ "European cities? "
     sample_query = "I'm planning a trip in July and enjoy beaches, nightlife, and vibrant cities. Recommend some " \
                    "cities. "
-    model = "GPT-4"
+    # model = "GPT-4"
     # model='Llama3.1-Instruct'
-    # model = "Gemma2"
+    model = "Gemma2"
 
     pipeline_response = pipeline(
         query=sample_query,

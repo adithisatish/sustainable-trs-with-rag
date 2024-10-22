@@ -1,7 +1,11 @@
+import sys
+import os
+print(os.getcwd())
+sys.path.append("../")
 from src.vectordb.search import *
 import logging
 
-from vectordb.ingest import create_wikivoyage_docs_db_and_add_data, create_wikivoyage_listings_db_and_add_data
+from src.vectordb.ingest import create_wikivoyage_docs_db_and_add_data, create_wikivoyage_listings_db_and_add_data
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)

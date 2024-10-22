@@ -20,7 +20,7 @@ def _create_table_and_ingest_data(table_name: str, schema: object, data_fetcher:
         - data_fetcher: Callable, function to fetch the data.
         - preprocessor: Optional[Callable], function to preprocess the data (default is None).
     """
-    uri = set_uri()
+    uri = set_uri(run_local=True)
 
     db = lancedb.connect(uri)
     logger.info(f"Connected to DB. Reading data for table {table_name} now...")
