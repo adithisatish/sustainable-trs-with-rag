@@ -21,7 +21,7 @@ load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
 logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
-
+import time
 
 def check_backend():
     if (torch.backends.mps.is_available()) and (torch.backends.mps.is_built()):
@@ -66,6 +66,9 @@ def generate_response(model, prompt, use_ollama=False):
         llm = model()
         try:
             response = llm.generate(prompt)
+            print("Generating response..\n\t", response)
+            print("Going to sleep for 20 seconds")
+            time.sleep(20)
         except Exception as e:
             logger.error(f"Error while generating response for {model}: {e}")
             response = 'ERROR'

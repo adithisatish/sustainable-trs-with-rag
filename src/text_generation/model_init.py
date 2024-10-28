@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 from anthropic import AnthropicVertex
 import os
 from openai import OpenAI
-from src.text_generation.vertexai_setup import initialize_vertexai_params
-
+from src.text_generation.vertexai_setup import initialize_vertexai_params, get_default_config
+from vertexai.generative_models import GenerativeModel
 load_dotenv()
 OAI_API_KEY = os.getenv("OPENAI_API_KEY")
 VERTEXAI_PROJECT = os.getenv("VERTEXAI_PROJECTID")
@@ -41,6 +41,8 @@ class LLMBaseClass:
         self.bnb_config = initialize_bnb_config()
         self.terminators = None
         self.tokenizer = None
+        self.temperature = 0.5
+        self.tokens = 1024
         self.model = self._initialize_model()
 
     def _initialize_model(self):
@@ -52,8 +54,10 @@ class LLMBaseClass:
         if model_type == "gpt-4o-mini":
             return OpenAI(api_key=OAI_API_KEY)
 
-        elif model_type == "claude-3-5-sonnet@20240620":
-            return AnthropicVertex(region="europe-west1", project_id=VERTEXAI_PROJECT)
+        elif "claude" in model_type:
+            return AnthropicVertex(region="europe-east5", project_id=VERTEXAI_PROJECT)
+        elif model_type == "gemini-1.5-pro-002":
+            return self._initialize_vertexai_model()
 
         else:  # Assume Hugging Face model
             tokenizer = AutoTokenizer.from_pretrained(self.model_id)
@@ -73,6 +77,18 @@ class LLMBaseClass:
             print("updating tokenizer")
             return model
 
+    def _initialize_vertexai_model(self):
+        """
+        Initialize Google Gemini model using Vertex AI.
+        """
+        # default_gen_config, default_safe_settings = get_default_config()
+        # gen_config = {
+        #     "temperature": self.temperature,
+        #     "max_output_tokens": self.tokens,
+        # }
+        initialize_vertexai_params(location="us-east5")
+        return GenerativeModel(self.model_id[0])
+
     def _generate_openai(self, messages):
         """
         Generates a response using OpenAI's GPT model.
@@ -85,22 +101,21 @@ class LLMBaseClass:
         )
         return completion.choices[0].message.content
 
-    def _generate_claude(self, messages):
+    def _generate_vertexai(self, messages):
         """
-        Generates a response using Claude via VertexAI.
+        Generates a response using Claude/Gemini via VertexAI.
         """
-        initialize_vertexai_params()
-        message = self.model.messages.create(
-            max_tokens=1024,
-            model=self.model_id[0],
-            messages=[
-                {
-                    "role": "user",
-                    "content": messages[0]["content"],
-                }
-            ],
-        )
-        return message.content[0].text
+        content = " ".join([message["content"] for message in messages])
+        if "claude" in self.model_id[0]:
+            message = self.model.messages.create(
+                max_tokens=self.tokens,
+                model=self.model_id,
+                messages=[{"role": "user", "content": content}],
+            )
+            return message.content[0].text
+        else:
+            response = self.model.generate_content(content)
+            return response.text
 
     def _generate_huggingface(self, messages):
         """
@@ -133,8 +148,8 @@ class LLMBaseClass:
         if model_type == "gpt-4o-mini":
             return self._generate_openai(messages)
 
-        elif model_type == "claude-3-5-sonnet@20240620":
-            return self._generate_claude(messages)
+        elif model_type in ["claude-3-5-sonnet@20240620", "gemini-1.5-pro-002", "claude-3-5-sonnet-v2@20241022"]:
+            return self._generate_vertexai(messages)
 
         else:  # Hugging Face models
             return self._generate_huggingface(messages)
