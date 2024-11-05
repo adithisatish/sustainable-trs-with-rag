@@ -1,13 +1,15 @@
+from typing import Optional
+
 import pandas as pd
 import os
 import re
 from sentence_transformers import SentenceTransformer
 import sys
-
+sys.path.append("../")
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from data_directories import *
+from src.data_directories import *
 
 
 def create_chunks(city, country, text):
@@ -148,3 +150,15 @@ def embed_query(query):
     # vector_dimension = model.get_sentence_embedding_dimension()   
     embedding = model.encode(query).tolist()
     return embedding
+
+
+def set_uri(run_local: Optional[bool] = False):
+    if run_local:
+        uri = database_dir
+        current_dir = os.path.split(os.getcwd())[1]
+
+        if "src" or "tests" in current_dir:  # hacky way to get the correct path
+            uri = uri.replace("../../", "../")
+    else:
+        uri = os.environ["BUCKET_NAME"]
+    return uri

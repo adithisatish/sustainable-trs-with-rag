@@ -5,7 +5,7 @@ import vertexai
 import os
 import json
 import base64
-
+from vertexai import generative_models
 load_dotenv()
 if "VERTEXAI_PROJECTID" in os.environ:
     VERTEXAI_PROJECT = os.environ["VERTEXAI_PROJECTID"]
@@ -34,3 +34,14 @@ def initialize_vertexai_params(location: Optional[str] = "us-central1"):
         scopes=["https://www.googleapis.com/auth/cloud-platform"],
     )
     vertexai.init(project=VERTEXAI_PROJECT, location=location)
+
+def get_default_config() -> tuple[dict, dict]:
+    default_gen_config = {
+        "temperature": 0.49,
+        "max_output_tokens": 1024,
+    }
+    default_safety_settings = {
+        generative_models.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: generative_models.HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+        generative_models.HarmCategory.HARM_CATEGORY_HARASSMENT: generative_models.HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+    }
+    return default_gen_config, default_safety_settings

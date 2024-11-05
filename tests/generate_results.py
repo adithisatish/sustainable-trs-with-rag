@@ -16,19 +16,23 @@ import os
 import json
 import re
 
+sys.path.append("../")
 current_dir = os.path.dirname(os.path.abspath(__file__))
 src_dir = os.path.join(current_dir, '../src')
 sys.path.insert(0, src_dir)
 
-from data_directories import *
-from pipeline import pipeline
+print("Current dir", os.getcwd())
+
+from src.data_directories import *
+from src.pipeline import pipeline
 import logging
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(encoding='utf-8', level=logging.INFO)
 
 MODEL_NAMES = ['Llama3', 'Mistral', 'Gemma2', 'Llama3.1']
 INSTRUCTION_TUNED_MODELS = ['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct', 'Llama3-Instruct']
+
 
 def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, sustainability=0):
     """
@@ -50,8 +54,8 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
 
     # print(prompts)
     prompts = prompts[start_idx:end_idx]  # Only because of limited GPU space;
-
-    for model_name in models:  
+    print(prompts)
+    for model_name in models:
         if 'Llama3.1' in model_name:
             dir_name = 'llama3point1-instruct'  # change to "llama3point1" for normal models
         else:
@@ -81,8 +85,9 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
                         model_name=model_name,
                         test=1,
                         sustainability=1,
-                        limit=10, 
+                        limit=10,
                     )
+                    print("Response in generate_results: ", len(response))
 
             except Exception as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -102,7 +107,7 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
 
                 with open(f"{prompt_results_dir}/{filenames[0]}", "w") as f:
                     f.write(response)
-                
+
                 with open(f"{prompt_results_dir}/{filenames[1]}", "w") as f:
                     f.write(context)
 
@@ -112,31 +117,28 @@ def generate_results(models, prompt_file_name, results_dir, start_idx, end_idx, 
                 logger.info(f"Stored response in {prompt_results_dir}")
 
 
-if __name__ == "__main__":
-    
-    results_path = os.path.join(results_dir, 'results-combined_prompts_SAR')
+def main(is_sustainable=True):
     prompt_file = os.path.join(prompts_dir, "prompts_combined.json")
+
+    if is_sustainable:
+        results_path = os.path.join(results_dir, 'results-combined_prompts_SAR')
+    else:
+        results_path = os.path.join(results_dir, 'results-combined_prompts')
 
     # define the indices
     start = 0
     end = 200
-
-    # without sustainability
+    # generating results for the models
     generate_results(
-        models=['Mistral-Instruct', 'Llama3.1-Instruct'],
+        # models=['Mistral-Instruct', 'Llama3.1-Instruct'],
+        models=['Gemma2'],
         prompt_file_name=prompt_file,
         results_dir=results_path,
         start_idx=start,
         end_idx=end,
-        sustainability=1
+        sustainability=is_sustainable
     )
 
-    # with sustainability
-    # generate_results(
-    #     models=['Phi3-Instruct', 'Mistral-Instruct', 'Llama3.1-Instruct'],
-    #     prompt_file_name=prompt_file,
-    #     results_dir=results_path,
-    #     start_idx=start,
-    #     end_idx=end,
-    #     sustainability=1
-    # )
+
+if __name__ == "__main__":
+    main(is_sustainable=False)

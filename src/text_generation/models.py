@@ -91,11 +91,22 @@ class GPT4(LLMBaseClass):
         self.model_id = "gpt-4o-mini",
         super().__init__(self.model_id)
 
+
 class Claude3Point5Sonnet(LLMBaseClass):
     """
-       Initializes a GPT-4 Instruct object
+       Initializes a Claude object
        """
 
     def __init__(self) -> None:
-        self.model_id = "claude-3-5-sonnet@20240620",
+        # self.model_id = "claude-3-5-sonnet@20240620",
+        self.model_id = "claude-3-5-sonnet-v2@20241022",
+        super().__init__(self.model_id)
+
+class Gemini1Point5Pro(LLMBaseClass):
+    """
+       Initializes a Gemini Instruct object
+       """
+
+    def __init__(self) -> None:
+        self.model_id = "gemini-1.5-pro-002",
         super().__init__(self.model_id)

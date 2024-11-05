@@ -97,7 +97,7 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
 
     logger.info(f"Augmented prompt, initializing {model} and generating response..")
     try:
-        response = tg.generate_response(model, prompt)
+        response = tg.generate_response(model, prompt, use_ollama=True)
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         logger.info(f"Error at line {exc_tb.tb_lineno} while generating response: {e}")
@@ -105,19 +105,18 @@ def pipeline(query: str, model_name: str, test: int = 0, **params):
 
     if test:
         return retrieved_cities, prompt[1]['content'], response
-
     else:
         return response
 
 
 if __name__ == "__main__":
-    # sample_query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you suggest " \
-    #                "some " \
-    #                "European cities? "
+    # sample_query = "I'm planning a trip in the summer and I love art, history, and visiting museums. Can you
+    # suggest " \ "some " \ "European cities? "
     sample_query = "I'm planning a trip in July and enjoy beaches, nightlife, and vibrant cities. Recommend some " \
                    "cities. "
     # model = "GPT-4"
-    model='Llama3.1-Instruct'
+    # model='Llama3.1-Instruct'
+    model = "Gemma2"
 
     pipeline_response = pipeline(
         query=sample_query,
