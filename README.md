@@ -80,3 +80,14 @@ This completes the set up! To execute the pipeline for a sample query, run the f
 - To run the single pipeline from the command line, use the following command:
 ```python pipeline.py``` from the `src` directory.
 - If you are using an IDE e.g. Pycharm, you can run the `pipeline.py` file directly by making sure you set the src directory as your `"Sources Root"`.
+
+### Citation 
+If you refer to this work, please cite the following: 
+```
+@article{banerjee2024enhancing,
+  title={Enhancing Tourism Recommender Systems for Sustainable City Trips Using Retrieval-Augmented Generation},
+  author={Banerjee, Ashmi and Satish, Adithi and W{\"o}rndl, Wolfgang},
+  journal={arXiv preprint arXiv:2409.18003},
+  year={2024}
+}
+```
